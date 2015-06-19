@@ -102,7 +102,7 @@ public class Gauge: UIView {
         }
     }
 
-    @IBInspectable public var reverse: Bool = true {
+    @IBInspectable public var reverse: Bool = false {
         didSet {
             resetLayers()
             updateLayerProperties()
@@ -191,7 +191,11 @@ public class Gauge: UIView {
                     0.48, brightness: 0.63,
                             alpha: 1.0)
                 }
-                ringLayer.strokeColor = strokeColor.CGColor
+                if (ringGradientLayer != nil) {
+                    ringGradientLayer.colors = [strokeColor.CGColor, strokeColor.CGColor]
+                } else {
+                    ringLayer.strokeColor = strokeColor.CGColor
+                }
             } else {
                 ringLayer.strokeColor = startColor.CGColor
             }

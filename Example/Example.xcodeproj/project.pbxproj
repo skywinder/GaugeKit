@@ -15,6 +15,7 @@
 		1C94051B1B31D12D001BF122 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C94051A1B31D12D001BF122 /* MainViewController.swift */; };
 		1CE31D571B341EDE006E4F7C /* GaugeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE31D561B341EDE006E4F7C /* GaugeKit.framework */; };
 		1CE31D581B341EDE006E4F7C /* GaugeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE31D561B341EDE006E4F7C /* GaugeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1CE31D5C1B345569006E4F7C /* AppleGaugeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31D5B1B345569006E4F7C /* AppleGaugeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1C9405101B31D057001BF122 /* ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTests.swift; sourceTree = "<group>"; };
 		1C94051A1B31D12D001BF122 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1CE31D561B341EDE006E4F7C /* GaugeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = GaugeKit.framework; path = "/Users/petrkorolev/Library/Developer/Xcode/DerivedData/GaugeKit-dgvjqloatorahwgwzdimkxhnnjhu/Build/Products/Debug-iphoneos/GaugeKit.framework"; sourceTree = "<absolute>"; };
+		1CE31D5B1B345569006E4F7C /* AppleGaugeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleGaugeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				1C94051A1B31D12D001BF122 /* MainViewController.swift */,
 				1C9404FA1B31D057001BF122 /* AppDelegate.swift */,
 				1C9404FE1B31D057001BF122 /* Main.storyboard */,
+				1CE31D5B1B345569006E4F7C /* AppleGaugeViewController.swift */,
 				1C9405011B31D057001BF122 /* Images.xcassets */,
 				1C9405031B31D057001BF122 /* LaunchScreen.xib */,
 				1C9404F81B31D057001BF122 /* Supporting Files */,
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CE31D5C1B345569006E4F7C /* AppleGaugeViewController.swift in Sources */,
 				1C94051B1B31D12D001BF122 /* MainViewController.swift in Sources */,
 				1C9404FB1B31D057001BF122 /* AppDelegate.swift in Sources */,
 			);
