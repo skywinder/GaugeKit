@@ -5,11 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 [![Platform](https://img.shields.io/cocoapods/p/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 
+Easy reproduce Apple's style gauges.
+
+![GaugeKit](https://github.com/skywinder/GaugeKit/blob/develop/Images/GaugeKit_sreenshot.png)
+
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
+To run the example - just open `GaugeKit.xcworkspace` and run Example project.
 
 ## Installation
 
@@ -19,6 +21,22 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "GaugeKit"
 ```
+
+## Features
+
+- Cusomizible
+- Auto-resized
+- Support `@IBInspectable` & `@IBDesignable`
+- Written with vanilla swift flavor :wink:
+
+
+##Example:
+
+![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/develop/Images/SWGauge_example.gif)
+
+###IB Example:
+
+![GaugeKit](https://github.com/skywinder/GaugeKit/blob/develop/Images/ib_example_1.gif)
 
 ## Author
 
