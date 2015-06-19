@@ -63,7 +63,7 @@ public class GaugeHalf: Gauge {
 
         if ringLayer == nil {
             ringLayer = CAShapeLayer.getOval(lineWidth, path: nil, strokeStart: 0, strokeEnd: 0.5, strokeColor: startColor,
-                    fillColor: UIColor.clearColor(), shadowRadius: 0, shadowOpacity: 0, shadowOffsset: CGSizeZero, bounds: newBounds, rotateAngle: M_PI_2, isCircle: isCircle)
+                    fillColor: UIColor.clearColor(), shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSizeZero, bounds: newBounds, rotateAngle: M_PI_2, isCircle: isCircle)
             ringLayer.frame = layer.bounds
             ringLayer.position = CGPointMake(ringLayer.position.x + bounds.width - lineWidth, ringLayer.position.y)
         }

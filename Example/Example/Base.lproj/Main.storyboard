@@ -155,6 +155,9 @@
                                                 <color key="value" red="0.73333334920000004" green="0.74509805439999999" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="customColors" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">

@@ -91,6 +91,17 @@ public class Gauge: UIView {
             updateLayerProperties()
         }
     }
+    @IBInspectable var shadowRadius: CGFloat = 0.0 {
+        didSet {
+            updateLayerProperties()
+        }
+    }
+    @IBInspectable var shadowOpacity: CGFloat = 0.5 {
+        didSet {
+            updateLayerProperties()
+        }
+    }
+
     @IBInspectable public var reverse: Bool = true {
         didSet {
             resetLayers()

@@ -17,7 +17,7 @@ extension CAShapeLayer {
                        strokeColor: UIColor,
                        fillColor: UIColor,
                        shadowRadius: CGFloat,
-                       shadowOpacity: Float,
+                       shadowOpacity: CGFloat,
                        shadowOffsset: CGSize,
                        bounds: CGRect? = nil,
                        rotateAngle: Double? = nil,
@@ -49,7 +49,7 @@ extension CAShapeLayer {
         arc.fillColor = fillColor.CGColor
         arc.shadowColor = UIColor.blackColor().CGColor
         arc.shadowRadius = shadowRadius
-        arc.shadowOpacity = shadowOpacity
+        arc.shadowOpacity = Float(shadowOpacity)
         arc.shadowOffset = shadowOffsset
 
         if let anchorPoint = anchorPoint {
