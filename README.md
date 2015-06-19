@@ -6,12 +6,12 @@
 [![Platform](https://img.shields.io/cocoapods/p/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 
 Easy reproduce Apple's style gauges.
-
+![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/ScreenShot1.png)
 ![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/GaugeKit_sreenshot.png)
 
-## Usage
+## Example Usage
 
-To run the example - just open `GaugeKit.xcworkspace` and run Example project.
+Just open `GaugeKit.xcworkspace` and run Example project.
 
 ## Installation
 
@@ -24,15 +24,16 @@ pod "GaugeKit"
 
 ## Features
 
-- Cusomizible
-- Auto-resized
+- Flexible and high-customizible gauges
+- Auto-resized views
 - Support `@IBInspectable` & `@IBDesignable`
-- Written with vanilla swift flavor :wink:
-
+- Written with vanilla `Swift` flavor :hatched_chick:
 
 ##Example:
 
+![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/gauge.gif)
 ![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/SWGauge_example.gif)
+
 
 ###IB Example:
 
