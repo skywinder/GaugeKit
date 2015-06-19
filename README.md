@@ -7,7 +7,7 @@
 
 Easy reproduce Apple's style gauges.
 
-![GaugeKit](https://github.com/skywinder/GaugeKit/blob/develop/Images/GaugeKit_sreenshot.png)
+![GaugeKit](https://github.com/skywinder/GaugeKit/blob/master/Images/GaugeKit_sreenshot.png)
 
 ## Usage
 
@@ -32,11 +32,11 @@ pod "GaugeKit"
 
 ##Example:
 
-![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/develop/Images/SWGauge_example.gif)
+![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/SWGauge_example.gif)
 
 ###IB Example:
 
-![GaugeKit](https://github.com/skywinder/GaugeKit/blob/develop/Images/ib_example_1.gif)
+![GaugeKit](https://github.com/skywinder/GaugeKit/blob/master/Images/ib_example_1.gif)
 
 ## Author
 

@@ -1,38 +1,30 @@
-#
-# Be sure to run `pod lib lint GaugeKit.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# Any lines starting with a # are optional, but encouraged
-#
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = "GaugeKit"
   s.version          = "0.1.0"
-  s.summary          = "A short description of GaugeKit."
-  s.description      = <<-DESC
-                       An optional longer description of GaugeKit
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/GaugeKit"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.summary          = "Easy reproduce Apple's style gauges"
+  s.description      = "Easy reproduce Apple's style gauges.
+                        ## Features
+                        - Cusomizible
+                        - Auto-resized
+                        - Support `@IBInspectable` & `@IBDesignable`
+                        - Written with vanilla swift flavor :wink:"
+  s.homepage         = "https://github.com/skywinder/GaugeKit"
+  s.screenshots      = ["https://github.com/skywinder/GaugeKit/blob/master/Images/GaugeKit_sreenshot.png",
+                        "https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/SWGauge_example.gif",
+                        "https://github.com/skywinder/GaugeKit/blob/master/Images/ib_example_1.gif"]
   s.license          = 'MIT'
   s.author           = { "Petr Korolev" => "sky4winder@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/GaugeKit.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/skywinder/GaugeKit.git", :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/skywinder'
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
+  s.source_files = 'GaugeKit/**/*'
   s.resource_bundles = {
-    'GaugeKit' => ['Pod/Assets/*.png']
+    'GaugeKit' => ['GaugeKit/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.public_header_files = 'GaugeKit/**/*.h'
+  s.frameworks = 'UIKit', 'QuartzCore'
 end
