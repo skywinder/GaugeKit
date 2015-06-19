@@ -321,10 +321,10 @@
             </objects>
             <point key="canvasLocation" x="1400" y="465"/>
         </scene>
-        <!--View Controller-->
+        <!--Apple Gauge View Controller-->
         <scene sceneID="MOc-Ds-zrX">
             <objects>
-                <viewController id="apk-bD-CPT" sceneMemberID="viewController">
+                <viewController id="apk-bD-CPT" customClass="AppleGaugeViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SQu-xY-ndJ"/>
                         <viewControllerLayoutGuide type="bottom" id="ymW-s9-oO9"/>
@@ -452,15 +452,24 @@
                                 <color key="textColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ufA-29-Bra">
+                                <rect key="frame" x="148" y="458" width="304" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="apk-bD-CPT" eventType="valueChanged" id="5Os-ZE-QTH"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ufA-29-Bra" firstAttribute="centerX" secondItem="q6f-rg-MaX" secondAttribute="centerX" id="5yA-SB-zdt"/>
                             <constraint firstItem="iJZ-Sg-mHm" firstAttribute="centerX" secondItem="1Gm-Rj-eIS" secondAttribute="centerX" constant="41.5" id="73n-YJ-L9m"/>
                             <constraint firstItem="iJZ-Sg-mHm" firstAttribute="top" secondItem="1Gm-Rj-eIS" secondAttribute="bottom" constant="-41" id="F5a-lC-B5u"/>
                             <constraint firstItem="kea-57-2JR" firstAttribute="top" secondItem="VXb-1o-Qpm" secondAttribute="bottom" constant="-42" id="OFs-iH-dw0"/>
                             <constraint firstItem="q6f-rg-MaX" firstAttribute="top" secondItem="oap-md-rio" secondAttribute="bottom" constant="-42" id="P0G-yj-C9k"/>
+                            <constraint firstItem="ufA-29-Bra" firstAttribute="width" secondItem="iJZ-Sg-mHm" secondAttribute="width" id="UKW-SS-yti"/>
                             <constraint firstItem="oap-md-rio" firstAttribute="centerX" secondItem="q6f-rg-MaX" secondAttribute="centerX" constant="-59" id="Vvc-zw-HjE"/>
                             <constraint firstAttribute="centerX" secondItem="GIw-G5-Th1" secondAttribute="centerX" id="YGI-md-ava"/>
+                            <constraint firstItem="ufA-29-Bra" firstAttribute="top" secondItem="iJZ-Sg-mHm" secondAttribute="bottom" constant="8" id="iOU-Fq-MTR"/>
                             <constraint firstItem="oap-md-rio" firstAttribute="centerY" secondItem="q6f-rg-MaX" secondAttribute="centerY" constant="-83.5" id="jZa-eh-ymX"/>
                             <constraint firstItem="VXb-1o-Qpm" firstAttribute="centerX" secondItem="kea-57-2JR" secondAttribute="centerX" constant="-44.5" id="mrR-bo-CM6"/>
                             <constraint firstAttribute="centerY" secondItem="GIw-G5-Th1" secondAttribute="centerY" id="qdA-lH-M4O"/>
@@ -472,6 +481,11 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" badgeValue="Apple" systemItem="featured" id="op3-Sq-BLG"/>
+                    <connections>
+                        <outlet property="gauge_in" destination="kea-57-2JR" id="U8t-cC-NbL"/>
+                        <outlet property="gauge_mid" destination="q6f-rg-MaX" id="X3W-kg-IbE"/>
+                        <outlet property="gauge_out" destination="iJZ-Sg-mHm" id="zuZ-jI-ts1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGG-17-uLh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -488,8 +502,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="wEc-Np-wf3"/>
                         <segue destination="apk-bD-CPT" kind="relationship" relationship="viewControllers" id="tiW-9B-Fzt"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="wEc-Np-wf3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwl-zX-bXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
