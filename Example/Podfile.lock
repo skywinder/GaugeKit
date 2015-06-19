@@ -1,0 +1,14 @@
+PODS:
+  - GaugeKit (0.1.0)
+
+DEPENDENCIES:
+  - GaugeKit (from `../`)
+
+EXTERNAL SOURCES:
+  GaugeKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GaugeKit: 84c5f6366a7739587fc817033562b1f90653249e
+
+COCOAPODS: 0.37.1
