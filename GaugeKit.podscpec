@@ -1,0 +1,15 @@
+Pod::Spec.new do | s |
+    s.name = 'GaugeKit'
+    s.version = '0.0.1'
+    s.summary = 'Easy reproduce Apple's style gauge view'
+    s.homepage = 'http://skywinder.github.io/GaugeKit'
+    s.license = 'MIT'
+    s.authors = { 'Petr Korolev' => 'https://github.com/skywinder' }
+    s.source = { :git => 'https://github.com/skywinder/GaugeKit.git', :tag => "#{s.version}" }
+    s.screenshots   = [ "https://github.com/skywinder/GaugeKit/blob/develop/Resources/GaugeKit_sreenshot.png" ]
+    s.requires_arc = true
+    s.ios.deployment_target = '8.0'
+    s.platform = :ios
+    s.source_files = 'GaugeKit/GaugeKit/*.swift'
+    s.frameworks = 'UIKit', 'QuartzCore'
+end

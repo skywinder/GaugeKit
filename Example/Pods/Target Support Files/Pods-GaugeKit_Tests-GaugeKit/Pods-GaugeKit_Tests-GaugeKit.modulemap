@@ -1,6 +1,0 @@
-framework module GaugeKit {
-  umbrella header "Pods-GaugeKit_Tests-GaugeKit-umbrella.h"
-
-  export *
-  module * { export * }
-}
