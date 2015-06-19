@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'GaugeKit_Example', :exclusive => true do
+  pod "GaugeKit", :path => "../"
+end
+
+target 'GaugeKit_Tests', :exclusive => true do
+  pod "GaugeKit", :path => "../"
+
+  
+end
