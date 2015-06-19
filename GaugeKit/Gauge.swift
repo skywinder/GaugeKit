@@ -102,7 +102,7 @@ public class Gauge: UIView {
         }
     }
 
-    @IBInspectable public var reverse: Bool = true {
+    @IBInspectable public var reverse: Bool = false {
         didSet {
             resetLayers()
             updateLayerProperties()
