@@ -96,7 +96,7 @@ public class Gauge: UIView {
             updateLayerProperties()
         }
     }
-    @IBInspectable var ringShadowOpacity: CGFloat = 0.5 {
+    @IBInspectable var ringShadowOpacity: Float = 0.5 {
         didSet {
             updateLayerProperties()
         }
