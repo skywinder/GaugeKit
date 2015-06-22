@@ -1,5 +1,21 @@
 # Change Log
 
+## [0.1.1](https://github.com/skywinder/GaugeKit/tree/0.1.1) (2015-06-22)
+
+[Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.1.0...0.1.1)
+
+**Implemented enhancements:**
+
+- Add ability to set shadow for a gauges. [\#1](https://github.com/skywinder/GaugeKit/issues/1)
+
+**Closed issues:**
+
+- Add example with gauge in Apple's style [\#4](https://github.com/skywinder/GaugeKit/issues/4)
+
+**Merged pull requests:**
+
+- Fix initial state for GaugeHalf [\#6](https://github.com/skywinder/GaugeKit/pull/6) ([skywinder](https://github.com/skywinder))
+
 ## [0.1.0](https://github.com/skywinder/GaugeKit/tree/0.1.0) (2015-06-19)
 
 
