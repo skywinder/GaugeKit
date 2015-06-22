@@ -86,7 +86,7 @@ public class Gauge: UIView {
             updateLayerProperties()
         }
     }
-    @IBInspectable var customColors: Bool = true {
+    @IBInspectable var colorsArray: Bool = false {
         didSet {
             updateLayerProperties()
         }
@@ -170,7 +170,7 @@ public class Gauge: UIView {
             var strokeColor = UIColor.lightGrayColor()
             //TODO: replace pre-defined colors with array of user-defined colors
             //TODO: and split them proportionally in whole sector
-            if !customColors {
+            if colorsArray {
                 switch (rate / 10) {
                 case let r where r >= 0.75:
                     strokeColor = UIColor(hue:

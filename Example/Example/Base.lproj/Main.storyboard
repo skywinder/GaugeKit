@@ -128,7 +128,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="roundCap" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="5"/>
+                                                <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
@@ -156,7 +156,6 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
                                                 <color key="value" red="0.73333334920000004" green="0.74509805439999999" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="customColors" value="NO"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
@@ -166,6 +165,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="ringShadowOpacity">
                                                 <real key="value" value="0.5"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="colorsArray" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -207,6 +207,7 @@
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="colorsArray" value="NO"/>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
