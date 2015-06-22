@@ -72,7 +72,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="customColors" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                                <real key="value" value="4"/>
+                                                <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="endColor">
                                                 <color key="value" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
