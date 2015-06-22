@@ -91,12 +91,12 @@ public class Gauge: UIView {
             updateLayerProperties()
         }
     }
-    @IBInspectable var ringShadowRadius: CGFloat = 0 {
+    @IBInspectable var shadowRadius: CGFloat = 0 {
         didSet {
             updateLayerProperties()
         }
     }
-    @IBInspectable var ringShadowOpacity: Float = 0.5 {
+    @IBInspectable var shadowOpacity: Float = 0.5 {
         didSet {
             updateLayerProperties()
         }
@@ -240,7 +240,7 @@ public class Gauge: UIView {
 
     public override func layoutSubviews() {
         resetLayers()
-        gaugeLayer = getGauge(rotate / 10 * M_PI)
+        gaugeLayer = getGauge(rotateAngle: rotate / 10 * M_PI)
         layer.addSublayer(gaugeLayer)
         updateLayerProperties()
     }

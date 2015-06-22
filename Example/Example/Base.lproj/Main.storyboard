@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ia3-CH-9hP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ia3-CH-9hP">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Kh-Q7-9Qx">
-                                <rect key="frame" x="67" y="516" width="383" height="31"/>
+                                <rect key="frame" x="63" y="517" width="391" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="cC9-OU-oQl"/>
                                 </constraints>
@@ -34,28 +34,28 @@
                                 </connections>
                             </slider>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6dm-cM-AIc">
-                                <rect key="frame" x="531" y="515" width="51" height="31"/>
+                                <rect key="frame" x="535" y="517" width="51" height="31"/>
                                 <connections>
                                     <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="e8F-zf-ILb"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6e-Fr-NqT">
-                                <rect key="frame" x="20" y="520" width="41" height="23"/>
+                                <rect key="frame" x="16" y="522" width="41" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMJ-Tn-iEJ">
-                                <rect key="frame" x="456" y="520" width="67" height="21"/>
+                                <rect key="frame" x="460" y="522" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2H-B1-nqW" userLabel="GaugesView">
-                                <rect key="frame" x="20" y="20" width="560" height="488"/>
+                                <rect key="frame" x="16" y="20" width="568" height="490"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yI1-eB-yrd" userLabel="CircleGaugeSmall" customClass="GaugeCircle" customModule="GaugeKit">
-                                        <rect key="frame" x="213" y="158" width="134" height="134"/>
+                                        <rect key="frame" x="216" y="158" width="136" height="136"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="yI1-eB-yrd" secondAttribute="height" multiplier="1:1" id="0k9-uR-Ab4"/>
@@ -92,7 +92,7 @@
                                         </variation>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo76" translatesAutoresizingMaskIntoConstraints="NO" id="H65-f6-Jwu">
-                                        <rect key="frame" x="265" y="210" width="30" height="30"/>
+                                        <rect key="frame" x="269" y="211" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="QgF-pW-ih2"/>
                                             <constraint firstAttribute="height" constant="100" id="Shp-Sw-Lop"/>
@@ -105,7 +105,7 @@
                                         </variation>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fV1-7b-EpV" userLabel="Gauge Right" customClass="GaugeHalf" customModule="GaugeKit">
-                                        <rect key="frame" x="336" y="-19" width="224" height="488"/>
+                                        <rect key="frame" x="341" y="-19" width="227" height="490"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="fV1-7b-EpV" secondAttribute="height" multiplier="1:2" id="Va0-Cm-JZi"/>
@@ -127,6 +127,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="roundCap" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -136,7 +139,7 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ob-Uc-gqV" userLabel="CircleGauge" customClass="GaugeCircle" customModule="GaugeKit">
-                                        <rect key="frame" x="168" y="113" width="224" height="224"/>
+                                        <rect key="frame" x="170" y="112" width="228" height="228"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="168" id="1me-xR-gTm"/>
@@ -157,6 +160,12 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="ringShadowRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="ringShadowOpacity">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -168,13 +177,13 @@
                                         </variation>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GaugeKit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4J-hI-3WU">
-                                        <rect key="frame" x="246" y="8" width="70" height="20"/>
+                                        <rect key="frame" x="250" y="8" width="70" height="20"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xql-cv-5KY" userLabel="Gauge Left" customClass="GaugeHalf" customModule="GaugeKit">
-                                        <rect key="frame" x="0.0" y="-19" width="224" height="488"/>
+                                        <rect key="frame" x="0.0" y="-19" width="227" height="490"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="XU6-iK-3MX"/>
@@ -280,6 +289,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6dm-cM-AIc" firstAttribute="centerY" secondItem="CMJ-Tn-iEJ" secondAttribute="centerY" id="HbL-eq-omh"/>
+                            <constraint firstItem="CMJ-Tn-iEJ" firstAttribute="centerY" secondItem="f6e-Fr-NqT" secondAttribute="centerY" id="QXa-YJ-f7y"/>
                             <constraint firstItem="6dm-cM-AIc" firstAttribute="trailing" secondItem="h2H-B1-nqW" secondAttribute="trailing" id="Vh1-z1-2PM"/>
                             <constraint firstItem="f6e-Fr-NqT" firstAttribute="leading" secondItem="h2H-B1-nqW" secondAttribute="leading" id="VoD-bK-vuH"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="f6e-Fr-NqT" secondAttribute="bottom" constant="8" symbolic="YES" id="Z9F-Io-dOO"/>
@@ -296,7 +306,7 @@
                             <constraint firstItem="h2H-B1-nqW" firstAttribute="width" secondItem="4Kh-Q7-9Qx" secondAttribute="width" multiplier="2:1" id="rWo-7x-MEC"/>
                             <constraint firstItem="4Kh-Q7-9Qx" firstAttribute="centerY" secondItem="f6e-Fr-NqT" secondAttribute="centerY" constant="-0.5" id="uen-Yu-sas"/>
                             <constraint firstItem="CMJ-Tn-iEJ" firstAttribute="leading" secondItem="4Kh-Q7-9Qx" secondAttribute="trailing" constant="8" symbolic="YES" id="vlh-In-grx"/>
-                            <constraint firstItem="h2H-B1-nqW" firstAttribute="leading" secondItem="2NQ-2R-cQ4" secondAttribute="leadingMargin" constant="4" id="wpl-DK-ubh"/>
+                            <constraint firstItem="h2H-B1-nqW" firstAttribute="leading" secondItem="2NQ-2R-cQ4" secondAttribute="leadingMargin" id="wpl-DK-ubh"/>
                             <constraint firstItem="h2H-B1-nqW" firstAttribute="centerX" secondItem="4Kh-Q7-9Qx" secondAttribute="centerX" id="yx2-WQ-cvy"/>
                         </constraints>
                         <variation key="default">
@@ -304,6 +314,7 @@
                                 <exclude reference="dd0-2j-eRo"/>
                                 <exclude reference="rWo-7x-MEC"/>
                                 <exclude reference="yx2-WQ-cvy"/>
+                                <exclude reference="f21-QT-8e2"/>
                                 <exclude reference="Znn-p3-rgO"/>
                                 <exclude reference="alC-H9-oOR"/>
                             </mask>
@@ -400,7 +411,7 @@
                                         </variation>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="kea-57-2JR" firstAttribute="width" secondItem="q6f-rg-MaX" secondAttribute="width" multiplier="1:1.4" id="2Rd-Oq-1Ox"/>
                                     <constraint firstAttribute="centerY" secondItem="kea-57-2JR" secondAttribute="centerY" id="36z-Na-aAI"/>
