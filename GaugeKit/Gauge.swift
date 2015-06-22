@@ -91,16 +91,16 @@ public class Gauge: UIView {
             updateLayerProperties()
         }
     }
-    @IBInspectable var ringShadowRadius: CGFloat = 0 {
-        didSet {
-            updateLayerProperties()
-        }
-    }
-    @IBInspectable var ringShadowOpacity: CGFloat = 0.5 {
-        didSet {
-            updateLayerProperties()
-        }
-    }
+//    @IBInspectable var ringShadowRadius: CGFloat = 0 {
+//        didSet {
+//            updateLayerProperties()
+//        }
+//    }
+//    @IBInspectable var ringShadowOpacity: Float = 0 {
+//        didSet {
+//            updateLayerProperties()
+//        }
+//    }
 
     @IBInspectable public var reverse: Bool = false {
         didSet {
