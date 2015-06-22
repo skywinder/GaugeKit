@@ -38,7 +38,7 @@ public class Gauge: UIView {
             if let endColor = endColor {
                 return endColor
             } else {
-                return startColor
+                return  UIColor.redColor()
             }
         }
         set {
@@ -76,7 +76,7 @@ public class Gauge: UIView {
             }
         }
     }
-    @IBInspectable var bgAlpha: CGFloat = 0.4 {
+    @IBInspectable var bgAlpha: CGFloat = 0.2 {
         didSet {
             updateLayerProperties()
         }

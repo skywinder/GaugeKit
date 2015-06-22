@@ -12,12 +12,24 @@ import QuartzCore
 @IBDesignable
 public class GaugeHalf: Gauge {
 
-
     @IBInspectable var right: Bool = false {
         didSet {
             self.type = right ? GaugeType.Right : GaugeType.Left
             updateLayerProperties()
         }
+    }
+
+
+    required public init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.type = right ? GaugeType.Right : GaugeType.Left
+        updateLayerProperties()
+    }
+
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.type = right ? GaugeType.Right : GaugeType.Left
+        updateLayerProperties()
     }
 
     override public func layoutSubviews() {
