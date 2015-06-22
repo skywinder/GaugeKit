@@ -38,7 +38,7 @@ public class Gauge: UIView {
             if let endColor = endColor {
                 return endColor
             } else {
-                return startColor
+                return  UIColor.redColor()
             }
         }
         set {
@@ -76,7 +76,7 @@ public class Gauge: UIView {
             }
         }
     }
-    @IBInspectable var bgAlpha: CGFloat = 0.4 {
+    @IBInspectable var bgAlpha: CGFloat = 0.2 {
         didSet {
             updateLayerProperties()
         }
@@ -86,21 +86,21 @@ public class Gauge: UIView {
             updateLayerProperties()
         }
     }
-    @IBInspectable var customColors: Bool = true {
+    @IBInspectable var colorsArray: Bool = false {
         didSet {
             updateLayerProperties()
         }
     }
-//    @IBInspectable var ringShadowRadius: CGFloat = 0 {
-//        didSet {
-//            updateLayerProperties()
-//        }
-//    }
-//    @IBInspectable var ringShadowOpacity: Float = 0 {
-//        didSet {
-//            updateLayerProperties()
-//        }
-//    }
+    @IBInspectable var shadowRadius: CGFloat = 0 {
+        didSet {
+            updateLayerProperties()
+        }
+    }
+    @IBInspectable var shadowOpacity: Float = 0.5 {
+        didSet {
+            updateLayerProperties()
+        }
+    }
 
     @IBInspectable public var reverse: Bool = false {
         didSet {
@@ -170,7 +170,7 @@ public class Gauge: UIView {
             var strokeColor = UIColor.lightGrayColor()
             //TODO: replace pre-defined colors with array of user-defined colors
             //TODO: and split them proportionally in whole sector
-            if !customColors {
+            if colorsArray {
                 switch (rate / 10) {
                 case let r where r >= 0.75:
                     strokeColor = UIColor(hue:

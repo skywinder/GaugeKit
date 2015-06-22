@@ -12,12 +12,24 @@ import QuartzCore
 @IBDesignable
 public class GaugeHalf: Gauge {
 
-
     @IBInspectable var right: Bool = false {
         didSet {
             self.type = right ? GaugeType.Right : GaugeType.Left
             updateLayerProperties()
         }
+    }
+
+
+    required public init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.type = right ? GaugeType.Right : GaugeType.Left
+        updateLayerProperties()
+    }
+
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.type = right ? GaugeType.Right : GaugeType.Left
+        updateLayerProperties()
     }
 
     override public func layoutSubviews() {
@@ -27,7 +39,7 @@ public class GaugeHalf: Gauge {
     }
 
     override func getGauge(rotateAngle: Double = 0) -> CALayer {
-        var gaugeLayer = getHalfGauge(rotateAngle: rotateAngle)
+        let gaugeLayer = getHalfGauge(rotateAngle: rotateAngle)
         return gaugeLayer
     }
 
@@ -36,11 +48,11 @@ public class GaugeHalf: Gauge {
         let gaugeLayer = CAShapeLayer()
 
         //        let rotatedBounds = CGRectMake(10, 10, bounds.height, bounds.width)
-        var newBounds = CGRectMake(bounds.origin.x, bounds.origin.y, bounds.height, bounds.width * 2 - lineWidth)
+        let newBounds = CGRectMake(bounds.origin.x, bounds.origin.y, bounds.height, bounds.width * 2 - lineWidth)
         //        var newBounds = bounds
         if bgLayer == nil {
             bgLayer = CAShapeLayer.getOval(lineWidth, path: nil, strokeStart: 0, strokeEnd: 0.5, strokeColor: _bgStartColor,
-                    fillColor: UIColor.clearColor(), shadowRadius: 0, shadowOpacity: 0, shadowOffsset: CGSizeZero, bounds: newBounds, rotateAngle: M_PI_2, isCircle: isCircle)
+                    fillColor: UIColor.clearColor(), shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSizeZero, bounds: newBounds, rotateAngle: M_PI_2, isCircle: isCircle)
             bgLayer.frame = layer.bounds
             bgLayer.position = CGPointMake(bgLayer.position.x + bounds.width - lineWidth, bgLayer.position.y)
         }
@@ -63,7 +75,7 @@ public class GaugeHalf: Gauge {
 
         if ringLayer == nil {
             ringLayer = CAShapeLayer.getOval(lineWidth, path: nil, strokeStart: 0, strokeEnd: 0.5, strokeColor: startColor,
-                    fillColor: UIColor.clearColor(), shadowRadius: 0, shadowOpacity: 0, shadowOffsset: CGSizeZero, bounds: newBounds, rotateAngle: M_PI_2, isCircle: isCircle)
+                    fillColor: UIColor.clearColor(), shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSizeZero, bounds: newBounds, rotateAngle: M_PI_2, isCircle: isCircle)
             ringLayer.frame = layer.bounds
             ringLayer.position = CGPointMake(ringLayer.position.x + bounds.width - lineWidth, ringLayer.position.y)
         }
