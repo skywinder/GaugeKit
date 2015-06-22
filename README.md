@@ -5,9 +5,11 @@
 [![License](https://img.shields.io/cocoapods/l/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 [![Platform](https://img.shields.io/cocoapods/p/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 
-Easy reproduce Apple's style gauges.
-![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/ScreenShot1.png)
-![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/GaugeKit_sreenshot.png)
+##Easy reproduce Apple's style gauges!
+
+![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/appleFitness.png)
+->
+![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/gauge.gif)
 
 ## Example Usage
 
@@ -31,9 +33,8 @@ pod "GaugeKit"
 
 ##Example:
 
-![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/gauge.gif)
+![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/GaugeKit_sreenshot.png)
 ![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/SWGauge_example.gif)
-
 
 ###IB Example:
 
