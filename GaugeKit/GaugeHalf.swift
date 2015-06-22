@@ -27,7 +27,7 @@ public class GaugeHalf: Gauge {
     }
 
     override func getGauge(rotateAngle: Double = 0) -> CALayer {
-        var gaugeLayer = getHalfGauge(rotateAngle: rotateAngle)
+        var gaugeLayer = getHalfGauge(rotateAngle)
         return gaugeLayer
     }
 

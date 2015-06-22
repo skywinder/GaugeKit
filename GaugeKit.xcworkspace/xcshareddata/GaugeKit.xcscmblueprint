@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D316725E3745C2E3F6B4E61E23722FBEC4818660",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D316725E3745C2E3F6B4E61E23722FBEC4818660" : 0,
+    "3715728EE139841130E5A94A8487F1BF54266A48" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4AB4A397-B2EE-4F60-A406-49F77742D5FC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D316725E3745C2E3F6B4E61E23722FBEC4818660" : "GaugeKit",
+    "3715728EE139841130E5A94A8487F1BF54266A48" : "SWGauge"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GaugeKit",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GaugeKit.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:skywinder\/SWGauge.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3715728EE139841130E5A94A8487F1BF54266A48"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:skywinder\/GaugeKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D316725E3745C2E3F6B4E61E23722FBEC4818660"
+    }
+  ]
+}

@@ -240,7 +240,7 @@ public class Gauge: UIView {
 
     public override func layoutSubviews() {
         resetLayers()
-        gaugeLayer = getGauge(rotateAngle: rotate / 10 * M_PI)
+        gaugeLayer = getGauge(rotate / 10 * M_PI)
         layer.addSublayer(gaugeLayer)
         updateLayerProperties()
     }
