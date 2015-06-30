@@ -51,10 +51,7 @@ public class Gauge: UIView {
         }
     }
 
-    var _bgStartColor: UIColor {
-        set {
-            bgColor = newValue
-        }
+    internal var _bgStartColor: UIColor {
         get {
             if let bgColor = bgColor {
                 return bgColor.colorWithAlphaComponent(bgAlpha)
@@ -64,10 +61,7 @@ public class Gauge: UIView {
         }
     }
 
-    var _bgEndColor: UIColor {
-        set {
-            bgColor = newValue
-        }
+    internal var _bgEndColor: UIColor {
         get {
             if let bgColor = bgColor {
                 return bgColor.colorWithAlphaComponent(bgAlpha)
