@@ -90,7 +90,7 @@ public class GaugeHalf: Gauge {
                 ringGradientLayer.startPoint = CGPointMake(0.5, 1)
                 ringGradientLayer.endPoint = CGPointMake(0.5, 0)
             }
-            ringGradientLayer.colors = [startColor.CGColor, _endColor.CGColor]
+            ringGradientLayer.colors = [startColor.CGColor, endColor.CGColor]
             ringGradientLayer.frame = layer.bounds
             ringGradientLayer.mask = ringLayer
             gaugeLayer.addSublayer(ringGradientLayer)

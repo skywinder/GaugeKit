@@ -28,21 +28,21 @@ public class Gauge: UIView {
     }
 
     /// default is nil: endColor is same as startColor
-    @IBInspectable var endColor: UIColor? {
-        didSet {
-            updateLayerProperties()
-        }
-    }
-    var _endColor: UIColor {
+    @IBInspectable var endColor: UIColor {
         get {
-            if let endColor = endColor {
-                return endColor
+            if let _endColor = _endColor {
+                return _endColor
             } else {
                 return  UIColor.redColor()
             }
         }
         set {
-            endColor = newValue
+            _endColor = newValue
+        }
+    }
+    private var _endColor: UIColor? {
+        didSet {
+            updateLayerProperties()
         }
     }
     @IBInspectable var bgColor: UIColor? {
@@ -72,7 +72,7 @@ public class Gauge: UIView {
             if let bgColor = bgColor {
                 return bgColor.colorWithAlphaComponent(bgAlpha)
             } else {
-                return _endColor.colorWithAlphaComponent(bgAlpha)
+                return endColor.colorWithAlphaComponent(bgAlpha)
             }
         }
     }
