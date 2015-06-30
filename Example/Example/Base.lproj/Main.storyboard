@@ -55,7 +55,7 @@
                                 <rect key="frame" x="16" y="20" width="568" height="490"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yI1-eB-yrd" userLabel="CircleGaugeSmall" customClass="GaugeCircle" customModule="GaugeKit">
-                                        <rect key="frame" x="216" y="158" width="136" height="136"/>
+                                        <rect key="frame" x="236" y="178" width="96" height="96"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="yI1-eB-yrd" secondAttribute="height" multiplier="1:1" id="0k9-uR-Ab4"/>
@@ -135,10 +135,11 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ob-Uc-gqV" userLabel="CircleGauge" customClass="GaugeCircle" customModule="GaugeKit">
-                                        <rect key="frame" x="170" y="112" width="228" height="228"/>
+                                        <rect key="frame" x="204" y="146" width="160" height="160"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="168" id="1me-xR-gTm"/>
+                                            <constraint firstAttribute="width" constant="160" id="LKs-on-Tk2"/>
                                             <constraint firstAttribute="width" constant="168" id="ccc-LS-K6h"/>
                                             <constraint firstAttribute="height" constant="300" id="kQm-cZ-4M0"/>
                                             <constraint firstAttribute="width" constant="150" id="m8B-fm-Kmk"/>
@@ -270,6 +271,7 @@
                                         <exclude reference="2xc-VX-bm7"/>
                                         <exclude reference="4Q7-c9-Fww"/>
                                         <exclude reference="K2d-OX-cq5"/>
+                                        <exclude reference="K2z-9n-C0z"/>
                                         <exclude reference="f2m-iw-T3T"/>
                                         <exclude reference="kJP-aj-br0"/>
                                         <exclude reference="rZ2-t1-FL1"/>
