@@ -33,7 +33,7 @@ public class Gauge: UIView {
             if let _endColor = _endColor {
                 return _endColor
             } else {
-                return  UIColor.redColor()
+                return UIColor.redColor()
             }
         }
         set {
@@ -110,9 +110,29 @@ public class Gauge: UIView {
         }
     }
 
-    var type: GaugeType = .Circle
+    var type: GaugeType = .Circle {
+        didSet {
+            resetLayers()
+            updateLayerProperties()
+        }
+    }
 
-/// Percantage of filling Gauge: 0..10
+    /// Convenience property to setup type variable from IB
+    @IBInspectable var gaugeTypeInt: Int {
+
+        get {
+            return type.rawValue
+        }
+        set(newValue) {
+            if let newType = GaugeType(rawValue: newValue) {
+                type = newType
+            } else {
+                type = .Circle
+            }
+        }
+    }
+
+    /// Percantage of filling Gauge: 0..10
     @IBInspectable public var rate: CGFloat = 9 {
         didSet {
             updateLayerProperties()
@@ -140,9 +160,15 @@ public class Gauge: UIView {
 /// background gradient
     var bgGradientLayer: CAGradientLayer!
 
-
     func getGauge(rotateAngle: Double = 0) -> CALayer {
-        preconditionFailure("This method must be overridden")
+        switch type {
+        case .Left, .Right:
+            return getHalfGauge(rotateAngle)
+        case .Circle:
+            return getCircleGauge(rotateAngle)
+        default:
+            return getCircleGauge(rotateAngle)
+        }
     }
 
     func updateLayerProperties() {
@@ -239,3 +265,5 @@ public class Gauge: UIView {
         updateLayerProperties()
     }
 }
+
+
