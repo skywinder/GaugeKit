@@ -54,7 +54,7 @@
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2H-B1-nqW" userLabel="GaugesView">
                                 <rect key="frame" x="16" y="20" width="568" height="490"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yI1-eB-yrd" userLabel="CircleGaugeSmall" customClass="GaugeCircle" customModule="GaugeKit">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yI1-eB-yrd" userLabel="CircleGaugeSmall" customClass="Gauge" customModule="GaugeKit">
                                         <rect key="frame" x="236" y="178" width="96" height="96"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -103,7 +103,7 @@
                                             </mask>
                                         </variation>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fV1-7b-EpV" userLabel="Gauge Right" customClass="GaugeHalf" customModule="GaugeKit">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fV1-7b-EpV" userLabel="Gauge Right" customClass="Gauge" customModule="GaugeKit">
                                         <rect key="frame" x="341" y="-19" width="227" height="490"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -134,7 +134,7 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ob-Uc-gqV" userLabel="CircleGauge" customClass="GaugeCircle" customModule="GaugeKit">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ob-Uc-gqV" userLabel="CircleGauge" customClass="Gauge" customModule="GaugeKit">
                                         <rect key="frame" x="204" y="146" width="160" height="160"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -173,7 +173,7 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xql-cv-5KY" userLabel="Gauge Left" customClass="GaugeHalf" customModule="GaugeKit">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xql-cv-5KY" userLabel="Gauge Left" customClass="Gauge" customModule="GaugeKit">
                                         <rect key="frame" x="0.0" y="-19" width="227" height="490"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>

@@ -9,41 +9,12 @@
 import UIKit
 import QuartzCore
 
-@IBDesignable
-public class GaugeHalf: Gauge {
+protocol GaugeHalf {
+    func getHalfGauge(rotatengle: Double) -> CAShapeLayer
+}
 
-    @IBInspectable var right: Bool = false {
-        didSet {
-            self.type = right ? GaugeType.Right : GaugeType.Left
-            updateLayerProperties()
-        }
-    }
-
-
-    required public init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.type = right ? GaugeType.Right : GaugeType.Left
-        updateLayerProperties()
-    }
-
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.type = right ? GaugeType.Right : GaugeType.Left
-        updateLayerProperties()
-    }
-
-    override public func layoutSubviews() {
-
-        super.layoutSubviews()
-
-    }
-
-    override func getGauge(rotateAngle: Double = 0) -> CALayer {
-        let gaugeLayer = getHalfGauge(rotateAngle: rotateAngle)
-        return gaugeLayer
-    }
-
-    func getHalfGauge(rotateAngle: Double? = 0) -> CAShapeLayer {
+extension Gauge: GaugeHalf {
+    func getHalfGauge(rotateAngle: Double) -> CAShapeLayer {
 
         let gaugeLayer = CAShapeLayer()
 
@@ -103,12 +74,12 @@ public class GaugeHalf: Gauge {
 
         gaugeLayer.frame = layer.bounds
         gaugeLayer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        gaugeLayer.transform = CATransform3DRotate(gaugeLayer.transform, CGFloat(rotateAngle!), 0, 0, 1)
+        gaugeLayer.transform = CATransform3DRotate(gaugeLayer.transform, CGFloat(rotateAngle), 0, 0, 1)
         if reverse {
             reverseX(gaugeLayer)
         }
 
-        if right {
+        if type == .Right {
             reverseY(gaugeLayer)
         }
 

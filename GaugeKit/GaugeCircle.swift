@@ -9,15 +9,13 @@
 import UIKit
 import QuartzCore
 
-@IBDesignable
-public class GaugeCircle: Gauge {
 
-    override public func layoutSubviews() {
+protocol GaugeCircle {
+    func getHalfGauge(rotateAngle: Double) -> CAShapeLayer
+}
 
-        super.layoutSubviews()
-    }
-
-    override func getGauge(rotateAngle: Double = 0) -> CALayer {
+extension Gauge: GaugeCircle {
+    func getCircleGauge(rotateAngle: Double) -> CALayer {
 
         let gaugeLayer = CAShapeLayer()
 
@@ -48,6 +46,4 @@ public class GaugeCircle: Gauge {
         }
         return gaugeLayer
     }
-
-
 }
