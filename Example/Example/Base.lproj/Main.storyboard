@@ -126,44 +126,14 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="roundCap" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="gaugeTypeInt">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="Va0-Cm-JZi"/>
                                                 <exclude reference="dEp-wq-faX"/>
-                                            </mask>
-                                        </variation>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ob-Uc-gqV" userLabel="CircleGauge" customClass="Gauge" customModule="GaugeKit">
-                                        <rect key="frame" x="204" y="146" width="160" height="160"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="168" id="1me-xR-gTm"/>
-                                            <constraint firstAttribute="width" constant="160" id="LKs-on-Tk2"/>
-                                            <constraint firstAttribute="width" constant="168" id="ccc-LS-K6h"/>
-                                            <constraint firstAttribute="height" constant="300" id="kQm-cZ-4M0"/>
-                                            <constraint firstAttribute="width" constant="150" id="m8B-fm-Kmk"/>
-                                            <constraint firstAttribute="width" secondItem="0Ob-Uc-gqV" secondAttribute="height" multiplier="1:1" id="q6w-pw-gaQ"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="rate">
-                                                <real key="value" value="9"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
-                                                <color key="value" red="0.73333334920000004" green="0.74509805439999999" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="colorsArray" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="1me-xR-gTm"/>
-                                                <exclude reference="ccc-LS-K6h"/>
-                                                <exclude reference="kQm-cZ-4M0"/>
-                                                <exclude reference="m8B-fm-Kmk"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -198,11 +168,47 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="colorsArray" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="gaugeTypeInt">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="XU6-iK-3MX"/>
                                                 <exclude reference="xzE-1e-A5B"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ob-Uc-gqV" userLabel="CircleGauge" customClass="Gauge" customModule="GaugeKit">
+                                        <rect key="frame" x="204" y="146" width="160" height="160"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="168" id="1me-xR-gTm"/>
+                                            <constraint firstAttribute="width" constant="160" id="LKs-on-Tk2"/>
+                                            <constraint firstAttribute="width" constant="168" id="ccc-LS-K6h"/>
+                                            <constraint firstAttribute="height" constant="300" id="kQm-cZ-4M0"/>
+                                            <constraint firstAttribute="width" constant="150" id="m8B-fm-Kmk"/>
+                                            <constraint firstAttribute="width" secondItem="0Ob-Uc-gqV" secondAttribute="height" multiplier="1:1" id="q6w-pw-gaQ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rate">
+                                                <real key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                <color key="value" red="0.73333334920000004" green="0.74509805439999999" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="colorsArray" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="1me-xR-gTm"/>
+                                                <exclude reference="ccc-LS-K6h"/>
+                                                <exclude reference="kQm-cZ-4M0"/>
+                                                <exclude reference="m8B-fm-Kmk"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -339,7 +345,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIw-G5-Th1" userLabel="AppleViews">
                                 <rect key="frame" x="150" y="150" width="300" height="300"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJZ-Sg-mHm" userLabel="GaugeOut" customClass="GaugeCircle" customModule="GaugeKit">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJZ-Sg-mHm" userLabel="GaugeOut" customClass="Gauge" customModule="GaugeKit">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -358,7 +364,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6f-rg-MaX" userLabel="GaugeMid" customClass="GaugeCircle" customModule="GaugeKit">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6f-rg-MaX" userLabel="GaugeMid" customClass="Gauge" customModule="GaugeKit">
                                         <rect key="frame" x="0.0" y="35" width="300" height="230"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -377,7 +383,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kea-57-2JR" userLabel="GaugeIn" customClass="GaugeCircle" customModule="GaugeKit">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kea-57-2JR" userLabel="GaugeIn" customClass="Gauge" customModule="GaugeKit">
                                         <rect key="frame" x="43" y="68" width="214" height="164"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>

@@ -110,9 +110,29 @@ public class Gauge: UIView {
         }
     }
 
-    @IBInspectable var type: GaugeType = .Circle
+    var type: GaugeType = .Circle {
+        didSet {
+            resetLayers()
+            updateLayerProperties()
+        }
+    }
 
-/// Percantage of filling Gauge: 0..10
+    /// Convenience property to setup type variable from IB
+    @IBInspectable var gaugeTypeInt: Int {
+
+        get {
+            return type.rawValue
+        }
+        set(newValue) {
+            if let newType = GaugeType(rawValue: newValue) {
+                type = newType
+            } else {
+                type = .Circle
+            }
+        }
+    }
+
+    /// Percantage of filling Gauge: 0..10
     @IBInspectable public var rate: CGFloat = 9 {
         didSet {
             updateLayerProperties()
@@ -147,7 +167,7 @@ public class Gauge: UIView {
         case .Circle:
             return getCircleGauge(rotateAngle)
         default:
-            preconditionFailure("Unknown gauge type")
+            return getCircleGauge(rotateAngle)
         }
     }
 
