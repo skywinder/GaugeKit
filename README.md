@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 [![Platform](https://img.shields.io/cocoapods/p/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 
-##Easy reproduce Apple's style gauges!
+##Kit for building custom gauges + easy reproducible Apple's style ring gauges.
 
 ![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/appleFitness.png)
 ->
