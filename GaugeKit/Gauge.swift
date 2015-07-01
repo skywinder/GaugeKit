@@ -159,7 +159,7 @@ public class Gauge: UIView {
 /// background gradient
     var bgGradientLayer: CAGradientLayer!
 
-    func getGauge(rotateAngle: Double = 0) -> CALayer {
+    func getGauge(rotateAngle: Double = 0) -> CAShapeLayer {
         switch type {
         case .Left, .Right:
             return getHalfGauge(rotateAngle)
