@@ -240,13 +240,13 @@ public class Gauge: UIView {
         updateLayerProperties()
     }
 
-    func reverseY(layer: CALayer) {
+    func reverseX(layer: CALayer) {
 //        layer.transform = CATransform3DScale(CATransform3DMakeRotation(CGFloat(M_PI_2), 0, 0, 1), -1, 1, 1)
         layer.transform = CATransform3DScale(layer.transform, -1, 1, 1)
 
     }
 
-    func reverseX(layer: CALayer) {
+    func reverseY(layer: CALayer) {
 //        layer.transform = CATransform3DScale(CATransform3DMakeRotation(CGFloat(M_PI_2), 0, 0, 1), 1, -1, 1)
         layer.transform = CATransform3DScale(layer.transform, 1, -1, 1)
 

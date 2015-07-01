@@ -42,7 +42,7 @@ extension Gauge: GaugeCircle {
         }
 
         if reverse {
-            reverseX(gaugeLayer)
+            reverseY(gaugeLayer)
         }
         return gaugeLayer
     }

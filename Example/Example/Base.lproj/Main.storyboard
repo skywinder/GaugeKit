@@ -236,6 +236,10 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="endColor">
                                                 <color key="value" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rotate">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -360,6 +364,7 @@
                         <outlet property="gauge" destination="0Ob-Uc-gqV" id="EFi-Kl-JB7"/>
                         <outlet property="gaugeSmall" destination="yI1-eB-yrd" id="m5R-Sy-oFe"/>
                         <outlet property="leftGauge" destination="Xql-cv-5KY" id="Hy4-zR-Elj"/>
+                        <outlet property="lineGauge" destination="WLb-pf-4hf" id="8wR-eZ-Nxy"/>
                         <outlet property="rightGauge" destination="fV1-7b-EpV" id="fB1-k6-cGi"/>
                     </connections>
                 </viewController>
@@ -539,8 +544,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="apk-bD-CPT" kind="relationship" relationship="viewControllers" id="tiW-9B-Fzt"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="wEc-Np-wf3"/>
+                        <segue destination="apk-bD-CPT" kind="relationship" relationship="viewControllers" id="tiW-9B-Fzt"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwl-zX-bXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
