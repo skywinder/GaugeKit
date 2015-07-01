@@ -60,8 +60,10 @@ extension Gauge: GaugeLine {
         if roundCap {
             ringLayer.lineCap = kCALineCapRound
             bgLayer.lineCap = kCALineCapRound
+        } else {
+            ringLayer.lineCap = kCALineCapSquare
+            bgLayer.lineCap = kCALineCapSquare
         }
-
         if reverse {
             reverseX(gaugeLayer)
         }
