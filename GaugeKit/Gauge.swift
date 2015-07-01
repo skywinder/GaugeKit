@@ -16,8 +16,7 @@ public class Gauge: UIView {
         case Circle = 0
         case Left
         case Right
-        case Top
-        case Bottom
+        case Line
         case Custom
     }
 
@@ -178,6 +177,7 @@ public class Gauge: UIView {
 
             switch (type) {
             case .Left, .Right:
+                // For Half gauge you have to fill 50% of circle and round it wisely.
                 let percanage = rate / 20 % 0.5
                 ringLayer.strokeEnd = (rate >= 10 ? 0.5 : percanage + ((rate != 0 && percanage == 0) ? 0.5 : 0))
             case .Circle, .Custom:
