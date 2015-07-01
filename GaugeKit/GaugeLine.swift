@@ -22,14 +22,11 @@ extension Gauge: GaugeLine {
         if bgLayer == nil {
             bgLayer = CAShapeLayer.getLine(lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: _bgStartColor, fillColor: UIColor.clearColor(), shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSizeZero, bounds: bounds)
             bgLayer.frame = layer.bounds
-//            gaugeLayer.addSublayer(bgLayer)
         }
 
         if ringLayer == nil {
             ringLayer = CAShapeLayer.getLine(lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: UIColor.clearColor(), fillColor: UIColor.clearColor(), shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSizeZero, bounds: bounds)
-
             ringLayer.frame = layer.bounds
-//            gaugeLayer.addSublayer(ringLayer)
         }
 
         if bgGradientLayer == nil {
@@ -54,8 +51,6 @@ extension Gauge: GaugeLine {
 
         gaugeLayer.frame = layer.bounds
         gaugeLayer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
-        // Rotate it in 90° CCW to make start position from the top
-//        gaugeLayer.transform = CATransform3DRotate(gaugeLayer.transform, CGFloat(rotateAngle * 2 - M_PI_2), 0, 0, 1)
 
         if roundCap {
             ringLayer.lineCap = kCALineCapRound
