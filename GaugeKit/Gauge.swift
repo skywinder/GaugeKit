@@ -16,8 +16,7 @@ public class Gauge: UIView {
         case Circle = 0
         case Left
         case Right
-        case Top
-        case Bottom
+        case Line
         case Custom
     }
 
@@ -28,21 +27,21 @@ public class Gauge: UIView {
     }
 
     /// default is nil: endColor is same as startColor
-    @IBInspectable var endColor: UIColor? {
-        didSet {
-            updateLayerProperties()
-        }
-    }
-    var _endColor: UIColor {
+    @IBInspectable var endColor: UIColor {
         get {
-            if let endColor = endColor {
-                return endColor
+            if let _endColor = _endColor {
+                return _endColor
             } else {
-                return  UIColor.redColor()
+                return UIColor.redColor()
             }
         }
         set {
-            endColor = newValue
+            _endColor = newValue
+        }
+    }
+    private var _endColor: UIColor? {
+        didSet {
+            updateLayerProperties()
         }
     }
     @IBInspectable var bgColor: UIColor? {
@@ -51,10 +50,7 @@ public class Gauge: UIView {
         }
     }
 
-    var _bgStartColor: UIColor {
-        set {
-            bgColor = newValue
-        }
+    internal var _bgStartColor: UIColor {
         get {
             if let bgColor = bgColor {
                 return bgColor.colorWithAlphaComponent(bgAlpha)
@@ -64,15 +60,12 @@ public class Gauge: UIView {
         }
     }
 
-    var _bgEndColor: UIColor {
-        set {
-            bgColor = newValue
-        }
+    internal var _bgEndColor: UIColor {
         get {
             if let bgColor = bgColor {
                 return bgColor.colorWithAlphaComponent(bgAlpha)
             } else {
-                return _endColor.colorWithAlphaComponent(bgAlpha)
+                return endColor.colorWithAlphaComponent(bgAlpha)
             }
         }
     }
@@ -116,10 +109,37 @@ public class Gauge: UIView {
         }
     }
 
-    var type: GaugeType = .Circle
+    var type: GaugeType = .Circle {
+        didSet {
+            resetLayers()
+            updateLayerProperties()
+        }
+    }
 
-/// Percantage of filling Gauge: 0..10
-    @IBInspectable public var rate: CGFloat = 9 {
+    /// Convenience property to setup type variable from IB
+    @IBInspectable var gaugeTypeInt: Int {
+
+        get {
+            return type.rawValue
+        }
+        set(newValue) {
+            if let newType = GaugeType(rawValue: newValue) {
+                type = newType
+            } else {
+                type = .Circle
+            }
+        }
+    }
+
+    /// This value specify rate value for 100% filled gauge. Default is 10.
+    ///i.e. with rate = 10 gauge is 100% filled.
+    @IBInspectable public var maxValue: CGFloat = 10 {
+        didSet {
+            updateLayerProperties()
+        }
+    }
+    /// percantage of filled Gauge. 0..maxValue.
+    @IBInspectable public var rate: CGFloat = 8 {
         didSet {
             updateLayerProperties()
         }
@@ -146,9 +166,17 @@ public class Gauge: UIView {
 /// background gradient
     var bgGradientLayer: CAGradientLayer!
 
-
-    func getGauge(rotateAngle: Double = 0) -> CALayer {
-        preconditionFailure("This method must be overridden")
+    func getGauge(rotateAngle: Double = 0) -> CAShapeLayer {
+        switch type {
+        case .Left, .Right:
+            return getHalfGauge(rotateAngle)
+        case .Circle:
+            return getCircleGauge(rotateAngle)
+        case .Line:
+             return getLineGauge(rotateAngle)
+        default:
+            return getCircleGauge(rotateAngle)
+        }
     }
 
     func updateLayerProperties() {
@@ -158,12 +186,13 @@ public class Gauge: UIView {
 
             switch (type) {
             case .Left, .Right:
-                let percanage = rate / 20 % 0.5
-                ringLayer.strokeEnd = (rate >= 10 ? 0.5 : percanage + ((rate != 0 && percanage == 0) ? 0.5 : 0))
+                // For Half gauge you have to fill 50% of circle and round it wisely.
+                let percanage = rate / 2 / maxValue % 0.5
+                ringLayer.strokeEnd = (rate >= maxValue ? 0.5 : percanage + ((rate != 0 && percanage == 0) ? 0.5 : 0))
             case .Circle, .Custom:
-                ringLayer.strokeEnd = rate / 10
+                ringLayer.strokeEnd = rate / maxValue
             default:
-                ringLayer.strokeEnd = rate / 10
+                ringLayer.strokeEnd = rate / maxValue
 
             }
 
@@ -171,7 +200,7 @@ public class Gauge: UIView {
             //TODO: replace pre-defined colors with array of user-defined colors
             //TODO: and split them proportionally in whole sector
             if colorsArray {
-                switch (rate / 10) {
+                switch (rate / maxValue) {
                 case let r where r >= 0.75:
                     strokeColor = UIColor(hue:
                     112.0 / 360.0, saturation:
@@ -218,13 +247,13 @@ public class Gauge: UIView {
         updateLayerProperties()
     }
 
-    func reverseY(layer: CALayer) {
+    func reverseX(layer: CALayer) {
 //        layer.transform = CATransform3DScale(CATransform3DMakeRotation(CGFloat(M_PI_2), 0, 0, 1), -1, 1, 1)
         layer.transform = CATransform3DScale(layer.transform, -1, 1, 1)
 
     }
 
-    func reverseX(layer: CALayer) {
+    func reverseY(layer: CALayer) {
 //        layer.transform = CATransform3DScale(CATransform3DMakeRotation(CGFloat(M_PI_2), 0, 0, 1), 1, -1, 1)
         layer.transform = CATransform3DScale(layer.transform, 1, -1, 1)
 
@@ -245,3 +274,5 @@ public class Gauge: UIView {
         updateLayerProperties()
     }
 }
+
+

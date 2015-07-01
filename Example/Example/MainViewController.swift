@@ -19,13 +19,16 @@ class MainViewController: UIViewController {
 //    @IBOutlet var scaleLabel: UILabel!
     @IBOutlet var gauge: Gauge!
     @IBOutlet var gaugeSmall: Gauge!
-    @IBOutlet var leftGauge: GaugeHalf!
-    @IBOutlet var rightGauge: GaugeHalf!
+    @IBOutlet var leftGauge: Gauge!
+    @IBOutlet var rightGauge: Gauge!
+    @IBOutlet var lineGauge: Gauge!
     @IBAction func sliderChanged(sender: UISlider) {
         gauge.rate = CGFloat(sender.value)
         gaugeSmall.rate = CGFloat(sender.value)
         leftGauge.rate = CGFloat(sender.value)
         rightGauge.rate = CGFloat(sender.value)
+        lineGauge.rate = CGFloat(sender.value)
+
 //        scaleLabel.text = "\(sender.value)"
     }
 
@@ -38,6 +41,7 @@ class MainViewController: UIViewController {
         gauge.reverse = sender.on
         leftGauge.reverse = sender.on
         rightGauge.reverse = sender.on
+        lineGauge.reverse = sender.on
 
     }
 
