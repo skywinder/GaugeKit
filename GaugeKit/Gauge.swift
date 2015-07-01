@@ -131,8 +131,15 @@ public class Gauge: UIView {
         }
     }
 
-    /// Percantage of filling Gauge: 0..10
-    @IBInspectable public var rate: CGFloat = 9 {
+    /// This value specify rate value for 100% filled gauge. Default is 10.
+    ///i.e. with rate = 10 gauge is 100% filled.
+    @IBInspectable public var maxValue: CGFloat = 10 {
+        didSet {
+            updateLayerProperties()
+        }
+    }
+    /// percantage of filled Gauge. 0..maxValue.
+    @IBInspectable public var rate: CGFloat = 8 {
         didSet {
             updateLayerProperties()
         }
@@ -180,12 +187,12 @@ public class Gauge: UIView {
             switch (type) {
             case .Left, .Right:
                 // For Half gauge you have to fill 50% of circle and round it wisely.
-                let percanage = rate / 20 % 0.5
-                ringLayer.strokeEnd = (rate >= 10 ? 0.5 : percanage + ((rate != 0 && percanage == 0) ? 0.5 : 0))
+                let percanage = rate / 2 / maxValue % 0.5
+                ringLayer.strokeEnd = (rate >= maxValue ? 0.5 : percanage + ((rate != 0 && percanage == 0) ? 0.5 : 0))
             case .Circle, .Custom:
-                ringLayer.strokeEnd = rate / 10
+                ringLayer.strokeEnd = rate / maxValue
             default:
-                ringLayer.strokeEnd = rate / 10
+                ringLayer.strokeEnd = rate / maxValue
 
             }
 
@@ -193,7 +200,7 @@ public class Gauge: UIView {
             //TODO: replace pre-defined colors with array of user-defined colors
             //TODO: and split them proportionally in whole sector
             if colorsArray {
-                switch (rate / 10) {
+                switch (rate / maxValue) {
                 case let r where r >= 0.75:
                     strokeColor = UIColor(hue:
                     112.0 / 360.0, saturation:
