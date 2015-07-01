@@ -165,6 +165,8 @@ public class Gauge: UIView {
     var ringGradientLayer: CAGradientLayer!
 /// background gradient
     var bgGradientLayer: CAGradientLayer!
+/// additional background gradient layer for circle
+    var bgGradientLayer2: CAGradientLayer!
 
     func getGauge(rotateAngle: Double = 0) -> CAShapeLayer {
         switch type {
