@@ -165,6 +165,8 @@ public class Gauge: UIView {
             return getHalfGauge(rotateAngle)
         case .Circle:
             return getCircleGauge(rotateAngle)
+        case .Line:
+             return getLineGauge(rotateAngle)
         default:
             return getCircleGauge(rotateAngle)
         }
