@@ -76,11 +76,11 @@ extension Gauge: GaugeHalf {
         gaugeLayer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         gaugeLayer.transform = CATransform3DRotate(gaugeLayer.transform, CGFloat(rotateAngle), 0, 0, 1)
         if reverse {
-            reverseX(gaugeLayer)
+            reverseY(gaugeLayer)
         }
 
         if type == .Right {
-            reverseY(gaugeLayer)
+            reverseX(gaugeLayer)
         }
 
         return gaugeLayer
