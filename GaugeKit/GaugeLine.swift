@@ -22,15 +22,36 @@ extension Gauge: GaugeLine {
         if bgLayer == nil {
             bgLayer = CAShapeLayer.getLine(lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: _bgStartColor, fillColor: UIColor.clearColor(), shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSizeZero, bounds: bounds)
             bgLayer.frame = layer.bounds
-            gaugeLayer.addSublayer(bgLayer)
+//            gaugeLayer.addSublayer(bgLayer)
         }
 
         if ringLayer == nil {
             ringLayer = CAShapeLayer.getLine(lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: UIColor.clearColor(), fillColor: UIColor.clearColor(), shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSizeZero, bounds: bounds)
 
             ringLayer.frame = layer.bounds
-            gaugeLayer.addSublayer(ringLayer)
+//            gaugeLayer.addSublayer(ringLayer)
         }
+
+        if bgGradientLayer == nil {
+            bgGradientLayer = CAGradientLayer()
+            bgGradientLayer.startPoint = CGPointMake(0, 1)
+            bgGradientLayer.endPoint = CGPointMake(0, 1)
+            bgGradientLayer.colors = [_bgStartColor.CGColor, _bgEndColor.CGColor]
+            bgGradientLayer.frame = layer.bounds
+            bgGradientLayer.mask = bgLayer
+            gaugeLayer.addSublayer(bgGradientLayer)
+        }
+
+        if ringGradientLayer == nil {
+            ringGradientLayer = CAGradientLayer()
+            ringGradientLayer.startPoint = CGPointMake(0, 1)
+            ringGradientLayer.endPoint = CGPointMake(0, 1)
+            ringGradientLayer.colors = [startColor.CGColor, endColor.CGColor]
+            ringGradientLayer.frame = layer.bounds
+            ringGradientLayer.mask = ringLayer
+            gaugeLayer.addSublayer(ringGradientLayer)
+        }
+
         gaugeLayer.frame = layer.bounds
         gaugeLayer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         // Rotate it in 90° CCW to make start position from the top

@@ -221,7 +221,7 @@
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="rate">
-                                                <real key="value" value="8"/>
+                                                <real key="value" value="9"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                                 <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -230,7 +230,7 @@
                                                 <integer key="value" value="3"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                                <real key="value" value="10"/>
+                                                <real key="value" value="16"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="colorsArray" value="NO"/>
                                             <userDefinedRuntimeAttribute type="color" keyPath="endColor">
@@ -239,7 +239,10 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="rotate">
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="bgAlpha">
+                                                <real key="value" value="0.40000000000000002"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
