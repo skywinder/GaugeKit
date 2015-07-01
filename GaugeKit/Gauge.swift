@@ -16,8 +16,7 @@ public class Gauge: UIView {
         case Circle = 0
         case Left
         case Right
-        case Top
-        case Bottom
+        case Line
         case Custom
     }
 
@@ -160,12 +159,14 @@ public class Gauge: UIView {
 /// background gradient
     var bgGradientLayer: CAGradientLayer!
 
-    func getGauge(rotateAngle: Double = 0) -> CALayer {
+    func getGauge(rotateAngle: Double = 0) -> CAShapeLayer {
         switch type {
         case .Left, .Right:
             return getHalfGauge(rotateAngle)
         case .Circle:
             return getCircleGauge(rotateAngle)
+        case .Line:
+             return getLineGauge(rotateAngle)
         default:
             return getCircleGauge(rotateAngle)
         }
@@ -178,6 +179,7 @@ public class Gauge: UIView {
 
             switch (type) {
             case .Left, .Right:
+                // For Half gauge you have to fill 50% of circle and round it wisely.
                 let percanage = rate / 20 % 0.5
                 ringLayer.strokeEnd = (rate >= 10 ? 0.5 : percanage + ((rate != 0 && percanage == 0) ? 0.5 : 0))
             case .Circle, .Custom:
@@ -238,13 +240,13 @@ public class Gauge: UIView {
         updateLayerProperties()
     }
 
-    func reverseY(layer: CALayer) {
+    func reverseX(layer: CALayer) {
 //        layer.transform = CATransform3DScale(CATransform3DMakeRotation(CGFloat(M_PI_2), 0, 0, 1), -1, 1, 1)
         layer.transform = CATransform3DScale(layer.transform, -1, 1, 1)
 
     }
 
-    func reverseX(layer: CALayer) {
+    func reverseY(layer: CALayer) {
 //        layer.transform = CATransform3DScale(CATransform3DMakeRotation(CGFloat(M_PI_2), 0, 0, 1), 1, -1, 1)
         layer.transform = CATransform3DScale(layer.transform, 1, -1, 1)
 
