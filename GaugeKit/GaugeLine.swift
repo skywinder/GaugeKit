@@ -11,11 +11,11 @@ import QuartzCore
 
 
 protocol GaugeLine {
-    func getHalfGauge(rotateAngle: Double) -> CAShapeLayer
+    func getLineGauge(rotateAngle: Double) -> CAShapeLayer
 }
 
 extension Gauge: GaugeLine {
-    func getLineGauge(rotateAngle: Double) -> CALayer {
+    func getLineGauge(rotateAngle: Double) -> CAShapeLayer {
 
         let gaugeLayer = CAShapeLayer()
 
@@ -26,7 +26,7 @@ extension Gauge: GaugeLine {
         }
 
         if ringLayer == nil {
-            ringLayer = CAShapeLayer.getOval(lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: UIColor.clearColor(), fillColor: UIColor.clearColor(), shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSizeZero, bounds: bounds)
+            ringLayer = CAShapeLayer.getLine(lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: UIColor.clearColor(), fillColor: UIColor.clearColor(), shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSizeZero, bounds: bounds)
 
             ringLayer.frame = layer.bounds
             gaugeLayer.addSublayer(ringLayer)
@@ -34,7 +34,7 @@ extension Gauge: GaugeLine {
         gaugeLayer.frame = layer.bounds
         gaugeLayer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         // Rotate it in 90° CCW to make start position from the top
-        gaugeLayer.transform = CATransform3DRotate(gaugeLayer.transform, CGFloat(rotateAngle * 2 - M_PI_2), 0, 0, 1)
+//        gaugeLayer.transform = CATransform3DRotate(gaugeLayer.transform, CGFloat(rotateAngle * 2 - M_PI_2), 0, 0, 1)
 
         if roundCap {
             ringLayer.lineCap = kCALineCapRound

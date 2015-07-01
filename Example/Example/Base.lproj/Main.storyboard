@@ -117,7 +117,6 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="21"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="right" value="YES"/>
                                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                                 <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
@@ -212,6 +211,39 @@
                                             </mask>
                                         </variation>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLb-pf-4hf" userLabel="Gauge Line" customClass="Gauge" customModule="GaugeKit">
+                                        <rect key="frame" x="0.0" y="470" width="568" height="20"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="Tjc-g9-igp"/>
+                                            <constraint firstAttribute="height" constant="20" id="bCl-Kl-7Xw"/>
+                                            <constraint firstAttribute="width" secondItem="WLb-pf-4hf" secondAttribute="height" multiplier="1:2" id="hY3-iI-j9n"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rate">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="gaugeTypeInt">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="colorsArray" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Tjc-g9-igp"/>
+                                                <exclude reference="hY3-iI-j9n"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -235,6 +267,7 @@
                                     <constraint firstItem="0Ob-Uc-gqV" firstAttribute="centerX" secondItem="yI1-eB-yrd" secondAttribute="centerX" id="Mt8-Js-cVs"/>
                                     <constraint firstAttribute="centerX" secondItem="yI1-eB-yrd" secondAttribute="centerX" id="Nvx-tk-DI2"/>
                                     <constraint firstItem="fV1-7b-EpV" firstAttribute="width" secondItem="Xql-cv-5KY" secondAttribute="width" id="OrD-IK-b5u"/>
+                                    <constraint firstAttribute="bottom" secondItem="WLb-pf-4hf" secondAttribute="bottom" id="PEu-j8-ed4"/>
                                     <constraint firstItem="Xql-cv-5KY" firstAttribute="top" secondItem="h2H-B1-nqW" secondAttribute="top" constant="74" id="Qu5-lH-SM4"/>
                                     <constraint firstItem="Xql-cv-5KY" firstAttribute="height" secondItem="0Ob-Uc-gqV" secondAttribute="height" id="RiZ-Zh-6IB"/>
                                     <constraint firstItem="fV1-7b-EpV" firstAttribute="leading" secondItem="0Ob-Uc-gqV" secondAttribute="trailing" constant="-18" id="TSj-im-oD4"/>
@@ -244,9 +277,11 @@
                                     <constraint firstItem="Xql-cv-5KY" firstAttribute="width" secondItem="0Ob-Uc-gqV" secondAttribute="width" id="cW0-mP-yVb"/>
                                     <constraint firstItem="Xql-cv-5KY" firstAttribute="leading" secondItem="h2H-B1-nqW" secondAttribute="leading" constant="8" id="eVp-cc-LKK"/>
                                     <constraint firstItem="0Ob-Uc-gqV" firstAttribute="height" secondItem="h2H-B1-nqW" secondAttribute="height" multiplier="1:2" id="f2m-iw-T3T"/>
+                                    <constraint firstAttribute="width" secondItem="WLb-pf-4hf" secondAttribute="width" id="fIO-Bs-Fg2"/>
                                     <constraint firstAttribute="width" constant="400" id="hPG-kV-fYD"/>
                                     <constraint firstItem="Xql-cv-5KY" firstAttribute="height" secondItem="0Ob-Uc-gqV" secondAttribute="height" multiplier="5:2" id="ige-AP-jty"/>
                                     <constraint firstItem="0Ob-Uc-gqV" firstAttribute="height" secondItem="fV1-7b-EpV" secondAttribute="height" id="kJP-aj-br0"/>
+                                    <constraint firstAttribute="centerX" secondItem="WLb-pf-4hf" secondAttribute="centerX" id="m0Y-PX-gsf"/>
                                     <constraint firstAttribute="trailing" secondItem="fV1-7b-EpV" secondAttribute="trailing" id="pfH-bp-rcc"/>
                                     <constraint firstItem="0Ob-Uc-gqV" firstAttribute="leading" secondItem="Xql-cv-5KY" secondAttribute="trailing" constant="-30" id="rZ2-t1-FL1"/>
                                     <constraint firstItem="fV1-7b-EpV" firstAttribute="height" secondItem="Xql-cv-5KY" secondAttribute="height" id="tF1-ss-fCt"/>
@@ -288,6 +323,7 @@
                         <constraints>
                             <constraint firstItem="6dm-cM-AIc" firstAttribute="centerY" secondItem="CMJ-Tn-iEJ" secondAttribute="centerY" id="HbL-eq-omh"/>
                             <constraint firstItem="CMJ-Tn-iEJ" firstAttribute="centerY" secondItem="f6e-Fr-NqT" secondAttribute="centerY" id="QXa-YJ-f7y"/>
+                            <constraint firstItem="4Kh-Q7-9Qx" firstAttribute="top" secondItem="WLb-pf-4hf" secondAttribute="bottom" constant="7" id="SRb-xo-axE"/>
                             <constraint firstItem="6dm-cM-AIc" firstAttribute="trailing" secondItem="h2H-B1-nqW" secondAttribute="trailing" id="Vh1-z1-2PM"/>
                             <constraint firstItem="f6e-Fr-NqT" firstAttribute="leading" secondItem="h2H-B1-nqW" secondAttribute="leading" id="VoD-bK-vuH"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="f6e-Fr-NqT" secondAttribute="bottom" constant="8" symbolic="YES" id="Z9F-Io-dOO"/>
@@ -312,6 +348,7 @@
                                 <exclude reference="dd0-2j-eRo"/>
                                 <exclude reference="rWo-7x-MEC"/>
                                 <exclude reference="yx2-WQ-cvy"/>
+                                <exclude reference="SRb-xo-axE"/>
                                 <exclude reference="f21-QT-8e2"/>
                                 <exclude reference="Znn-p3-rgO"/>
                                 <exclude reference="alC-H9-oOR"/>

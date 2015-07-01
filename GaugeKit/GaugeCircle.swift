@@ -11,11 +11,11 @@ import QuartzCore
 
 
 protocol GaugeCircle {
-    func getHalfGauge(rotateAngle: Double) -> CAShapeLayer
+    func getCircleGauge(rotateAngle: Double) -> CAShapeLayer
 }
 
 extension Gauge: GaugeCircle {
-    func getCircleGauge(rotateAngle: Double) -> CALayer {
+    func getCircleGauge(rotateAngle: Double) -> CAShapeLayer {
 
         let gaugeLayer = CAShapeLayer()
 

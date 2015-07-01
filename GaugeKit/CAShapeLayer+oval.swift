@@ -21,21 +21,17 @@ extension CAShapeLayer {
                        shadowOffsset: CGSize,
                        bounds: CGRect,
                        rotateAngle: Double? = nil,
-                       anchorPoint: CGPoint? = nil,
-                       isCircle: Bool = true
-
+                       anchorPoint: CGPoint? = nil
     ) -> CAShapeLayer {
 
         var arc = CAShapeLayer()
         let rect = CGRectInset(bounds, CGFloat(lineWidth / 2.0), CGFloat(lineWidth / 2.0))
-        if isCircle {
-            let arcDiameter: CGFloat = min(bounds.width, bounds.height) - 2 * lineWidth
-            let X = CGRectGetMidX(bounds)
+//        let lineWidth: CGFloat = bounds.width - 2 * lineWidth
+        let path = CGPathCreateMutable()
             let Y = CGRectGetMidY(bounds)
-            arc.path = UIBezierPath(ovalInRect: CGRectMake((X - (arcDiameter / 2)), (Y - (arcDiameter / 2)), arcDiameter, arcDiameter)).CGPath
-        } else {
-            arc.path = UIBezierPath(ovalInRect: rect).CGPath
-        }
+        CGPathMoveToPoint(path, nil, lineWidth, Y)
+        CGPathAddLineToPoint(path, nil, bounds.width - lineWidth, Y)
+        arc.path = path
 
         arc = setupArc(arc, lineWidth: lineWidth,
                 strokeStart: strokeStart,
