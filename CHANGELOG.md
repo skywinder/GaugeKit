@@ -4,9 +4,17 @@
 
 [Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.1.1...0.2.0)
 
-**Closed issues:**
+**Implemented enhancements:**
 
 - Implement a maxValue [\#7](https://github.com/skywinder/GaugeKit/issues/7)
+
+**Merged pull requests:**
+
+- Implement maxValue property [\#10](https://github.com/skywinder/GaugeKit/pull/10) ([skywinder](https://github.com/skywinder))
+
+- Implement LineGauge [\#9](https://github.com/skywinder/GaugeKit/pull/9) ([skywinder](https://github.com/skywinder))
+
+- Move all gauges in Gauge class. Transform sublclasses to extensions. Update example. [\#8](https://github.com/skywinder/GaugeKit/pull/8) ([skywinder](https://github.com/skywinder))
 
 ## [0.1.1](https://github.com/skywinder/GaugeKit/tree/0.1.1) (2015-06-22)
 
