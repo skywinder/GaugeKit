@@ -4,6 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 [![License](https://img.shields.io/cocoapods/l/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 [![Platform](https://img.shields.io/cocoapods/p/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
+![language](https://img.shields.io/badge/Language-%20Swift%20-orange.svg)
 
 ##Kit for building custom gauges + easy reproducible Apple's style ring gauges.
 
