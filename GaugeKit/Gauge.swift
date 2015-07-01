@@ -159,10 +159,13 @@ public class Gauge: UIView {
     var gaugeLayer: CALayer!
 /// Colored layer, depends from scale
     var ringLayer: CAShapeLayer!
+    var ringLayer2:CAShapeLayer!
 /// background for ring layer
     var bgLayer: CAShapeLayer!
 /// ring gradient layer
     var ringGradientLayer: CAGradientLayer!
+/// additional ring gradient layer for circle
+    var ringGradientLayer2: CAGradientLayer!
 /// background gradient
     var bgGradientLayer: CAGradientLayer!
 /// additional background gradient layer for circle
