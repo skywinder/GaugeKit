@@ -1,5 +1,13 @@
 # Change Log
 
+## [0.2.0](https://github.com/skywinder/GaugeKit/tree/0.2.0) (2015-07-01)
+
+[Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.1.1...0.2.0)
+
+**Closed issues:**
+
+- Implement a maxValue [\#7](https://github.com/skywinder/GaugeKit/issues/7)
+
 ## [0.1.1](https://github.com/skywinder/GaugeKit/tree/0.1.1) (2015-06-22)
 
 [Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.1.0...0.1.1)
