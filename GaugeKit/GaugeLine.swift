@@ -20,7 +20,7 @@ extension Gauge: GaugeLine {
         let gaugeLayer = CAShapeLayer()
 
         if bgLayer == nil {
-            bgLayer = CAShapeLayer.getOval(lineWidth, path: nil, strokeStart: 0, strokeEnd: 1, strokeColor: _bgStartColor, fillColor: UIColor.clearColor(), shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSizeZero, bounds: bounds)
+            bgLayer = CAShapeLayer.getLine(lineWidth, path: nil, strokeStart: 0, strokeEnd: 1, strokeColor: _bgStartColor, fillColor: UIColor.clearColor(), shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSizeZero, bounds: bounds)
             bgLayer.frame = layer.bounds
             gaugeLayer.addSublayer(bgLayer)
         }
