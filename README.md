@@ -28,14 +28,14 @@ use_frameworks!
 pod "GaugeKit"
 ```
 
-## Features
+## Features :sparkles:
 
 - Flexible and high-customizible gauges
 - Auto-resized views
 - Support `@IBInspectable` & `@IBDesignable`
-- Written with vanilla `Swift` flavor :hatched_chick:
+- Written with vanilla `Swift` flavor :baby_chick:
 
-## Usage
+## Usage :rainbow:
 
 - Put on storyboard `UIView`, and set them class `Gauge` and module `GaugeKit`:
 
@@ -56,6 +56,26 @@ pod "GaugeKit"
 ###IB Example:
 
 ![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/ib_example_1.gif)
+
+## Requirements
+
+- iOS SDK **7.0** or later (iOS SDK **8.0** if you use it as a Framework)
+- **Swift 1.2** and **Xcode 6.3** or later
+
+## Communication :speaker:
+
+Bug reports, feature requests, patches, well-wishes are always welcome! 
+
+- If you need help, open an issue.
+- If you found a bug, open an issue.
+- If you have a feature request, open an issue.
+- If you want to contribute, see [Contributing](https://github.com/skywinder/GaugeKit#contributing-octocat) section.
+
+## Contributing :octocat:
+I'd love to see your ideas for improving this library.
+
+The best way to contribute is by submitting a pull request.
+I'll do my best to respond to you as soon as possible.
 
 ## Author
 
