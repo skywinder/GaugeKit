@@ -1,6 +1,5 @@
 # GaugeKit
 
-[![CI Status](http://img.shields.io/travis/Petr Korolev/GaugeKit.svg?style=flat)](https://travis-ci.org/Petr Korolev/GaugeKit)
 [![Version](https://img.shields.io/cocoapods/v/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 [![License](https://img.shields.io/cocoapods/l/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 [![Platform](https://img.shields.io/cocoapods/p/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
