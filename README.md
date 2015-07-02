@@ -36,6 +36,19 @@ pod "GaugeKit"
 - Support `@IBInspectable` & `@IBDesignable`
 - Written with vanilla `Swift` flavor :hatched_chick:
 
+## Usage
+
+- Put on storyboard `UIView`, and set them class `Gauge` and module `GaugeKit`:
+
+![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/IB_class.png)
+
+- Select type of gauge (property `type` in class or `gaugeTypeInt` for changes directly in Interface builder)
+
+       - case `Circle`
+       - case `Left`
+       - case `Right`
+       - case `Line`
+
 ##Example:
 
 ![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/GaugeKit_sreenshot.png)
