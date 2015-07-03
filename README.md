@@ -5,6 +5,9 @@
 [![Platform](https://img.shields.io/cocoapods/p/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 ![language](https://img.shields.io/badge/Language-%20Swift%20-orange.svg)
 
+<img src="https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/GK.PNG" width="200">
+
+
 ##Kit for building custom gauges + easy reproducible Apple's style ring gauges.
 
 ![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/appleFitness.png)
