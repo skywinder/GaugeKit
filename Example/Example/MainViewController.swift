@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
 
     }
 
+    @IBOutlet var gauges: [Gauge]!
 //    @IBOutlet var scaleLabel: UILabel!
     @IBOutlet var gauge: Gauge!
     @IBOutlet var gaugeSmall: Gauge!
@@ -37,6 +38,13 @@ class MainViewController: UIViewController {
 
     }
 
+    @IBAction func animateAction(sender: AnyObject) {
+        UIView.animateWithDuration(NSTimeInterval(5.0), animations: { () -> Void in
+            self.leftGauge.rate = CGFloat(arc4random() % 10)
+            return
+        })
+        
+    }
     @IBAction func switchChanged(sender: UISwitch) {
         gauge.reverse = sender.on
         leftGauge.reverse = sender.on
