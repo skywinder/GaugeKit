@@ -109,6 +109,9 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="gaugeTypeInt">
                                                 <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -138,7 +141,7 @@
                                                 <real key="value" value="23"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                                <color key="value" red="0.9450981021" green="0.53333336109999996" blue="0.1411764771" alpha="1" colorSpace="deviceRGB"/>
+                                                <color key="value" red="1" green="0.40000000596046448" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                                 <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -218,6 +221,9 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="bgAlpha">
                                                 <real key="value" value="0.40000000000000002"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" red="1" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -226,6 +232,13 @@
                                             </mask>
                                         </variation>
                                     </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GK" translatesAutoresizingMaskIntoConstraints="NO" id="86S-uh-YXI">
+                                        <rect key="frame" x="260" y="201" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="cs0-xz-sg4"/>
+                                            <constraint firstAttribute="width" secondItem="86S-uh-YXI" secondAttribute="height" multiplier="1:1" id="gIl-Ra-9kl"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -239,6 +252,7 @@
                                     <constraint firstItem="Xql-cv-5KY" firstAttribute="height" secondItem="h2H-B1-nqW" secondAttribute="height" id="FUh-rs-Vst"/>
                                     <constraint firstAttribute="centerY" secondItem="fV1-7b-EpV" secondAttribute="centerY" constant="19" id="FuV-a1-0mz"/>
                                     <constraint firstItem="0Ob-Uc-gqV" firstAttribute="width" secondItem="yI1-eB-yrd" secondAttribute="width" multiplier="5:3" id="HH7-u8-eb7"/>
+                                    <constraint firstItem="0Ob-Uc-gqV" firstAttribute="centerY" secondItem="86S-uh-YXI" secondAttribute="centerY" id="HbK-qR-RKt"/>
                                     <constraint firstItem="Xql-cv-5KY" firstAttribute="height" secondItem="h2H-B1-nqW" secondAttribute="height" id="HdK-Y9-Lrq"/>
                                     <constraint firstAttribute="centerY" secondItem="0Ob-Uc-gqV" secondAttribute="centerY" constant="19" id="K2d-OX-cq5"/>
                                     <constraint firstItem="0Ob-Uc-gqV" firstAttribute="width" secondItem="h2H-B1-nqW" secondAttribute="width" multiplier="2:5" id="K2z-9n-C0z"/>
@@ -268,6 +282,7 @@
                                     <constraint firstAttribute="height" constant="300" id="wgz-zN-EJ9"/>
                                     <constraint firstItem="0Ob-Uc-gqV" firstAttribute="centerY" secondItem="yI1-eB-yrd" secondAttribute="centerY" id="xeb-mW-hb5"/>
                                     <constraint firstAttribute="centerX" secondItem="a4J-hI-3WU" secondAttribute="centerX" constant="-0.5" id="xgJ-Dy-4OR"/>
+                                    <constraint firstItem="0Ob-Uc-gqV" firstAttribute="centerX" secondItem="86S-uh-YXI" secondAttribute="centerX" constant="-1" id="yfc-zd-OZv"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -357,7 +372,11 @@
                         <outlet property="leftGauge" destination="Xql-cv-5KY" id="Hy4-zR-Elj"/>
                         <outlet property="lineGauge" destination="WLb-pf-4hf" id="8wR-eZ-Nxy"/>
                         <outlet property="rightGauge" destination="fV1-7b-EpV" id="fB1-k6-cGi"/>
-                        <outletCollection property="gauges" destination="yI1-eB-yrd" collectionClass="NSMutableArray" id="vxA-9S-3Z5"/>
+                        <outletCollection property="allGauges" destination="yI1-eB-yrd" collectionClass="NSMutableArray" id="IwR-lm-XUp"/>
+                        <outletCollection property="allGauges" destination="fV1-7b-EpV" collectionClass="NSMutableArray" id="fnw-ym-1SY"/>
+                        <outletCollection property="allGauges" destination="Xql-cv-5KY" collectionClass="NSMutableArray" id="0Jd-cP-v30"/>
+                        <outletCollection property="allGauges" destination="0Ob-Uc-gqV" collectionClass="NSMutableArray" id="uc0-Q2-q06"/>
+                        <outletCollection property="allGauges" destination="WLb-pf-4hf" collectionClass="NSMutableArray" id="AyM-jA-gw3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -545,4 +564,7 @@
             <point key="canvasLocation" x="588" y="465"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="GK" width="200" height="200"/>
+    </resources>
 </document>
