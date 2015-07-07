@@ -1,6 +1,7 @@
 # GaugeKit
 
 [![Version](https://img.shields.io/cocoapods/v/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 [![Platform](https://img.shields.io/cocoapods/p/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 ![language](https://img.shields.io/badge/Language-%20Swift%20-orange.svg)
@@ -20,6 +21,10 @@ Just open `GaugeKit.xcworkspace` and run Example project.
 
 ## Installation
 
+### CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects.
+
 GaugeKit is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
@@ -30,6 +35,28 @@ use_frameworks!
 
 pod "GaugeKit"
 ```
+
+### Carthage
+
+To integrate GaugeKit into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "skywinder/GaugeKit" >= 0.2
+```
+
+
+#### Embedded Framework
+
+Add GaugeKit as a [submodule](http://git-scm.com/docs/git-submodule) by opening the Terminal, `cd`-ing into your top-level project directory, and entering the following command:
+
+```bash
+$ git submodule add https://github.com/skywinder/GaugeKit.git
+```
+
+### Manually
+
+If you prefer not to use either of the aforementioned dependency managers, you can simply add swift files into your project manually.
+
 
 ## Features :sparkles:
 

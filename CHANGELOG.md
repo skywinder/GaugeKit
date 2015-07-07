@@ -1,5 +1,15 @@
 # Change Log
 
+## [0.2.2](https://github.com/skywinder/GaugeKit/tree/0.2.2) (2015-07-07)
+
+[Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.2.1...0.2.2)
+
+**Merged pull requests:**
+
+- Add Carthage support [\#15](https://github.com/skywinder/GaugeKit/pull/15) ([skywinder](https://github.com/skywinder))
+
+- Fix framework linking. [\#14](https://github.com/skywinder/GaugeKit/pull/14) ([skywinder](https://github.com/skywinder))
+
 ## [0.2.1](https://github.com/skywinder/GaugeKit/tree/0.2.1) (2015-07-05)
 
 [Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.2.0...0.2.1)
@@ -10,7 +20,7 @@
 
 **Merged pull requests:**
 
-- \* fix line gauge gradient layer endpoint \* remove framework files with hardcoded path [\#13](https://github.com/skywinder/GaugeKit/pull/13) ([duckspeaker](https://github.com/duckspeaker))
+- Fix line gauge gradient layer endpoint [\#13](https://github.com/skywinder/GaugeKit/pull/13) ([duckspeaker](https://github.com/duckspeaker))
 
 ## [0.2.0](https://github.com/skywinder/GaugeKit/tree/0.2.0) (2015-07-01)
 
@@ -22,11 +32,11 @@
 
 **Merged pull requests:**
 
+- Implement maxValue property [\#10](https://github.com/skywinder/GaugeKit/pull/10) ([skywinder](https://github.com/skywinder))
+
 - Implement LineGauge [\#9](https://github.com/skywinder/GaugeKit/pull/9) ([skywinder](https://github.com/skywinder))
 
 - Move all gauges in Gauge class. Transform sublclasses to extensions. Update example. [\#8](https://github.com/skywinder/GaugeKit/pull/8) ([skywinder](https://github.com/skywinder))
-
-- Implement maxValue property [\#10](https://github.com/skywinder/GaugeKit/pull/10) ([skywinder](https://github.com/skywinder))
 
 ## [0.1.1](https://github.com/skywinder/GaugeKit/tree/0.1.1) (2015-06-22)
 
