@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C84929C1B4FA52800445D83 /* GaugeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C84929B1B4FA52800445D83 /* GaugeKit.framework */; };
+		1C84929D1B4FA52800445D83 /* GaugeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C84929B1B4FA52800445D83 /* GaugeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1C9404FB1B31D057001BF122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9404FA1B31D057001BF122 /* AppDelegate.swift */; };
 		1C9405001B31D057001BF122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C9404FE1B31D057001BF122 /* Main.storyboard */; };
 		1C9405021B31D057001BF122 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C9405011B31D057001BF122 /* Images.xcassets */; };
@@ -14,8 +16,6 @@
 		1C9405111B31D057001BF122 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9405101B31D057001BF122 /* ExampleTests.swift */; };
 		1C94051B1B31D12D001BF122 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C94051A1B31D12D001BF122 /* MainViewController.swift */; };
 		1CE31D5C1B345569006E4F7C /* AppleGaugeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31D5B1B345569006E4F7C /* AppleGaugeViewController.swift */; };
-		1CE6536E1B4BBD3C00FA4569 /* GaugeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE6536D1B4BBD3C00FA4569 /* GaugeKit.framework */; };
-		1CE6536F1B4BBD3C00FA4569 /* GaugeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE6536D1B4BBD3C00FA4569 /* GaugeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1CE653701B4BBD3C00FA4569 /* Embed Frameworks */ = {
+		1C84929E1B4FA52900445D83 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1CE6536F1B4BBD3C00FA4569 /* GaugeKit.framework in Embed Frameworks */,
+				1C84929D1B4FA52800445D83 /* GaugeKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,7 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1C8603F11B49DFB2005F495B /* GaugeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GaugeKit.framework; path = "../build/Debug-iphoneos/GaugeKit.framework"; sourceTree = "<group>"; };
+		1C84929B1B4FA52800445D83 /* GaugeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = GaugeKit.framework; path = "/Users/petrkorolev/Library/Developer/Xcode/DerivedData/GaugeKit-evarryfseqjhwbcgaxucqvnmcesq/Build/Products/Debug-iphoneos/GaugeKit.framework"; sourceTree = "<absolute>"; };
 		1C9404F51B31D057001BF122 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C9404F91B31D057001BF122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C9404FA1B31D057001BF122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +55,6 @@
 		1C9405101B31D057001BF122 /* ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTests.swift; sourceTree = "<group>"; };
 		1C94051A1B31D12D001BF122 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1CE31D5B1B345569006E4F7C /* AppleGaugeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleGaugeViewController.swift; sourceTree = "<group>"; };
-		1CE6536D1B4BBD3C00FA4569 /* GaugeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = GaugeKit.framework; path = "/Users/petrkorolev/Library/Developer/Xcode/DerivedData/GaugeKit-bmbifmbfuibegzaycqpznxyhungq/Build/Products/Debug-iphoneos/GaugeKit.framework"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CE6536E1B4BBD3C00FA4569 /* GaugeKit.framework in Frameworks */,
+				1C84929C1B4FA52800445D83 /* GaugeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,8 +79,7 @@
 		1C9404EC1B31D057001BF122 = {
 			isa = PBXGroup;
 			children = (
-				1CE6536D1B4BBD3C00FA4569 /* GaugeKit.framework */,
-				1C8603F11B49DFB2005F495B /* GaugeKit.framework */,
+				1C84929B1B4FA52800445D83 /* GaugeKit.framework */,
 				1C9404F71B31D057001BF122 /* Example */,
 				1C94050D1B31D057001BF122 /* ExampleTests */,
 				1C9404F61B31D057001BF122 /* Products */,
@@ -146,7 +144,7 @@
 				1C9404F11B31D057001BF122 /* Sources */,
 				1C9404F21B31D057001BF122 /* Frameworks */,
 				1C9404F31B31D057001BF122 /* Resources */,
-				1CE653701B4BBD3C00FA4569 /* Embed Frameworks */,
+				1C84929E1B4FA52900445D83 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
