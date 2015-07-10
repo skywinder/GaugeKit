@@ -20,14 +20,14 @@ public class Gauge: UIView {
         case Custom
     }
 
-    @IBInspectable var startColor: UIColor = UIColor.greenColor() {
+    @IBInspectable public var startColor: UIColor = UIColor.greenColor() {
         didSet {
             updateLayerProperties()
         }
     }
 
     /// default is nil: endColor is same as startColor
-    @IBInspectable var endColor: UIColor {
+    @IBInspectable public var endColor: UIColor {
         get {
             if let _endColor = _endColor {
                 return _endColor
@@ -44,9 +44,10 @@ public class Gauge: UIView {
             updateLayerProperties()
         }
     }
-    @IBInspectable var bgColor: UIColor? {
+    @IBInspectable public var bgColor: UIColor? {
         didSet {
             updateLayerProperties()
+            setNeedsLayout()
         }
     }
 
@@ -69,27 +70,27 @@ public class Gauge: UIView {
             }
         }
     }
-    @IBInspectable var bgAlpha: CGFloat = 0.2 {
+    @IBInspectable public var bgAlpha: CGFloat = 0.2 {
         didSet {
             updateLayerProperties()
         }
     }
-    @IBInspectable var rotate: Double = 0 {
+    @IBInspectable public var rotate: Double = 0 {
         didSet {
             updateLayerProperties()
         }
     }
-    @IBInspectable var colorsArray: Bool = false {
+    @IBInspectable public var colorsArray: Bool = false {
         didSet {
             updateLayerProperties()
         }
     }
-    @IBInspectable var shadowRadius: CGFloat = 0 {
+    @IBInspectable public var shadowRadius: CGFloat = 0 {
         didSet {
             updateLayerProperties()
         }
     }
-    @IBInspectable var shadowOpacity: Float = 0.5 {
+    @IBInspectable public var shadowOpacity: Float = 0.5 {
         didSet {
             updateLayerProperties()
         }
