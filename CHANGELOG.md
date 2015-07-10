@@ -1,5 +1,9 @@
 # Change Log
 
+## [0.2.3](https://github.com/skywinder/GaugeKit/tree/0.2.3) (2015-07-10)
+
+[Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.2.2...0.2.3)
+
 ## [0.2.2](https://github.com/skywinder/GaugeKit/tree/0.2.2) (2015-07-07)
 
 [Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.2.1...0.2.2)
