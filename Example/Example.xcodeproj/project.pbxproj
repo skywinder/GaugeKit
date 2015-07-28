@@ -43,7 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1C84929B1B4FA52800445D83 /* GaugeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = GaugeKit.framework; path = "/Users/petrkorolev/Library/Developer/Xcode/DerivedData/GaugeKit-evarryfseqjhwbcgaxucqvnmcesq/Build/Products/Debug-iphoneos/GaugeKit.framework"; sourceTree = "<absolute>"; };
+		1C84929B1B4FA52800445D83 /* GaugeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GaugeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C9404F51B31D057001BF122 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C9404F91B31D057001BF122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C9404FA1B31D057001BF122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
