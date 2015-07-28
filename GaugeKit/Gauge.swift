@@ -22,6 +22,7 @@ public class Gauge: UIView {
 
     @IBInspectable public var startColor: UIColor = UIColor.greenColor() {
         didSet {
+            resetLayers()
             updateLayerProperties()
         }
     }
@@ -41,6 +42,7 @@ public class Gauge: UIView {
     }
     private var _endColor: UIColor? {
         didSet {
+            resetLayers()
             updateLayerProperties()
         }
     }
