@@ -25,8 +25,6 @@ extension CAShapeLayer {
     ) -> CAShapeLayer {
 
         var arc = CAShapeLayer()
-        _ = CGRectInset(bounds, CGFloat(lineWidth / 2.0), CGFloat(lineWidth / 2.0))
-//        let lineWidth: CGFloat = bounds.width - 2 * lineWidth
         let path = CGPathCreateMutable()
             let Y = CGRectGetMidY(bounds)
         CGPathMoveToPoint(path, nil, lineWidth, Y)
