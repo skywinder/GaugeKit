@@ -32,7 +32,7 @@ extension Gauge: GaugeLine {
         if bgGradientLayer == nil {
             bgGradientLayer = CAGradientLayer()
             bgGradientLayer.startPoint = CGPointMake(0, 1)
-            bgGradientLayer.endPoint = CGPointMake(0, 1)
+            bgGradientLayer.endPoint = CGPointMake(1, 1)
             bgGradientLayer.colors = [_bgStartColor.CGColor, _bgEndColor.CGColor]
             bgGradientLayer.frame = layer.bounds
             bgGradientLayer.mask = bgLayer
@@ -42,7 +42,7 @@ extension Gauge: GaugeLine {
         if ringGradientLayer == nil {
             ringGradientLayer = CAGradientLayer()
             ringGradientLayer.startPoint = CGPointMake(0, 1)
-            ringGradientLayer.endPoint = CGPointMake(0, 1)
+            ringGradientLayer.endPoint = CGPointMake(1, 1)
             ringGradientLayer.colors = [startColor.CGColor, endColor.CGColor]
             ringGradientLayer.frame = layer.bounds
             ringGradientLayer.mask = ringLayer

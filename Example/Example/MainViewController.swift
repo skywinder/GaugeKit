@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
 
     }
 
+    @IBOutlet var allGauges: [Gauge]!
 //    @IBOutlet var scaleLabel: UILabel!
     @IBOutlet var gauge: Gauge!
     @IBOutlet var gaugeSmall: Gauge!
@@ -34,6 +35,27 @@ class MainViewController: UIViewController {
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+
+    }
+
+    @IBAction func animateAction(sender: AnyObject) {
+
+//   UIView.beginAnimations(nil, context: nil)
+//        UIView.setAnimationDuration(5.0)
+//        for gauge in self.allGauges {
+//            gauge.rate = gauge.rate == 0.0 ? 10 : 0
+//        }
+//        UIView.commitAnimations()
+//
+        UIView.animateWithDuration(NSTimeInterval(5.0), animations: {
+            () -> Void in
+            println(self.allGauges.count)
+            for gauge in self.allGauges {
+                gauge.rate = gauge.rate == 0.0 ? 10 : 0
+//                gauge.rate = CGFloat(arc4random() % 10)
+            }
+            return
+        })
 
     }
 

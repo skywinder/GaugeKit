@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C4B1A471B37F491008720C6 /* GaugeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4B1A461B37F491008720C6 /* GaugeKit.framework */; };
-		1C4B1A481B37F491008720C6 /* GaugeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C4B1A461B37F491008720C6 /* GaugeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1C84929C1B4FA52800445D83 /* GaugeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C84929B1B4FA52800445D83 /* GaugeKit.framework */; };
+		1C84929D1B4FA52800445D83 /* GaugeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1C84929B1B4FA52800445D83 /* GaugeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1C9404FB1B31D057001BF122 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9404FA1B31D057001BF122 /* AppDelegate.swift */; };
 		1C9405001B31D057001BF122 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C9404FE1B31D057001BF122 /* Main.storyboard */; };
 		1C9405021B31D057001BF122 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C9405011B31D057001BF122 /* Images.xcassets */; };
@@ -29,13 +29,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1C4B1A491B37F492008720C6 /* Embed Frameworks */ = {
+		1C84929E1B4FA52900445D83 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1C4B1A481B37F491008720C6 /* GaugeKit.framework in Embed Frameworks */,
+				1C84929D1B4FA52800445D83 /* GaugeKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,8 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1C1E3C561B34CFE2005F495B /* GaugeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GaugeKit.framework; path = "../build/Debug-iphoneos/GaugeKit.framework"; sourceTree = "<group>"; };
-		1C4B1A461B37F491008720C6 /* GaugeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = GaugeKit.framework; path = "/Users/petrkorolev/Library/Developer/Xcode/DerivedData/GaugeKit-evarryfseqjhwbcgaxucqvnmcesq/Build/Products/Debug-iphoneos/GaugeKit.framework"; sourceTree = "<absolute>"; };
+		1C84929B1B4FA52800445D83 /* GaugeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GaugeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C9404F51B31D057001BF122 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C9404F91B31D057001BF122 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C9404FA1B31D057001BF122 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C4B1A471B37F491008720C6 /* GaugeKit.framework in Frameworks */,
+				1C84929C1B4FA52800445D83 /* GaugeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,8 +79,7 @@
 		1C9404EC1B31D057001BF122 = {
 			isa = PBXGroup;
 			children = (
-				1C4B1A461B37F491008720C6 /* GaugeKit.framework */,
-				1C1E3C561B34CFE2005F495B /* GaugeKit.framework */,
+				1C84929B1B4FA52800445D83 /* GaugeKit.framework */,
 				1C9404F71B31D057001BF122 /* Example */,
 				1C94050D1B31D057001BF122 /* ExampleTests */,
 				1C9404F61B31D057001BF122 /* Products */,
@@ -146,7 +144,7 @@
 				1C9404F11B31D057001BF122 /* Sources */,
 				1C9404F21B31D057001BF122 /* Frameworks */,
 				1C9404F31B31D057001BF122 /* Resources */,
-				1C4B1A491B37F492008720C6 /* Embed Frameworks */,
+				1C84929E1B4FA52900445D83 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -370,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -383,6 +382,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
