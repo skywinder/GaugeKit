@@ -152,7 +152,7 @@ public class Gauge: UIView {
             updateLayerProperties()
         }
     }
-    @IBInspectable var lineWidth: CGFloat = 15.0 {
+    @IBInspectable public var lineWidth: CGFloat = 15.0 {
         didSet {
             updateLayerProperties()
         }
