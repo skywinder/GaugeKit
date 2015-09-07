@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.2.5](https://github.com/skywinder/GaugeKit/tree/0.2.5) (2015-09-07)
+[Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.2.4...0.2.5)
+
+**Merged pull requests:**
+
+- Make lineWidth a public variable [\#20](https://github.com/skywinder/GaugeKit/pull/20) ([lammertw](https://github.com/lammertw))
+
 ## [0.2.4](https://github.com/skywinder/GaugeKit/tree/0.2.4) (2015-07-28)
 [Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.2.3...0.2.4)
 
@@ -39,12 +46,12 @@
 **Implemented enhancements:**
 
 - Implement a maxValue [\#7](https://github.com/skywinder/GaugeKit/issues/7)
+- Implement LineGauge [\#9](https://github.com/skywinder/GaugeKit/pull/9) ([skywinder](https://github.com/skywinder))
+- Move all gauges in Gauge class. Transform sublclasses to extensions. Update example. [\#8](https://github.com/skywinder/GaugeKit/pull/8) ([skywinder](https://github.com/skywinder))
 
 **Merged pull requests:**
 
 - Implement maxValue property [\#10](https://github.com/skywinder/GaugeKit/pull/10) ([skywinder](https://github.com/skywinder))
-- Implement LineGauge [\#9](https://github.com/skywinder/GaugeKit/pull/9) ([skywinder](https://github.com/skywinder))
-- Move all gauges in Gauge class. Transform sublclasses to extensions. Update example. [\#8](https://github.com/skywinder/GaugeKit/pull/8) ([skywinder](https://github.com/skywinder))
 
 ## [0.1.1](https://github.com/skywinder/GaugeKit/tree/0.1.1) (2015-06-22)
 [Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.1.0...0.1.1)
