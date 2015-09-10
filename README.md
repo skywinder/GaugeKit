@@ -1,15 +1,14 @@
+
+<img src="https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/GK.PNG" width="200">
+
 # GaugeKit
+##Kit for building custom gauges + easy reproducible Apple's style ring gauges.
 
 [![Version](https://img.shields.io/cocoapods/v/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 [![Platform](https://img.shields.io/cocoapods/p/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 ![language](https://img.shields.io/badge/Language-%20Swift%20-orange.svg)
-
-<img src="https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/GK.PNG" width="200">
-
-
-##Kit for building custom gauges + easy reproducible Apple's style ring gauges.
 
 ![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/appleFitness.png)
 ->
@@ -96,9 +95,9 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 
 Bug reports, feature requests, patches, well-wishes are always welcome! 
 
-- If you need help, open an issue.
-- If you found a bug, open an issue.
-- If you have a feature request, open an issue.
+- If you need help, [open an issue](https://github.com/skywinder/GaugeKit/issues/new).
+- If you found a bug, [open an issue](https://github.com/skywinder/GaugeKit/issues/new).
+- If you have a feature request, [open an issue](https://github.com/skywinder/GaugeKit/issues/new).
 - If you want to contribute, see [Contributing](https://github.com/skywinder/GaugeKit#contributing-octocat) section.
 
 ## Contributing :octocat:
