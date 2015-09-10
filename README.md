@@ -9,9 +9,11 @@
 # GaugeKit
 ##Kit for building custom gauges + easy reproducible Apple's style ring gauges.
 
-![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/appleFitness.png)
+<img src="https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/appleFitness.png" width="250">
 ->
-![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/gauge.gif)
+<img src="https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/gauge.gif" width="200">
+
+
 
 ## Example Usage
 
