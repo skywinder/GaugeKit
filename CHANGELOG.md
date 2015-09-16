@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.3.0](https://github.com/skywinder/GaugeKit/tree/0.3.0) (2015-09-16)
+[Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.2.5...0.3.0)
+
+**Merged pull requests:**
+
+- Update to Swift 2.0 [\#22](https://github.com/skywinder/GaugeKit/pull/22) ([skywinder](https://github.com/skywinder))
+
 ## [0.2.5](https://github.com/skywinder/GaugeKit/tree/0.2.5) (2015-09-07)
 [Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.2.4...0.2.5)
 
