@@ -9,16 +9,16 @@
 import UIKit
 import QuartzCore
 
+public enum GaugeType: Int {
+    case Circle = 0
+    case Left
+    case Right
+    case Line
+    case Custom
+}
+
 @IBDesignable
 public class Gauge: UIView {
-
-    enum GaugeType: Int {
-        case Circle = 0
-        case Left
-        case Right
-        case Line
-        case Custom
-    }
 
     @IBInspectable public var startColor: UIColor = UIColor.greenColor() {
         didSet {
@@ -112,7 +112,7 @@ public class Gauge: UIView {
         }
     }
 
-    var type: GaugeType = .Circle {
+    public var type: GaugeType = .Circle {
         didSet {
             resetLayers()
             updateLayerProperties()
