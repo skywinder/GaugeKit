@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.3.1](https://github.com/skywinder/GaugeKit/tree/0.3.1) (2016-01-05)
+[Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.3.0...0.3.1)
+
+**Merged pull requests:**
+
+- Makes gauge type property public [\#27](https://github.com/skywinder/GaugeKit/pull/27) ([chadedrupt](https://github.com/chadedrupt))
+
 ## [0.3.0](https://github.com/skywinder/GaugeKit/tree/0.3.0) (2015-09-16)
 [Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.2.5...0.3.0)
 
@@ -45,7 +52,7 @@
 
 **Merged pull requests:**
 
-- Fix line gauge gradient layer endpoint [\#13](https://github.com/skywinder/GaugeKit/pull/13) ([duckspeaker](https://github.com/duckspeaker))
+- Fix line gauge gradient layer endpoint [\#13](https://github.com/skywinder/GaugeKit/pull/13) ([kaizensoze](https://github.com/kaizensoze))
 
 ## [0.2.0](https://github.com/skywinder/GaugeKit/tree/0.2.0) (2015-07-01)
 [Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.1.1...0.2.0)
