@@ -1,8 +1,9 @@
 [![Version](https://img.shields.io/cocoapods/v/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
+[![Build Status](https://travis-ci.org/skywinder/GaugeKit.svg)](https://travis-ci.org/skywinder/GaugeKit)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+![language](https://img.shields.io/badge/Language-%20Swift%20-orange.svg)
 [![License](https://img.shields.io/cocoapods/l/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 [![Platform](https://img.shields.io/cocoapods/p/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
-![language](https://img.shields.io/badge/Language-%20Swift%20-orange.svg)
 
 <img src="https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/GK.PNG" width="200">
 
