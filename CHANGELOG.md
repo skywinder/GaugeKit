@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.3.2](https://github.com/skywinder/GaugeKit/tree/0.3.2) (2016-01-29)
+[Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.3.1...0.3.2)
+
+**Implemented enhancements:**
+
+- bugfix | padding between circle and component bounds has been eliminated [\#29](https://github.com/skywinder/GaugeKit/pull/29) ([volkdmitri](https://github.com/volkdmitri))
+
 ## [0.3.1](https://github.com/skywinder/GaugeKit/tree/0.3.1) (2016-01-05)
 [Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.3.0...0.3.1)
 
