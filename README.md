@@ -90,8 +90,9 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 
 ## Requirements
 
-- iOS SDK **7.0** or later (iOS SDK **8.0** if you use it as a Framework)
-- **Swift 1.2** and **Xcode 6.3** or later
+- iOS SDK **7.0** or **later** (iOS SDK **8.0** if you use it as a Framework)
+- **Swift 1.2** and **Xcode 6.3** or later 
+- **Swift 2.x.x** is also supported!
 
 ## Communication :speaker:
 
@@ -106,11 +107,6 @@ Bug reports, feature requests, patches, well-wishes are always welcome!
 I'd love to see your ideas for improving this library.
 
 The best way to contribute is by submitting a pull request.
-I'll do my best to respond to you as soon as possible.
-
-## Author
-
-Petr Korolev, sky4winder@gmail.com
 
 ## License
 
