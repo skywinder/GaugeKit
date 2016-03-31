@@ -39,24 +39,13 @@ class MainViewController: UIViewController {
     }
 
     @IBAction func animateAction(sender: AnyObject) {
+        for gauge in self.allGauges {
+            let newRate = gauge.rate == 0.0 ? 10 : 0
 
-//   UIView.beginAnimations(nil, context: nil)
-//        UIView.setAnimationDuration(5.0)
-//        for gauge in self.allGauges {
-//            gauge.rate = gauge.rate == 0.0 ? 10 : 0
-//        }
-//        UIView.commitAnimations()
-//
-        UIView.animateWithDuration(NSTimeInterval(5.0), animations: {
-            () -> Void in
-            print(self.allGauges.count)
-            for gauge in self.allGauges {
-                gauge.rate = gauge.rate == 0.0 ? 10 : 0
-//                gauge.rate = CGFloat(arc4random() % 10)
+            gauge.animateRate(duration: 5.0, newValue: newRate) { (finished) in
+                print("Gauge animation completed !")
             }
-            return
-        })
-
+        }
     }
 
     @IBAction func switchChanged(sender: UISwitch) {

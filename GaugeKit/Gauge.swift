@@ -19,7 +19,6 @@ public enum GaugeType: Int {
 
 @IBDesignable
 public class Gauge: UIView {
-
     @IBInspectable public var startColor: UIColor = UIColor.greenColor() {
         didSet {
             resetLayers()
@@ -169,6 +168,10 @@ public class Gauge: UIView {
 /// background gradient
     var bgGradientLayer: CAGradientLayer!
 
+    // Animation variables
+    internal var animationTimer: NSTimer = NSTimer()
+    internal var animationCompletionBlock: (Bool) -> () = {_ in }
+    
     func getGauge(rotateAngle: Double = 0) -> CAShapeLayer {
         switch type {
         case .Left, .Right:
@@ -277,5 +280,3 @@ public class Gauge: UIView {
         updateLayerProperties()
     }
 }
-
-
