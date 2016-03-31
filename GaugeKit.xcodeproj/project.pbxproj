@@ -14,6 +14,7 @@
 		1C9405231B31D1BE001BF122 /* CAShapeLayer+oval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C94051F1B31D1BE001BF122 /* CAShapeLayer+oval.swift */; };
 		1C9405241B31D1BE001BF122 /* Gauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9405201B31D1BE001BF122 /* Gauge.swift */; };
 		1C9405251B31D1BE001BF122 /* GaugeCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9405211B31D1BE001BF122 /* GaugeCircle.swift */; };
+		856D35181CACBE930007D5C6 /* Gauge+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856D35171CACBE930007D5C6 /* Gauge+Animations.swift */; };
 		D66F51CE3D9204261BCE1C87 /* GaugeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66F53D8674BBD2D847BDB75 /* GaugeLine.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		1C94051F1B31D1BE001BF122 /* CAShapeLayer+oval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+oval.swift"; sourceTree = "<group>"; };
 		1C9405201B31D1BE001BF122 /* Gauge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gauge.swift; sourceTree = "<group>"; };
 		1C9405211B31D1BE001BF122 /* GaugeCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaugeCircle.swift; sourceTree = "<group>"; };
+		856D35171CACBE930007D5C6 /* Gauge+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Gauge+Animations.swift"; sourceTree = "<group>"; };
 		D66F53D8674BBD2D847BDB75 /* GaugeLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaugeLine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 				1C94051E1B31D1BE001BF122 /* GaugeHalf.swift */,
 				1C94051F1B31D1BE001BF122 /* CAShapeLayer+oval.swift */,
 				1C9405201B31D1BE001BF122 /* Gauge.swift */,
+				856D35171CACBE930007D5C6 /* Gauge+Animations.swift */,
 				1C9405211B31D1BE001BF122 /* GaugeCircle.swift */,
 				1C9404D51B31CF85001BF122 /* GaugeKit.h */,
 				1C9404D31B31CF85001BF122 /* Supporting Files */,
@@ -228,6 +231,7 @@
 			files = (
 				1C9405221B31D1BE001BF122 /* GaugeHalf.swift in Sources */,
 				1C9405231B31D1BE001BF122 /* CAShapeLayer+oval.swift in Sources */,
+				856D35181CACBE930007D5C6 /* Gauge+Animations.swift in Sources */,
 				1C9405241B31D1BE001BF122 /* Gauge.swift in Sources */,
 				1C9405251B31D1BE001BF122 /* GaugeCircle.swift in Sources */,
 				D66F51CE3D9204261BCE1C87 /* GaugeLine.swift in Sources */,
