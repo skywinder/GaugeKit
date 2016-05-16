@@ -40,9 +40,9 @@ class MainViewController: UIViewController {
 
     @IBAction func animateAction(sender: AnyObject) {
         for gauge in self.allGauges {
-            let newRate = gauge.rate == 0.0 ? 10 : 0
+            let newRate : CGFloat = gauge.rate == 0.0 ? 10.0 : 0.0
 
-            gauge.animateRate(duration: 5.0, newValue: newRate) { (finished) in
+            gauge.animateRate(5.0, newValue: newRate) { (finished) in
                 print("Gauge animation completed !")
             }
         }
