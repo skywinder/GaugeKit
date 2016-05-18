@@ -87,6 +87,18 @@ public class Gauge: UIView {
             updateLayerProperties()
         }
     }
+    @IBInspectable public var topGradientColor: UIColor = UIColor.greenColor() {
+        didSet {
+            resetLayers()
+            updateLayerProperties()
+        }
+    }
+    @IBInspectable public var bottomGradientColor: UIColor = UIColor.redColor() {
+        didSet {
+            resetLayers()
+            updateLayerProperties()
+        }
+    }
     @IBInspectable public var shadowRadius: CGFloat = 0 {
         didSet {
             updateLayerProperties()
@@ -229,7 +241,10 @@ public class Gauge: UIView {
                             alpha: 1.0)
                 }
                 if (ringGradientLayer != nil) {
-                    ringGradientLayer.colors = [strokeColor.CGColor, strokeColor.CGColor]
+                    let color1 = topGradientColor ?? self.tintColor as UIColor
+                    let color2 = bottomGradientColor ?? UIColor.blackColor() as UIColor
+                    let colors: Array <AnyObject> = [ color1.CGColor, color2.CGColor ]
+                    ringGradientLayer.colors = colors
                 } else {
                     ringLayer.strokeColor = strokeColor.CGColor
                 }
