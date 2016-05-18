@@ -17,7 +17,8 @@
 
 ## Example Usage
 
-Just open `GaugeKit.xcworkspace` and run Example project.
+Install the GaugeKit framework through Cocoapods, run ```pod install``` from the Example directory
+Open `GaugeKit.xcworkspace` and run Example project.
 
 ## Installation
 
