@@ -49,7 +49,7 @@ class MainViewController: UIViewController {
 //
         UIView.animateWithDuration(NSTimeInterval(5.0), animations: {
             () -> Void in
-            println(self.allGauges.count)
+            print(self.allGauges.count)
             for gauge in self.allGauges {
                 gauge.rate = gauge.rate == 0.0 ? 10 : 0
 //                gauge.rate = CGFloat(arc4random() % 10)

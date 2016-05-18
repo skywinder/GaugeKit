@@ -1,0 +1,10 @@
+PODS:
+  - GaugeKit (0.3.2)
+
+DEPENDENCIES:
+  - GaugeKit
+
+SPEC CHECKSUMS:
+  GaugeKit: 4d5c3491521ed2d6e2f83cac5f51d0cd09db8989
+
+COCOAPODS: 0.39.0

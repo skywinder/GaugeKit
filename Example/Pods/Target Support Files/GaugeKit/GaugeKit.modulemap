@@ -1,0 +1,6 @@
+framework module GaugeKit {
+  umbrella header "GaugeKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
