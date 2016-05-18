@@ -9,7 +9,7 @@
 import UIKit
 
 extension Gauge {
-    func animateRate(duration: NSTimeInterval, newValue: CGFloat, completion: (Bool) -> ()) -> Void {
+    public func animateRate(duration: NSTimeInterval, newValue: CGFloat, completion: (Bool) -> ()) -> Void {
         animationTimer.invalidate()
         
         let refreshRate: Double = 0.1
