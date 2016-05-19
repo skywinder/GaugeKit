@@ -1,0 +1,10 @@
+framework module GaugeKit {
+  umbrella header "GaugeKit.h"
+
+  export *
+  module * { export * }
+}
+
+module GaugeKit.Swift {
+    header "GaugeKit-Swift.h"
+}

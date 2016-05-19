@@ -1,0 +1,3 @@
+[submodule "Example/GaugeKit"]
+	path = Example/GaugeKit
+	url = https://github.com/skywinder/GaugeKit.git
