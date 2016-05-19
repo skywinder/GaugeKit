@@ -14,7 +14,8 @@
 		1C9405111B31D057001BF122 /* ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9405101B31D057001BF122 /* ExampleTests.swift */; };
 		1C94051B1B31D12D001BF122 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C94051A1B31D12D001BF122 /* MainViewController.swift */; };
 		1CE31D5C1B345569006E4F7C /* AppleGaugeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE31D5B1B345569006E4F7C /* AppleGaugeViewController.swift */; };
-		30735FAC1CEDE80F00B8E2A7 /* GaugeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30735FAB1CEDE80F00B8E2A7 /* GaugeKit.framework */; };
+		305BC14C1CEDEBC20007920C /* GaugeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30CCB34F1CEDEB99009A5F2A /* GaugeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30CCB3501CEDEB99009A5F2A /* GaugeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30CCB34F1CEDEB99009A5F2A /* GaugeKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,13 +31,14 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		1C84929E1B4FA52900445D83 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				305BC14C1CEDEBC20007920C /* GaugeKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -52,7 +54,7 @@
 		1C9405101B31D057001BF122 /* ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleTests.swift; sourceTree = "<group>"; };
 		1C94051A1B31D12D001BF122 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1CE31D5B1B345569006E4F7C /* AppleGaugeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleGaugeViewController.swift; sourceTree = "<group>"; };
-		30735FAB1CEDE80F00B8E2A7 /* GaugeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GaugeKit.framework; path = Example/GaugeKit.framework; sourceTree = "<group>"; };
+		30CCB34F1CEDEB99009A5F2A /* GaugeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GaugeKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/GaugeKit-cjzfdhgbtxyhiwcufkbmwrtiborr/Build/Products/Debug-iphonesimulator/GaugeKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30735FAC1CEDE80F00B8E2A7 /* GaugeKit.framework in Frameworks */,
+				30CCB3501CEDEB99009A5F2A /* GaugeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +79,6 @@
 		1C9404EC1B31D057001BF122 = {
 			isa = PBXGroup;
 			children = (
-				30735FAB1CEDE80F00B8E2A7 /* GaugeKit.framework */,
 				1C9404F71B31D057001BF122 /* Example */,
 				1C94050D1B31D057001BF122 /* ExampleTests */,
 				1C9404F61B31D057001BF122 /* Products */,
@@ -136,6 +137,7 @@
 		C973B54B91A9691C11718703 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				30CCB34F1CEDEB99009A5F2A /* GaugeKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,7 +149,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C9405141B31D057001BF122 /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
-				9F5600300A555398371CB24E /* Check Pods Manifest.lock */,
 				1C9404F11B31D057001BF122 /* Sources */,
 				1C9404F21B31D057001BF122 /* Frameworks */,
 				1C9404F31B31D057001BF122 /* Resources */,
@@ -249,21 +250,6 @@
 			inputPaths = (
 			);
 			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "";
-			showEnvVarsInLog = 0;
-		};
-		9F5600300A555398371CB24E /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
