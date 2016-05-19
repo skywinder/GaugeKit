@@ -19,7 +19,6 @@ public enum GaugeType: Int {
 
 @IBDesignable
 public class Gauge: UIView {
-
     @IBInspectable public var startColor: UIColor = UIColor.greenColor() {
         didSet {
             resetLayers()
@@ -82,7 +81,7 @@ public class Gauge: UIView {
             updateLayerProperties()
         }
     }
-    @IBInspectable public var colorsArray: Bool = false {
+    @IBInspectable public var colorsArray: [UIColor] = [] {
         didSet {
             updateLayerProperties()
         }
@@ -169,6 +168,10 @@ public class Gauge: UIView {
 /// background gradient
     var bgGradientLayer: CAGradientLayer!
 
+    // Animation variables
+    internal var animationTimer: NSTimer = NSTimer()
+    internal var animationCompletionBlock: (Bool) -> () = {_ in }
+    
     func getGauge(rotateAngle: Double = 0) -> CAShapeLayer {
         switch type {
         case .Left, .Right:
@@ -184,46 +187,43 @@ public class Gauge: UIView {
 
     func updateLayerProperties() {
         backgroundColor = UIColor.clearColor()
-
+        
         if (ringLayer != nil) {
-
-            switch (type) {
+            switch type {
             case .Left, .Right:
-                // For Half gauge you have to fill 50% of circle and round it wisely.
-                let percanage = rate / 2 / maxValue % 0.5
-                ringLayer.strokeEnd = (rate >= maxValue ? 0.5 : percanage + ((rate != 0 && percanage == 0) ? 0.5 : 0))
-            case .Circle, .Custom:
-                ringLayer.strokeEnd = rate / maxValue
+                // For Half Gauge, you have to fill 50% of circle and round it wisely
+                let percentage = rate / 2 / maxValue % 0.5
+                ringLayer.strokeEnd = (rate >= maxValue ? 0.5 : percentage + ((rate != 0 && percentage == 0) ? 0.5 : 0))
             default:
                 ringLayer.strokeEnd = rate / maxValue
-
             }
-
+            
             var strokeColor = UIColor.lightGrayColor()
-            //TODO: replace pre-defined colors with array of user-defined colors
-            //TODO: and split them proportionally in whole sector
-            if colorsArray {
-                switch (rate / maxValue) {
-                case let r where r >= 0.75:
-                    strokeColor = UIColor(hue:
-                    112.0 / 360.0, saturation:
-                    0.39, brightness: 0.85,
-                            alpha: 1.0)
-                case let r where r >= 0.5:
-                    strokeColor = UIColor(hue:
-                    208.0 / 360.0, saturation:
-                    0.51, brightness: 0.75,
-                            alpha: 1.0)
-                case let r where r >= 0.25:
-                    strokeColor = UIColor(hue: 40.0 / 360.0, saturation: 0.39,
-                            brightness: 0.85, alpha: 1.0)
+            
+            if !colorsArray.isEmpty {
+                switch colorsArray.count {
+                case 1:
+                    strokeColor = colorsArray.first!
+                case 2:
+                    let percentage: CGFloat = rate / maxValue
+                    strokeColor = (1 - percentage) * colorsArray.first! + percentage * colorsArray.last!
                 default:
-                    strokeColor = UIColor(hue:
-                    359.0 / 360.0, saturation:
-                    0.48, brightness: 0.63,
-                            alpha: 1.0)
+                    let percentageInSector: CGFloat = (rate / maxValue * CGFloat(colorsArray.count - 1) * 100.0 % 100.0) / 100.0
+                    let currentSector: Int = Int(rate / maxValue * CGFloat(colorsArray.count - 1)) + 1
+                    //print(currentSector)
+                    //print(percentageInSector)
+                    
+                    let firstColor = colorsArray[currentSector - 1]
+                    let secondColor = colorsArray[min(currentSector, colorsArray.count - 1)]
+                    
+                    strokeColor = (1.0 - percentageInSector) * firstColor + percentageInSector * secondColor
                 }
-                if (ringGradientLayer != nil) {
+                
+                if type == .Line {
+                    ringLayer.strokeColor = strokeColor.CGColor
+                }
+                
+                if ringGradientLayer != nil {
                     ringGradientLayer.colors = [strokeColor.CGColor, strokeColor.CGColor]
                 } else {
                     ringLayer.strokeColor = strokeColor.CGColor
@@ -231,7 +231,6 @@ public class Gauge: UIView {
             } else {
                 ringLayer.strokeColor = startColor.CGColor
             }
-
         }
     }
 
@@ -277,5 +276,3 @@ public class Gauge: UIView {
         updateLayerProperties()
     }
 }
-
-
