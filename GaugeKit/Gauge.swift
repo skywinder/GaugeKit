@@ -87,18 +87,6 @@ public class Gauge: UIView {
             updateLayerProperties()
         }
     }
-    @IBInspectable public var topGradientColor: UIColor = UIColor.greenColor() {
-        didSet {
-            resetLayers()
-            updateLayerProperties()
-        }
-    }
-    @IBInspectable public var bottomGradientColor: UIColor = UIColor.redColor() {
-        didSet {
-            resetLayers()
-            updateLayerProperties()
-        }
-    }
     @IBInspectable public var shadowRadius: CGFloat = 0 {
         didSet {
             updateLayerProperties()
@@ -241,8 +229,8 @@ public class Gauge: UIView {
                             alpha: 1.0)
                 }
                 if (ringGradientLayer != nil) {
-                    let color1 = topGradientColor ?? self.tintColor as UIColor
-                    let color2 = bottomGradientColor ?? UIColor.blackColor() as UIColor
+                    let color1 = startColor ?? self.tintColor as UIColor
+                    let color2 = endColor ?? UIColor.blackColor() as UIColor
                     let colors: Array <AnyObject> = [ color1.CGColor, color2.CGColor ]
                     ringGradientLayer.colors = colors
                 } else {
@@ -255,11 +243,11 @@ public class Gauge: UIView {
         }
     }
 
-    required public init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)!
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         updateLayerProperties()
     }
-
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         updateLayerProperties()

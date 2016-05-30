@@ -42,7 +42,7 @@ extension Gauge: GaugeCircle {
                 ringGradientLayer.startPoint = CGPointMake(0.5, 1)
                 ringGradientLayer.endPoint = CGPointMake(0.5, 0)
             }
-            ringGradientLayer.colors = [topGradientColor.CGColor, bottomGradientColor.CGColor]
+            ringGradientLayer.colors = [startColor.CGColor, endColor.CGColor]
             ringGradientLayer.frame = layer.bounds
             ringGradientLayer.mask = ringLayer
             gaugeLayer.addSublayer(ringGradientLayer)
