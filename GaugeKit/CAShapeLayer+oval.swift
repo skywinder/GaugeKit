@@ -11,7 +11,7 @@ import Foundation
 
 extension CAShapeLayer {
 
-    class func getLine(lineWidth: CGFloat,
+    class func getLine(_ lineWidth: CGFloat,
                        strokeStart: CGFloat,
                        strokeEnd: CGFloat,
                        strokeColor: UIColor,
@@ -25,10 +25,10 @@ extension CAShapeLayer {
     ) -> CAShapeLayer {
 
         var arc = CAShapeLayer()
-        let path = CGPathCreateMutable()
-            let Y = CGRectGetMidY(bounds)
-        CGPathMoveToPoint(path, nil, lineWidth, Y)
-        CGPathAddLineToPoint(path, nil, bounds.width - lineWidth, Y)
+        let path = CGMutablePath()
+		let Y = bounds.midY
+		path.move(to: CGPoint(x: lineWidth, y: Y))
+		path.move(to: CGPoint(x: bounds.width - lineWidth, y: Y))
         arc.path = path
 
         arc = setupArc(arc, lineWidth: lineWidth,
@@ -45,7 +45,7 @@ extension CAShapeLayer {
     }
 
 
-    class func getOval(lineWidth: CGFloat,
+    class func getOval(_ lineWidth: CGFloat,
                        strokeStart: CGFloat,
                        strokeEnd: CGFloat,
                        strokeColor: UIColor,
@@ -61,14 +61,14 @@ extension CAShapeLayer {
     ) -> CAShapeLayer {
 
         var arc = CAShapeLayer()
-        let rect = CGRectInset(bounds, CGFloat(lineWidth / 2.0), CGFloat(lineWidth / 2.0))
+        let rect = bounds.insetBy(dx: CGFloat(lineWidth / 2.0), dy: CGFloat(lineWidth / 2.0))
         if isCircle {
             let arcDiameter: CGFloat = min(bounds.width, bounds.height) - lineWidth
-            let X = CGRectGetMidX(bounds)
-            let Y = CGRectGetMidY(bounds)
-            arc.path = UIBezierPath(ovalInRect: CGRectMake((X - (arcDiameter / 2)), (Y - (arcDiameter / 2)), arcDiameter, arcDiameter)).CGPath
+            let X = bounds.midX
+            let Y = bounds.midY
+            arc.path = UIBezierPath(ovalIn: CGRect(x: (X - (arcDiameter / 2)), y: (Y - (arcDiameter / 2)), width: arcDiameter, height: arcDiameter)).cgPath
         } else {
-            arc.path = UIBezierPath(ovalInRect: rect).CGPath
+            arc.path = UIBezierPath(ovalIn: rect).cgPath
         }
 
 
@@ -85,7 +85,7 @@ extension CAShapeLayer {
         return arc
     }
 
-    static func setupArc(arc: CAShapeLayer, lineWidth: CGFloat,
+    static func setupArc(_ arc: CAShapeLayer, lineWidth: CGFloat,
                          strokeStart: CGFloat,
                          strokeEnd: CGFloat,
                          strokeColor: UIColor,
@@ -99,9 +99,9 @@ extension CAShapeLayer {
 
         arc.strokeStart = strokeStart
 
-        arc.strokeColor = strokeColor.CGColor
-        arc.fillColor = fillColor.CGColor
-        arc.shadowColor = UIColor.blackColor().CGColor
+        arc.strokeColor = strokeColor.cgColor
+        arc.fillColor = fillColor.cgColor
+        arc.shadowColor = UIColor.black.cgColor
         arc.shadowRadius = shadowRadius
         arc.shadowOpacity = shadowOpacity
         arc.shadowOffset = shadowOffsset
