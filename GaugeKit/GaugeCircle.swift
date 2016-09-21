@@ -11,22 +11,22 @@ import QuartzCore
 
 
 protocol GaugeCircle {
-    func getCircleGauge(rotateAngle: Double) -> CAShapeLayer
+    func getCircleGauge(_ rotateAngle: Double) -> CAShapeLayer
 }
 
 extension Gauge: GaugeCircle {
-    func getCircleGauge(rotateAngle: Double) -> CAShapeLayer {
+    func getCircleGauge(_ rotateAngle: Double) -> CAShapeLayer {
 
         let gaugeLayer = CAShapeLayer()
 
         if bgLayer == nil {
-            bgLayer = CAShapeLayer.getOval(lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: _bgStartColor, fillColor: UIColor.clearColor(), shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSizeZero, bounds: bounds)
+            bgLayer = CAShapeLayer.getOval(lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: _bgStartColor, fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: bounds)
             bgLayer.frame = layer.bounds
             gaugeLayer.addSublayer(bgLayer)
         }
 
         if ringLayer == nil {
-            ringLayer = CAShapeLayer.getOval(lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: UIColor.clearColor(), fillColor: UIColor.clearColor(), shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSizeZero, bounds: bounds)
+            ringLayer = CAShapeLayer.getOval(lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: UIColor.clear, fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: bounds)
 
             ringLayer.frame = layer.bounds
             gaugeLayer.addSublayer(ringLayer)
