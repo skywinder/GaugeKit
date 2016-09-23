@@ -11,109 +11,112 @@ import Foundation
 
 extension CAShapeLayer {
 
-    class func getLine(lineWidth: CGFloat,
-                       strokeStart: CGFloat,
-                       strokeEnd: CGFloat,
-                       strokeColor: UIColor,
-                       fillColor: UIColor,
-                       shadowRadius: CGFloat,
-                       shadowOpacity: Float,
-                       shadowOffsset: CGSize,
-                       bounds: CGRect,
-                       rotateAngle: Double? = nil,
-                       anchorPoint: CGPoint? = nil
-    ) -> CAShapeLayer {
+	class func getLine(_ lineWidth: CGFloat,
+	                   strokeStart: CGFloat,
+	                   strokeEnd: CGFloat,
+	                   strokeColor: UIColor,
+	                   fillColor: UIColor,
+	                   shadowRadius: CGFloat,
+	                   shadowOpacity: Float,
+	                   shadowOffsset: CGSize,
+	                   bounds: CGRect,
+	                   rotateAngle: Double? = nil,
+	                   anchorPoint: CGPoint? = nil
+		) -> CAShapeLayer {
 
-        var arc = CAShapeLayer()
-        let path = CGPathCreateMutable()
-            let Y = CGRectGetMidY(bounds)
-        CGPathMoveToPoint(path, nil, lineWidth, Y)
-        CGPathAddLineToPoint(path, nil, bounds.width - lineWidth, Y)
-        arc.path = path
+		var arc = CAShapeLayer()
+		let path = CGMutablePath()
+		let Y = bounds.midY
 
-        arc = setupArc(arc, lineWidth: lineWidth,
-                strokeStart: strokeStart,
-                strokeEnd: strokeEnd,
-                strokeColor: strokeColor,
-                fillColor: fillColor,
-                shadowRadius: shadowRadius,
-                shadowOpacity: shadowOpacity,
-                shadowOffsset: shadowOffsset,
-                rotateAngle: rotateAngle,
-                anchorPoint: anchorPoint)
-        return arc
-    }
+		path.move(to: CGPoint(x: lineWidth, y: Y))
+		path.addLine(to: CGPoint(x: bounds.width-lineWidth, y: Y))
+//		CGPathMoveToPoint(path, nil, lineWidth, Y)
+//		CGPathAddLineToPoint(path, nil, bounds.width - lineWidth, Y)
+		arc.path = path
 
-
-    class func getOval(lineWidth: CGFloat,
-                       strokeStart: CGFloat,
-                       strokeEnd: CGFloat,
-                       strokeColor: UIColor,
-                       fillColor: UIColor,
-                       shadowRadius: CGFloat,
-                       shadowOpacity: Float,
-                       shadowOffsset: CGSize,
-                       bounds: CGRect,
-                       rotateAngle: Double? = nil,
-                       anchorPoint: CGPoint? = nil,
-                       isCircle: Bool = true
-
-    ) -> CAShapeLayer {
-
-        var arc = CAShapeLayer()
-        let rect = CGRectInset(bounds, CGFloat(lineWidth / 2.0), CGFloat(lineWidth / 2.0))
-        if isCircle {
-            let arcDiameter: CGFloat = min(bounds.width, bounds.height) - lineWidth
-            let X = CGRectGetMidX(bounds)
-            let Y = CGRectGetMidY(bounds)
-            arc.path = UIBezierPath(ovalInRect: CGRectMake((X - (arcDiameter / 2)), (Y - (arcDiameter / 2)), arcDiameter, arcDiameter)).CGPath
-        } else {
-            arc.path = UIBezierPath(ovalInRect: rect).CGPath
-        }
+		arc = setupArc(arc, lineWidth: lineWidth,
+		               strokeStart: strokeStart,
+		               strokeEnd: strokeEnd,
+		               strokeColor: strokeColor,
+		               fillColor: fillColor,
+		               shadowRadius: shadowRadius,
+		               shadowOpacity: shadowOpacity,
+		               shadowOffsset: shadowOffsset,
+		               rotateAngle: rotateAngle,
+		               anchorPoint: anchorPoint)
+		return arc
+	}
 
 
-        arc = setupArc(arc, lineWidth: lineWidth,
-                strokeStart: strokeStart,
-                strokeEnd: strokeEnd,
-                strokeColor: strokeColor,
-                fillColor: fillColor,
-                shadowRadius: shadowRadius,
-                shadowOpacity: shadowOpacity,
-                shadowOffsset: shadowOffsset,
-                rotateAngle: rotateAngle,
-                anchorPoint: anchorPoint)
-        return arc
-    }
+	class func getOval(_ lineWidth: CGFloat,
+	                   strokeStart: CGFloat,
+	                   strokeEnd: CGFloat,
+	                   strokeColor: UIColor,
+	                   fillColor: UIColor,
+	                   shadowRadius: CGFloat,
+	                   shadowOpacity: Float,
+	                   shadowOffsset: CGSize,
+	                   bounds: CGRect,
+	                   rotateAngle: Double? = nil,
+	                   anchorPoint: CGPoint? = nil,
+	                   isCircle: Bool = true
 
-    static func setupArc(arc: CAShapeLayer, lineWidth: CGFloat,
-                         strokeStart: CGFloat,
-                         strokeEnd: CGFloat,
-                         strokeColor: UIColor,
-                         fillColor: UIColor,
-                         shadowRadius: CGFloat,
-                         shadowOpacity: Float,
-                         shadowOffsset: CGSize,
-                         rotateAngle: Double? = nil,
-                         anchorPoint: CGPoint? = nil) -> CAShapeLayer {
-        arc.lineWidth = lineWidth
+		) -> CAShapeLayer {
 
-        arc.strokeStart = strokeStart
+		var arc = CAShapeLayer()
+		let rect = bounds.insetBy(dx: CGFloat(lineWidth / 2.0), dy: CGFloat(lineWidth / 2.0))
+		if isCircle {
+			let arcDiameter: CGFloat = min(bounds.width, bounds.height) - lineWidth
+			let X = bounds.midX
+			let Y = bounds.midY
+			arc.path = UIBezierPath(ovalIn: CGRect(x: (X - (arcDiameter / 2)), y: (Y - (arcDiameter / 2)), width: arcDiameter, height: arcDiameter)).cgPath
+		} else {
+			arc.path = UIBezierPath(ovalIn: rect).cgPath
+		}
 
-        arc.strokeColor = strokeColor.CGColor
-        arc.fillColor = fillColor.CGColor
-        arc.shadowColor = UIColor.blackColor().CGColor
-        arc.shadowRadius = shadowRadius
-        arc.shadowOpacity = shadowOpacity
-        arc.shadowOffset = shadowOffsset
 
-        if let anchorPoint = anchorPoint {
-            arc.anchorPoint = anchorPoint
-        }
-        if let rotateAngle = rotateAngle {
-            arc.transform = CATransform3DRotate(arc.transform, CGFloat(rotateAngle), 0, 0, 1)
-        }
+		arc = setupArc(arc, lineWidth: lineWidth,
+		               strokeStart: strokeStart,
+		               strokeEnd: strokeEnd,
+		               strokeColor: strokeColor,
+		               fillColor: fillColor,
+		               shadowRadius: shadowRadius,
+		               shadowOpacity: shadowOpacity,
+		               shadowOffsset: shadowOffsset,
+		               rotateAngle: rotateAngle,
+		               anchorPoint: anchorPoint)
+		return arc
+	}
 
-        arc.strokeEnd = strokeEnd
-        return arc
-    }
+	static func setupArc(_ arc: CAShapeLayer, lineWidth: CGFloat,
+	                     strokeStart: CGFloat,
+	                     strokeEnd: CGFloat,
+	                     strokeColor: UIColor,
+	                     fillColor: UIColor,
+	                     shadowRadius: CGFloat,
+	                     shadowOpacity: Float,
+	                     shadowOffsset: CGSize,
+	                     rotateAngle: Double? = nil,
+	                     anchorPoint: CGPoint? = nil) -> CAShapeLayer {
+		arc.lineWidth = lineWidth
+
+		arc.strokeStart = strokeStart
+
+		arc.strokeColor = strokeColor.cgColor
+		arc.fillColor = fillColor.cgColor
+		arc.shadowColor = UIColor.black.cgColor
+		arc.shadowRadius = shadowRadius
+		arc.shadowOpacity = shadowOpacity
+		arc.shadowOffset = shadowOffsset
+
+		if let anchorPoint = anchorPoint {
+			arc.anchorPoint = anchorPoint
+		}
+		if let rotateAngle = rotateAngle {
+			arc.transform = CATransform3DRotate(arc.transform, CGFloat(rotateAngle), 0, 0, 1)
+		}
+
+		arc.strokeEnd = strokeEnd
+		return arc
+	}
 }
