@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        gauge.colorsArray = [UIColor.redColor(), UIColor.orangeColor(), UIColor.yellowColor() ,UIColor.greenColor()]
+        gauge.colorsArray = [UIColor.red, UIColor.orange, UIColor.yellow ,UIColor.green]
     }
 
     @IBOutlet var allGauges: [Gauge]!
@@ -49,10 +49,10 @@ class MainViewController: UIViewController {
     }
 
     @IBAction func switchChanged(_ sender: UISwitch) {
-        gauge.reverse = sender.on
-        leftGauge.reverse = sender.on
-        rightGauge.reverse = sender.on
-        lineGauge.reverse = sender.on
+        gauge.reverse = sender.isOn
+        leftGauge.reverse = sender.isOn
+        rightGauge.reverse = sender.isOn
+        lineGauge.reverse = sender.isOn
 
     }
 
