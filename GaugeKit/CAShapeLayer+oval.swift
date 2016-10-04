@@ -26,9 +26,10 @@ extension CAShapeLayer {
 
         var arc = CAShapeLayer()
         let path = CGMutablePath()
-            let Y = bounds.midY
-        CGPathMoveToPoint(path, nil, lineWidth, Y)
-        CGPathAddLineToPoint(path, nil, bounds.width - lineWidth, Y)
+        let Y = bounds.midY
+        path.move(to: CGPoint(x: lineWidth, y: Y))
+        path.addLine(to: CGPoint(x: bounds.width - lineWidth, y: Y))
+
         arc.path = path
 
         arc = setupArc(arc, lineWidth: lineWidth,
