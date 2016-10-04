@@ -42,7 +42,7 @@ class MainViewController: UIViewController {
         for gauge in self.allGauges {
             let newRate : CGFloat = gauge.rate == 0.0 ? 10.0 : 0.0
 
-            gauge.animateRate(5.0, newValue: newRate) { (finished) in
+            gauge.animateRate(1.0, newValue: newRate) { (finished) in
                 print("Gauge animation completed !")
             }
         }
