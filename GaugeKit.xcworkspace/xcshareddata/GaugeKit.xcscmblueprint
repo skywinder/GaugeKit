@@ -9,11 +9,11 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4AB4A397-B2EE-4F60-A406-49F77742D5FC",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "D316725E3745C2E3F6B4E61E23722FBEC4818660" : "GaugeKit",
+    "D316725E3745C2E3F6B4E61E23722FBEC4818660" : "GaugeKit\/",
     "3715728EE139841130E5A94A8487F1BF54266A48" : "SWGauge"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "GaugeKit",
-  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GaugeKit.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
