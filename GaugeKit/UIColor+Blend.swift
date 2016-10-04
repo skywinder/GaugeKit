@@ -9,8 +9,8 @@
 import UIKit
 
 func + (left: UIColor, right: UIColor) -> UIColor {
-    var leftRGBA = [CGFloat](count: 4, repeatedValue: 0.0)
-    var rightRGBA = [CGFloat](count: 4, repeatedValue: 0.0)
+    var leftRGBA = [CGFloat](repeating: 0.0, count: 4)
+    var rightRGBA = [CGFloat](repeating: 0.0, count: 4)
     
     left.getRed(&leftRGBA[0], green: &leftRGBA[1], blue: &leftRGBA[2], alpha: &leftRGBA[3])
     right.getRed(&rightRGBA[0], green: &rightRGBA[1], blue: &rightRGBA[2], alpha: &rightRGBA[3])
@@ -24,7 +24,7 @@ func + (left: UIColor, right: UIColor) -> UIColor {
 }
 
 func * (left: CGFloat, right: UIColor) -> UIColor {
-    var rightRGBA = [CGFloat](count: 4, repeatedValue: 0.0)
+    var rightRGBA = [CGFloat](repeating: 0.0, count: 4)
     
     right.getRed(&rightRGBA[0], green: &rightRGBA[1], blue: &rightRGBA[2], alpha: &rightRGBA[3])
     
