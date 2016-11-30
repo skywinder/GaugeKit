@@ -21,9 +21,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'GaugeKit/**/*'
-  s.resource_bundles = {
-    'GaugeKit' => ['GaugeKit/Assets/*.png']
-  }
 
   s.public_header_files = 'GaugeKit/**/*.h'
   s.frameworks = 'UIKit', 'QuartzCore'
