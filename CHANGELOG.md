@@ -1,5 +1,20 @@
 # Change Log
 
+## [0.4.0](https://github.com/skywinder/GaugeKit/tree/0.4.0) (2016-11-30)
+[Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.3.2...0.4.0)
+
+**Implemented enhancements:**
+
+- Swift 3.0 support [\#41](https://github.com/skywinder/GaugeKit/pull/41) ([skywinder](https://github.com/skywinder))
+
+**Closed issues:**
+
+- iOS 10 Beta Support [\#37](https://github.com/skywinder/GaugeKit/issues/37)
+
+**Merged pull requests:**
+
+- Added rate animations [\#32](https://github.com/skywinder/GaugeKit/pull/32) ([f8th](https://github.com/f8th))
+
 ## [0.3.2](https://github.com/skywinder/GaugeKit/tree/0.3.2) (2016-01-29)
 [Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.3.1...0.3.2)
 
