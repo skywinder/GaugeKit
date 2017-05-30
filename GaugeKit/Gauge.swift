@@ -210,9 +210,7 @@ open class Gauge: UIView {
                 default:
                     let percentageInSector: CGFloat = ((rate / maxValue * CGFloat(colorsArray.count - 1) * 100.0).truncatingRemainder(dividingBy: 100.0)) / 100.0
                     let currentSector: Int = Int(rate / maxValue * CGFloat(colorsArray.count - 1)) + 1
-                    //print(currentSector)
-                    //print(percentageInSector)
-                    
+
                     let firstColor = colorsArray[currentSector - 1]
                     let secondColor = colorsArray[min(currentSector, colorsArray.count - 1)]
                     
@@ -250,15 +248,11 @@ open class Gauge: UIView {
     }
 
     func reverseX(_ layer: CALayer) {
-//        layer.transform = CATransform3DScale(CATransform3DMakeRotation(CGFloat(M_PI_2), 0, 0, 1), -1, 1, 1)
         layer.transform = CATransform3DScale(layer.transform, -1, 1, 1)
-
     }
 
     func reverseY(_ layer: CALayer) {
-//        layer.transform = CATransform3DScale(CATransform3DMakeRotation(CGFloat(M_PI_2), 0, 0, 1), 1, -1, 1)
         layer.transform = CATransform3DScale(layer.transform, 1, -1, 1)
-
     }
 
     func resetLayers() {
@@ -271,7 +265,7 @@ open class Gauge: UIView {
 
     open override func layoutSubviews() {
         resetLayers()
-        gaugeLayer = getGauge(rotate / 10 * M_PI)
+        gaugeLayer = getGauge(rotate / 10 * .pi)
         layer.addSublayer(gaugeLayer)
         updateLayerProperties()
     }
