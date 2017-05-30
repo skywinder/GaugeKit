@@ -64,14 +64,13 @@ extension Gauge {
                 self.rate = newValue
                 timer.invalidate()
                 animationCompletionBlock(true)
-                //print("GAUGE-KIT: Gauge went up to \(newValue)")
             }
             
             if self.rate >= self.maxValue {
                 self.rate = self.maxValue
                 timer.invalidate()
                 animationCompletionBlock(true)
-                //print("GAUGE-KIT: Gauge filled")
+
             }
         }
     }
