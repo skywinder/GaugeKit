@@ -9,6 +9,8 @@
 import UIKit
 import QuartzCore
 
+let pi_2 = Double.pi / 2
+
 public enum GaugeType: Int {
     case circle = 0
     case left
@@ -271,7 +273,7 @@ open class Gauge: UIView {
 
     open override func layoutSubviews() {
         resetLayers()
-        gaugeLayer = getGauge(rotate / 10 * M_PI)
+        gaugeLayer = getGauge(rotate / 10 * Double.pi)
         layer.addSublayer(gaugeLayer)
         updateLayerProperties()
     }
