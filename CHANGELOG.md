@@ -1,5 +1,16 @@
 # Change Log
 
+## [Unreleased](https://github.com/skywinder/GaugeKit/tree/HEAD)
+
+[Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.4.5...HEAD)
+
+**Implemented enhancements:**
+
+- UIAppearance not supported [\#31](https://github.com/skywinder/GaugeKit/issues/31)
+
+## [0.4.5](https://github.com/skywinder/GaugeKit/tree/0.4.5) (2017-11-21)
+[Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.4.4...0.4.5)
+
 ## [0.4.4](https://github.com/skywinder/GaugeKit/tree/0.4.4) (2017-11-21)
 [Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.4.3...0.4.4)
 
@@ -17,6 +28,11 @@
 
 - Swift 3 support [\#46](https://github.com/skywinder/GaugeKit/issues/46)
 - Warning message : M\_PI and M\_PI\_2 is deprecated [\#54](https://github.com/skywinder/GaugeKit/issues/54)
+
+**Merged pull requests:**
+
+- fix warning 'M\_PI is deprecated' in Swift 3.1 [\#52](https://github.com/skywinder/GaugeKit/pull/52) ([axenovV](https://github.com/axenovV))
+- Support for tvOS. [\#47](https://github.com/skywinder/GaugeKit/pull/47) ([arturgrigor](https://github.com/arturgrigor))
 
 ## [0.4.0](https://github.com/skywinder/GaugeKit/tree/0.4.0) (2016-11-30)
 [Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.3.2...0.4.0)
