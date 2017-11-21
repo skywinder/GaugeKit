@@ -23,7 +23,7 @@ extension Gauge: GaugeHalf {
         //        var newBounds = bounds
         if bgLayer == nil {
             bgLayer = CAShapeLayer.getOval(lineWidth, strokeStart: 0, strokeEnd: 0.5, strokeColor: _bgStartColor,
-                    fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: newBounds, rotateAngle: M_PI_2, isCircle: isCircle)
+                    fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: newBounds, rotateAngle: pi_2, isCircle: isCircle)
             bgLayer.frame = layer.bounds
             bgLayer.position = CGPoint(x: bgLayer.position.x + bounds.width - lineWidth, y: bgLayer.position.y)
         }
@@ -46,7 +46,7 @@ extension Gauge: GaugeHalf {
 
         if ringLayer == nil {
             ringLayer = CAShapeLayer.getOval(lineWidth, strokeStart: 0, strokeEnd: 0.5, strokeColor: startColor,
-                    fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: newBounds, rotateAngle: M_PI_2, isCircle: isCircle)
+                    fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: newBounds, rotateAngle: pi_2, isCircle: isCircle)
             ringLayer.frame = layer.bounds
             ringLayer.position = CGPoint(x: ringLayer.position.x + bounds.width - lineWidth, y: ringLayer.position.y)
         }
