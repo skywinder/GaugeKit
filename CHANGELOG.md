@@ -1,5 +1,23 @@
 # Change Log
 
+## [0.4.4](https://github.com/skywinder/GaugeKit/tree/0.4.4) (2017-11-21)
+[Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.4.3...0.4.4)
+
+## [0.4.3](https://github.com/skywinder/GaugeKit/tree/0.4.3) (2017-11-21)
+[Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.4.2...0.4.3)
+
+**Closed issues:**
+
+- Build error, GaugeKit.bundle: No such file or directory [\#33](https://github.com/skywinder/GaugeKit/issues/33)
+
+## [0.4.2](https://github.com/skywinder/GaugeKit/tree/0.4.2) (2017-11-21)
+[Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.4.0...0.4.2)
+
+**Closed issues:**
+
+- Swift 3 support [\#46](https://github.com/skywinder/GaugeKit/issues/46)
+- Warning message : M\_PI and M\_PI\_2 is deprecated [\#54](https://github.com/skywinder/GaugeKit/issues/54)
+
 ## [0.4.0](https://github.com/skywinder/GaugeKit/tree/0.4.0) (2016-11-30)
 [Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.3.2...0.4.0)
 
@@ -13,7 +31,7 @@
 
 **Merged pull requests:**
 
-- Added rate animations [\#32](https://github.com/skywinder/GaugeKit/pull/32) ([f8th](https://github.com/f8th))
+- Added rate animations [\#32](https://github.com/skywinder/GaugeKit/pull/32) ([dpelletier2017](https://github.com/dpelletier2017))
 
 ## [0.3.2](https://github.com/skywinder/GaugeKit/tree/0.3.2) (2016-01-29)
 [Full Changelog](https://github.com/skywinder/GaugeKit/compare/0.3.1...0.3.2)
