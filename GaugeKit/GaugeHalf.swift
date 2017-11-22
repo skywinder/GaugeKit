@@ -14,7 +14,7 @@ protocol GaugeHalf {
 }
 
 extension Gauge: GaugeHalf {
-    func getHalfGauge(_ rotateAngle: Double) -> CAShapeLayer {
+    @objc func getHalfGauge(_ rotateAngle: Double) -> CAShapeLayer {
 
         let gaugeLayer = CAShapeLayer()
 

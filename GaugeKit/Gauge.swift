@@ -54,7 +54,7 @@ open class Gauge: UIView {
         }
     }
 
-    internal var _bgStartColor: UIColor {
+    @objc internal var _bgStartColor: UIColor {
         get {
             if let bgColor = bgColor {
                 return bgColor.withAlphaComponent(bgAlpha)
@@ -64,7 +64,7 @@ open class Gauge: UIView {
         }
     }
 
-    internal var _bgEndColor: UIColor {
+    @objc internal var _bgEndColor: UIColor {
         get {
             if let bgColor = bgColor {
                 return bgColor.withAlphaComponent(bgAlpha)
@@ -160,21 +160,21 @@ open class Gauge: UIView {
     }
 
 /// Main gauge layer
-    var gaugeLayer: CALayer!
+    @objc var gaugeLayer: CALayer!
 /// Colored layer, depends from scale
-    var ringLayer: CAShapeLayer!
+    @objc var ringLayer: CAShapeLayer!
 /// background for ring layer
-    var bgLayer: CAShapeLayer!
+    @objc var bgLayer: CAShapeLayer!
 /// ring gradient layer
-    var ringGradientLayer: CAGradientLayer!
+    @objc var ringGradientLayer: CAGradientLayer!
 /// background gradient
-    var bgGradientLayer: CAGradientLayer!
+    @objc var bgGradientLayer: CAGradientLayer!
 
     // Animation variables
-    internal var animationTimer: Timer = Timer()
-    internal var animationCompletionBlock: (Bool) -> () = {_ in }
+    @objc internal var animationTimer: Timer = Timer()
+    @objc internal var animationCompletionBlock: (Bool) -> () = {_ in }
     
-    func getGauge(_ rotateAngle: Double = 0) -> CAShapeLayer {
+    @objc func getGauge(_ rotateAngle: Double = 0) -> CAShapeLayer {
         switch type {
         case .left, .right:
             return getHalfGauge(rotateAngle)
@@ -187,7 +187,7 @@ open class Gauge: UIView {
         }
     }
 
-    func updateLayerProperties() {
+    @objc func updateLayerProperties() {
         backgroundColor = UIColor.clear
         
         if (ringLayer != nil) {
@@ -251,19 +251,19 @@ open class Gauge: UIView {
         updateLayerProperties()
     }
 
-    func reverseX(_ layer: CALayer) {
+    @objc func reverseX(_ layer: CALayer) {
 //        layer.transform = CATransform3DScale(CATransform3DMakeRotation(CGFloat(M_PI_2), 0, 0, 1), -1, 1, 1)
         layer.transform = CATransform3DScale(layer.transform, -1, 1, 1)
 
     }
 
-    func reverseY(_ layer: CALayer) {
+    @objc func reverseY(_ layer: CALayer) {
 //        layer.transform = CATransform3DScale(CATransform3DMakeRotation(CGFloat(M_PI_2), 0, 0, 1), 1, -1, 1)
         layer.transform = CATransform3DScale(layer.transform, 1, -1, 1)
 
     }
 
-    func resetLayers() {
+    @objc func resetLayers() {
         layer.sublayers = nil
         bgLayer = nil
         ringLayer = nil

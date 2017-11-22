@@ -15,7 +15,7 @@ protocol GaugeCircle {
 }
 
 extension Gauge: GaugeCircle {
-    func getCircleGauge(_ rotateAngle: Double) -> CAShapeLayer {
+    @objc func getCircleGauge(_ rotateAngle: Double) -> CAShapeLayer {
 
         let gaugeLayer = CAShapeLayer()
 

@@ -15,7 +15,7 @@ protocol GaugeLine {
 }
 
 extension Gauge: GaugeLine {
-    func getLineGauge(_ rotateAngle: Double) -> CAShapeLayer {
+    @objc func getLineGauge(_ rotateAngle: Double) -> CAShapeLayer {
 
         let gaugeLayer = CAShapeLayer()
 
