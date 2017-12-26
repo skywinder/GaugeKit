@@ -83,6 +83,7 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 
 ![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/GaugeKit_sreenshot.png)
 ![GaugeKit](https://raw.githubusercontent.com/skywinder/GaugeKit/master/Images/SWGauge_example.gif)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fskywinder%2FGaugeKit.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fskywinder%2FGaugeKit?ref=badge_shield)
 
 ###IB Example:
 
@@ -111,3 +112,6 @@ The best way to contribute is by submitting a pull request.
 ## License
 
 GaugeKit is available under the MIT license. See the LICENSE file for more info.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fskywinder%2FGaugeKit.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fskywinder%2FGaugeKit?ref=badge_large)
