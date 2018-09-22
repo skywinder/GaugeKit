@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '9.0'
   s.requires_arc = true
 
-  s.source_files = 'GaugeKit/**/*'
+  s.source_files = 'GaugeKit/**/*.{h,m,swift}'
 
   s.public_header_files = 'GaugeKit/**/*.h'
   s.frameworks = 'UIKit', 'QuartzCore'
