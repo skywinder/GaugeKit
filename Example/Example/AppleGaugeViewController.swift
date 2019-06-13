@@ -15,9 +15,9 @@ class AppleGaugeViewController: UIViewController {
     @IBOutlet var gauge_mid: Gauge!
     @IBOutlet var gauge_out: Gauge!
     @IBAction func sliderChanged(_ sender: UISlider) {
-        gauge_in.rate = CGFloat(sender.value * 4)
-        gauge_mid.rate = CGFloat(sender.value * 8)
-        gauge_out.rate = CGFloat(sender.value * 12)
+        gauge_in.rate = CGFloat(sender.value * 10)
+        gauge_mid.rate = CGFloat(sender.value * 10)
+        gauge_out.rate = CGFloat(sender.value * 10)
     }
 
     override func viewDidLoad() {
