@@ -19,7 +19,7 @@ extension Gauge {
         animationTimer = Timer.scheduledTimer(
             timeInterval: refreshRate,
             target: self,
-            selector: #selector(updateProgress),
+            selector: #selector(updateProgress(_:)),
             userInfo: [newValue, rateSpeed],
             repeats: true
         )
@@ -29,7 +29,7 @@ extension Gauge {
         animationCompletionBlock = completion
     }
     
-    func updateProgress(_ timer: Timer) -> Void {
+    @objc func updateProgress(_ timer: Timer) -> Void {
         let userInfo = timer.userInfo as! [CGFloat]
         guard let newValue: CGFloat = userInfo.first else {
             print("GAUGE-KIT: Error, new value not defined...")
