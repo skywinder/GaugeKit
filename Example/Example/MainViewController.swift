@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        gauge.colorsArray = [UIColor.red, UIColor.orange, UIColor.yellow ,UIColor.green]
+
     }
 
     @IBOutlet var allGauges: [Gauge]!
@@ -23,7 +23,7 @@ class MainViewController: UIViewController {
     @IBOutlet var leftGauge: Gauge!
     @IBOutlet var rightGauge: Gauge!
     @IBOutlet var lineGauge: Gauge!
-    @IBAction func sliderChanged(_ sender: UISlider) {
+    @IBAction func sliderChanged(sender: UISlider) {
         gauge.rate = CGFloat(sender.value)
         gaugeSmall.rate = CGFloat(sender.value)
         leftGauge.rate = CGFloat(sender.value)
@@ -38,38 +38,32 @@ class MainViewController: UIViewController {
 
     }
 
-    @IBAction func animateAction(_ sender: AnyObject) {
-        for gauge in self.allGauges {
-            let newRate : CGFloat = gauge.rate == 0.0 ? 10.0 : 0.0
+    @IBAction func animateAction(sender: AnyObject) {
 
-            gauge.animateRate(1.0, newValue: newRate) { (finished) in
-                print("Gauge animation completed !")
+//   UIView.beginAnimations(nil, context: nil)
+//        UIView.setAnimationDuration(5.0)
+//        for gauge in self.allGauges {
+//            gauge.rate = gauge.rate == 0.0 ? 10 : 0
+//        }
+//        UIView.commitAnimations()
+//
+        UIView.animate(withDuration: TimeInterval(5.0), animations: {
+            () -> Void in
+            print(self.allGauges.count)
+            for gauge in self.allGauges {
+                gauge.rate = gauge.rate == 0.0 ? 10 : 0
+//                gauge.rate = CGFloat(arc4random() % 10)
             }
-        }
+            return
+        })
+
     }
 
-    @IBAction func switchChanged(_ sender: UISwitch) {
+    @IBAction func switchChanged(sender: UISwitch) {
         gauge.reverse = sender.isOn
         leftGauge.reverse = sender.isOn
         rightGauge.reverse = sender.isOn
         lineGauge.reverse = sender.isOn
 
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

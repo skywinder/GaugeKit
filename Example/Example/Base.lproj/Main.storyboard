@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ia3-CH-9hP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ia3-CH-9hP">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,10 +18,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2NQ-2R-cQ4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Kh-Q7-9Qx">
+                                <rect key="frame" x="66" y="779" width="199" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="cC9-OU-oQl"/>
                                 </constraints>
@@ -31,27 +32,32 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MUw-Rc-cZr"/>
+                                    <action selector="sliderChangedWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="WAt-RZ-Y8V"/>
                                 </connections>
                             </slider>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6dm-cM-AIc">
+                                <rect key="frame" x="345" y="779" width="51" height="31"/>
                                 <connections>
-                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="e8F-zf-ILb"/>
+                                    <action selector="switchChangedWithSender:" destination="BYZ-38-t0r" eventType="valueChanged" id="36o-2G-hqV"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6e-Fr-NqT">
+                                <rect key="frame" x="20" y="784" width="40" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMJ-Tn-iEJ">
+                                <rect key="frame" x="271" y="784" width="66" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h2H-B1-nqW" userLabel="GaugesView">
+                                <rect key="frame" x="20" y="20" width="374" height="752"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yI1-eB-yrd" userLabel="CircleGaugeSmall" customClass="Gauge" customModule="GaugeKit">
+                                        <rect key="frame" x="139" y="309" width="96" height="96"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="yI1-eB-yrd" secondAttribute="height" multiplier="1:1" id="0k9-uR-Ab4"/>
@@ -87,11 +93,13 @@
                                         </variation>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GaugeKit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4J-hI-3WU">
+                                        <rect key="frame" x="150.5" y="8" width="74" height="20"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xql-cv-5KY" userLabel="Gauge Left" customClass="Gauge" customModule="GaugeKit">
+                                        <rect key="frame" x="0.0" y="-19" width="149.5" height="752"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="XU6-iK-3MX"/>
@@ -126,6 +134,7 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ob-Uc-gqV" userLabel="CircleGauge" customClass="Gauge" customModule="GaugeKit">
+                                        <rect key="frame" x="107" y="277" width="160" height="160"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="168" id="1me-xR-gTm"/>
@@ -144,7 +153,7 @@
                                                 <color key="value" red="0.67838913202285767" green="0.69138109683990479" blue="0.70511919260025024" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                <real key="value" value="4"/>
+                                                <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="22"/>
@@ -160,6 +169,7 @@
                                         </variation>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLb-pf-4hf" userLabel="Gauge Line" customClass="Gauge" customModule="GaugeKit">
+                                        <rect key="frame" x="0.0" y="732" width="374" height="20"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="Tjc-g9-igp"/>
@@ -195,12 +205,14 @@
                                         </variation>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GK" translatesAutoresizingMaskIntoConstraints="NO" id="86S-uh-YXI">
+                                        <rect key="frame" x="163" y="332" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="cs0-xz-sg4"/>
                                             <constraint firstAttribute="width" secondItem="86S-uh-YXI" secondAttribute="height" multiplier="1:1" id="gIl-Ra-9kl"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fV1-7b-EpV" userLabel="Gauge Right" customClass="Gauge" customModule="GaugeKit">
+                                        <rect key="frame" x="224.5" y="-19" width="149.5" height="752"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="fV1-7b-EpV" secondAttribute="height" multiplier="1:2" id="Va0-Cm-JZi"/>
@@ -286,6 +298,7 @@
                                         <exclude reference="cW0-mP-yVb"/>
                                         <exclude reference="eVp-cc-LKK"/>
                                         <exclude reference="ige-AP-jty"/>
+                                        <exclude reference="TSj-im-oD4"/>
                                         <exclude reference="2xc-VX-bm7"/>
                                         <exclude reference="4Q7-c9-Fww"/>
                                         <exclude reference="K2d-OX-cq5"/>
@@ -295,16 +308,16 @@
                                         <exclude reference="rZ2-t1-FL1"/>
                                         <exclude reference="MTp-Qo-kCR"/>
                                         <exclude reference="Nvx-tk-DI2"/>
-                                        <exclude reference="TSj-im-oD4"/>
                                     </mask>
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1n-V7-5G2">
+                                <rect key="frame" x="178.5" y="719" width="57" height="30"/>
                                 <state key="normal" title="Animate">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="animateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hGf-Y0-BjA"/>
+                                    <action selector="animateActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3kw-XE-u1L"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -343,10 +356,10 @@
                                 <exclude reference="dd0-2j-eRo"/>
                                 <exclude reference="rWo-7x-MEC"/>
                                 <exclude reference="yx2-WQ-cvy"/>
+                                <exclude reference="PFL-Vv-fNB"/>
                                 <exclude reference="SRb-xo-axE"/>
                                 <exclude reference="cUe-DU-PZb"/>
                                 <exclude reference="f21-QT-8e2"/>
-                                <exclude reference="PFL-Vv-fNB"/>
                                 <exclude reference="1tC-Eg-uNk"/>
                                 <exclude reference="Rwp-La-Hav"/>
                                 <exclude reference="Znn-p3-rgO"/>
@@ -381,12 +394,14 @@
                         <viewControllerLayoutGuide type="bottom" id="ymW-s9-oO9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pmC-ej-QbQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIw-G5-Th1" userLabel="AppleViews">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iJZ-Sg-mHm" userLabel="GaugeOut" customClass="Gauge" customModule="GaugeKit">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="iJZ-Sg-mHm" secondAttribute="height" multiplier="1:1" id="GJH-ha-wNk"/>
@@ -400,11 +415,15 @@
                                                 <real key="value" value="30"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                                <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="value" red="0.3811221718788147" green="0.35773998498916626" blue="0.86648464202880859" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" red="0.46119093894958496" green="0.93878459930419922" blue="0.63160872459411621" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6f-rg-MaX" userLabel="GaugeMid" customClass="Gauge" customModule="GaugeKit">
+                                        <rect key="frame" x="0.0" y="34.5" width="300" height="231"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="q6f-rg-MaX" secondAttribute="height" multiplier="1.3:1" id="hkk-fT-8aQ"/>
@@ -423,6 +442,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kea-57-2JR" userLabel="GaugeIn" customClass="Gauge" customModule="GaugeKit">
+                                        <rect key="frame" x="43" y="68" width="214" height="164"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="kea-57-2JR" secondAttribute="height" multiplier="30:23" id="5ud-7w-d0d"/>
@@ -447,7 +467,7 @@
                                         </variation>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="kea-57-2JR" firstAttribute="width" secondItem="q6f-rg-MaX" secondAttribute="width" multiplier="1:1.4" id="2Rd-Oq-1Ox"/>
                                     <constraint firstAttribute="centerY" secondItem="kea-57-2JR" secondAttribute="centerY" id="36z-Na-aAI"/>
@@ -473,27 +493,31 @@
                                 </variation>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MOVE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gm-Rj-eIS">
+                                <rect key="frame" x="141.5" y="318" width="48" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STAND" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXb-1o-Qpm">
+                                <rect key="frame" x="135" y="387" width="55" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXERCISE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oap-md-rio">
+                                <rect key="frame" x="109.5" y="353.5" width="77.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ufA-29-Bra">
+                                <rect key="frame" x="55" y="606" width="304" height="31"/>
                                 <connections>
-                                    <action selector="sliderChanged:" destination="apk-bD-CPT" eventType="valueChanged" id="5Os-ZE-QTH"/>
+                                    <action selector="sliderChangedWithSender:" destination="apk-bD-CPT" eventType="valueChanged" id="rOT-us-0Pg"/>
                                 </connections>
                             </slider>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ufA-29-Bra" firstAttribute="centerX" secondItem="q6f-rg-MaX" secondAttribute="centerX" id="5yA-SB-zdt"/>
                             <constraint firstItem="iJZ-Sg-mHm" firstAttribute="centerX" secondItem="1Gm-Rj-eIS" secondAttribute="centerX" constant="41.5" id="73n-YJ-L9m"/>
@@ -532,6 +556,7 @@
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ePi-Rq-GNP">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
@@ -546,6 +571,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GK" width="40" height="40"/>
+        <image name="GK" width="200" height="200"/>
     </resources>
 </document>

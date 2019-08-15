@@ -10,11 +10,11 @@ import UIKit
 import QuartzCore
 
 protocol GaugeHalf {
-    func getHalfGauge(_ rotatengle: Double) -> CAShapeLayer
+    func getHalfGauge(rotatengle: Double) -> CAShapeLayer
 }
 
 extension Gauge: GaugeHalf {
-    func getHalfGauge(_ rotateAngle: Double) -> CAShapeLayer {
+    func getHalfGauge(rotatengle rotateAngle: Double) -> CAShapeLayer {
 
         let gaugeLayer = CAShapeLayer()
 
@@ -22,8 +22,8 @@ extension Gauge: GaugeHalf {
         let newBounds = CGRect(x: bounds.origin.x, y: bounds.origin.y, width: bounds.height, height: bounds.width * 2 - lineWidth)
         //        var newBounds = bounds
         if bgLayer == nil {
-            bgLayer = CAShapeLayer.getOval(lineWidth, strokeStart: 0, strokeEnd: 0.5, strokeColor: _bgStartColor,
-                    fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: newBounds, rotateAngle: pi_2, isCircle: isCircle)
+            bgLayer = CAShapeLayer.getOval(lineWidth: lineWidth, strokeStart: 0, strokeEnd: 0.5, strokeColor: _bgStartColor,
+                                           fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: newBounds, rotateAngle: Double.pi/2, isCircle: isCircle)
             bgLayer.frame = layer.bounds
             bgLayer.position = CGPoint(x: bgLayer.position.x + bounds.width - lineWidth, y: bgLayer.position.y)
         }
@@ -45,8 +45,8 @@ extension Gauge: GaugeHalf {
         }
 
         if ringLayer == nil {
-            ringLayer = CAShapeLayer.getOval(lineWidth, strokeStart: 0, strokeEnd: 0.5, strokeColor: startColor,
-                    fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: newBounds, rotateAngle: pi_2, isCircle: isCircle)
+            ringLayer = CAShapeLayer.getOval(lineWidth: lineWidth, strokeStart: 0, strokeEnd: 0.5, strokeColor: startColor,
+                                             fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: newBounds, rotateAngle: Double.pi/2, isCircle: isCircle)
             ringLayer.frame = layer.bounds
             ringLayer.position = CGPoint(x: ringLayer.position.x + bounds.width - lineWidth, y: ringLayer.position.y)
         }
@@ -68,19 +68,19 @@ extension Gauge: GaugeHalf {
         }
 
         if roundCap {
-            ringLayer.lineCap = kCALineCapRound
-            bgLayer.lineCap = kCALineCapRound
+            ringLayer.lineCap = CAShapeLayerLineCap.round
+            bgLayer.lineCap = CAShapeLayerLineCap.round
         }
 
         gaugeLayer.frame = layer.bounds
         gaugeLayer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         gaugeLayer.transform = CATransform3DRotate(gaugeLayer.transform, CGFloat(rotateAngle), 0, 0, 1)
         if reverse {
-            reverseY(gaugeLayer)
+            reverseY(layer: gaugeLayer)
         }
 
-        if type == .right {
-            reverseX(gaugeLayer)
+        if type == .Right {
+            reverseX(layer: gaugeLayer)
         }
 
         return gaugeLayer

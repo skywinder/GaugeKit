@@ -11,21 +11,21 @@ import QuartzCore
 
 
 protocol GaugeLine {
-    func getLineGauge(_ rotateAngle: Double) -> CAShapeLayer
+    func getLineGauge(rotateAngle: Double) -> CAShapeLayer
 }
 
 extension Gauge: GaugeLine {
-    func getLineGauge(_ rotateAngle: Double) -> CAShapeLayer {
+    func getLineGauge(rotateAngle: Double) -> CAShapeLayer {
 
         let gaugeLayer = CAShapeLayer()
 
         if bgLayer == nil {
-            bgLayer = CAShapeLayer.getLine(lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: _bgStartColor, fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: bounds)
+            bgLayer = CAShapeLayer.getLine(lineWidth: lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: _bgStartColor, fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: bounds)
             bgLayer.frame = layer.bounds
         }
 
         if ringLayer == nil {
-            ringLayer = CAShapeLayer.getLine(lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: UIColor.clear, fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: bounds)
+            ringLayer = CAShapeLayer.getLine(lineWidth: lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: UIColor.clear, fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: bounds)
             ringLayer.frame = layer.bounds
         }
 
@@ -53,14 +53,14 @@ extension Gauge: GaugeLine {
         gaugeLayer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
 
         if roundCap {
-            ringLayer.lineCap = kCALineCapRound
-            bgLayer.lineCap = kCALineCapRound
+            ringLayer.lineCap = CAShapeLayerLineCap.round
+            bgLayer.lineCap = CAShapeLayerLineCap.round
         } else {
-            ringLayer.lineCap = kCALineCapSquare
-            bgLayer.lineCap = kCALineCapSquare
+            ringLayer.lineCap = CAShapeLayerLineCap.square
+            bgLayer.lineCap = CAShapeLayerLineCap.square
         }
         if reverse {
-            reverseX(gaugeLayer)
+            reverseX(layer: gaugeLayer)
         }
         return gaugeLayer
     }
