@@ -20,11 +20,38 @@ extension Gauge: GaugeCircle {
         let gaugeLayer = CAShapeLayer()
 
         if bgLayer == nil {
-            bgLayer = CAShapeLayer.getOval(lineWidth: lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: _bgStartColor, fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: bounds)
-            bgLayer.frame = layer.bounds
-            gaugeLayer.addSublayer(bgLayer)
+            if thinBG {
+                bgLayer = CAShapeLayer.getThinCircle(
+                    lineWidth: thinLineWidth,
+                    strokeStart: 0,
+                    strokeEnd: 1,
+                    strokeColor: thinBGColor,
+                    fillColor: UIColor.clear,
+                    shadowRadius: shadowRadius,
+                    shadowOpacity: shadowOpacity,
+                    shadowOffsset: CGSize.zero,
+                    bounds: bounds,
+                    guageWidth: lineWidth
+                )
+                bgLayer.frame = layer.bounds
+                gaugeLayer.addSublayer(bgLayer)
+                
+            } else {
+                bgLayer = CAShapeLayer.getOval(
+                    lineWidth: lineWidth,
+                    strokeStart: 0,
+                    strokeEnd: 1,
+                    strokeColor: _bgStartColor,
+                    fillColor: UIColor.clear,
+                    shadowRadius: shadowRadius,
+                    shadowOpacity: shadowOpacity,
+                    shadowOffsset: CGSize.zero,
+                    bounds: bounds
+                )
+                bgLayer.frame = layer.bounds
+                gaugeLayer.addSublayer(bgLayer)
+            }
         }
-
         if ringLayer == nil {
             ringLayer = CAShapeLayer.getOval(lineWidth: lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: UIColor.clear, fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: bounds)
 
@@ -42,7 +69,7 @@ extension Gauge: GaugeCircle {
                 ringGradientLayer.startPoint = CGPoint(x: 0.5, y: 1)
                 ringGradientLayer.endPoint = CGPoint(x: 0.5, y: 0)
             }
-            ringGradientLayer.colors = [startColor.cgColor, endColor.cgColor, UIColor.red.cgColor]
+            ringGradientLayer.colors = [startColor.cgColor, endColor.cgColor]
             ringGradientLayer.frame = layer.bounds
             ringGradientLayer.mask = ringLayer
             gaugeLayer.addSublayer(ringGradientLayer)

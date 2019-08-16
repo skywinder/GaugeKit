@@ -45,6 +45,48 @@ extension CAShapeLayer {
         return arc
     }
 
+    
+    class func getThinCircle(
+        lineWidth: CGFloat,
+        strokeStart: CGFloat,
+        strokeEnd: CGFloat,
+        strokeColor: UIColor,
+        fillColor: UIColor,
+        shadowRadius: CGFloat,
+        shadowOpacity: Float,
+        shadowOffsset: CGSize,
+        bounds: CGRect,
+        rotateAngle: Double? = nil,
+        anchorPoint: CGPoint? = nil,
+        isCircle: Bool = true,
+        guageWidth: CGFloat
+        ) -> CAShapeLayer {
+        
+        var arc = CAShapeLayer()
+        let rect = bounds.insetBy(dx: CGFloat(lineWidth / 2.0), dy: CGFloat(lineWidth / 2.0))
+        if isCircle {
+            let arcDiameter: CGFloat = min(bounds.width, bounds.height) - 2 * guageWidth
+            let X = bounds.midX
+            let Y = bounds.midY
+            arc.path = UIBezierPath(ovalIn: CGRect(x: (X - (arcDiameter / 2)), y: (Y - (arcDiameter / 2)), width: arcDiameter, height: arcDiameter)).cgPath
+        } else {
+            arc.path = UIBezierPath(ovalIn: rect).cgPath
+        }
+        
+        
+        arc = setupArc(arc: arc, lineWidth: lineWidth,
+                       strokeStart: strokeStart,
+                       strokeEnd: strokeEnd,
+                       strokeColor: strokeColor,
+                       fillColor: fillColor,
+                       shadowRadius: shadowRadius,
+                       shadowOpacity: shadowOpacity,
+                       shadowOffsset: shadowOffsset,
+                       rotateAngle: rotateAngle,
+                       anchorPoint: anchorPoint)
+        return arc
+    }
+    
 
     class func getOval(lineWidth: CGFloat,
                        strokeStart: CGFloat,
@@ -65,6 +107,7 @@ extension CAShapeLayer {
         let rect = bounds.insetBy(dx: CGFloat(lineWidth / 2.0), dy: CGFloat(lineWidth / 2.0))
         if isCircle {
             let arcDiameter: CGFloat = min(bounds.width, bounds.height) - 2 * lineWidth
+
             let X = bounds.midX
             let Y = bounds.midY
             arc.path = UIBezierPath(ovalIn: CGRect(x: (X - (arcDiameter / 2)), y: (Y - (arcDiameter / 2)), width: arcDiameter, height: arcDiameter)).cgPath

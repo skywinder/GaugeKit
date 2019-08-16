@@ -157,6 +157,24 @@ public class Gauge: UIView {
             updateLayerProperties()
         }
     }
+    
+    @IBInspectable var thinLineWidth: CGFloat = 1.0 {
+        didSet {
+            updateLayerProperties()
+        }
+    }
+    
+    @IBInspectable var thinBG: Bool = false {
+        didSet {
+            updateLayerProperties()
+        }
+    }
+    
+    @IBInspectable var thinBGColor: UIColor = .white {
+        didSet {
+            updateLayerProperties()
+        }
+    }
 
 /// Main gauge layer
     var gaugeLayer: CALayer!
@@ -234,8 +252,7 @@ public class Gauge: UIView {
                 if (ringGradientLayer != nil) {
                     let color1 = startColor
                     let color2 = endColor
-                    let color3: UIColor = .red
-                    let colors: Array <AnyObject> = [color1.cgColor, color2.cgColor, color3.cgColor]
+                    let colors: Array <AnyObject> = [color1.cgColor, color2.cgColor]
                     ringGradientLayer.colors = colors
                 } else {
                     ringLayer.strokeColor = strokeColor.cgColor
