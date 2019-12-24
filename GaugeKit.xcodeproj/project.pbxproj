@@ -181,15 +181,17 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Petr Korolev";
 				TargetAttributes = {
 					1C9404CF1B31CF85001BF122 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 5UH69GW6GE;
 						LastSwiftMigration = 1010;
 					};
 					1C9404DA1B31CF85001BF122 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 5UH69GW6GE;
 						LastSwiftMigration = 0800;
 					};
 				};

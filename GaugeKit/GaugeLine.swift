@@ -53,11 +53,11 @@ extension Gauge: GaugeLine {
         gaugeLayer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
 
         if roundCap {
-            ringLayer.lineCap = CAShapeLayerLineCap.round
-            bgLayer.lineCap = CAShapeLayerLineCap.round
+            ringLayer.lineCap = .round
+            bgLayer.lineCap = .round
         } else {
-            ringLayer.lineCap = CAShapeLayerLineCap.square
-            bgLayer.lineCap = CAShapeLayerLineCap.square
+            ringLayer.lineCap = .square
+            bgLayer.lineCap = .square
         }
         if reverse {
             reverseX(gaugeLayer)
