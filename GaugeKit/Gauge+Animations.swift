@@ -29,7 +29,7 @@ extension Gauge {
         animationCompletionBlock = completion
     }
     
-    func updateProgress(_ timer: Timer) -> Void {
+    @objc func updateProgress(_ timer: Timer) -> Void {
         let userInfo = timer.userInfo as! [CGFloat]
         guard let newValue: CGFloat = userInfo.first else {
             print("GAUGE-KIT: Error, new value not defined...")
