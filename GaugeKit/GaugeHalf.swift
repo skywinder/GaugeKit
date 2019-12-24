@@ -68,8 +68,8 @@ extension Gauge: GaugeHalf {
         }
 
         if roundCap {
-            ringLayer.lineCap = kCALineCapRound
-            bgLayer.lineCap = kCALineCapRound
+            ringLayer.lineCap = CAShapeLayerLineCap.round
+            bgLayer.lineCap = CAShapeLayerLineCap.round
         }
 
         gaugeLayer.frame = layer.bounds
