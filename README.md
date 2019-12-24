@@ -1,4 +1,4 @@
-[![Financial Contributors on Open Collective](https://opencollective.com/GaugeKit/all/badge.svg?label=financial+contributors)](https://opencollective.com/GaugeKit) [![Version](https://img.shields.io/cocoapods/v/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
+[![Version](https://img.shields.io/cocoapods/v/GaugeKit.svg?style=flat)](http://cocoapods.org/pods/GaugeKit)
 [![Build Status](https://travis-ci.org/skywinder/GaugeKit.svg)](https://travis-ci.org/skywinder/GaugeKit)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![language](https://img.shields.io/badge/Language-%20Swift%20-orange.svg)
@@ -91,12 +91,12 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 ## Requirements
 
 - iOS SDK **7.0** or **later** (iOS SDK **8.0** if you use it as a Framework)
-- **Swift 1.2** and **Xcode 6.3** or later 
+- **Swift 1.2** and **Xcode 6.3** or later
 - **Swift 2.x.x** is also supported!
 
 ## Communication :speaker:
 
-Bug reports, feature requests, patches, well-wishes are always welcome! 
+Bug reports, feature requests, patches, well-wishes are always welcome!
 
 - If you need help, [open an issue](https://github.com/skywinder/GaugeKit/issues/new).
 - If you found a bug, [open an issue](https://github.com/skywinder/GaugeKit/issues/new).
@@ -114,18 +114,6 @@ The best way to contribute is by submitting a pull request.
 
 This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
 <a href="https://github.com/skywinder/GaugeKit/graphs/contributors"><img src="https://opencollective.com/GaugeKit/contributors.svg?width=890&button=false" /></a>
-
-### Financial Contributors
-
-Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/GaugeKit/contribute)]
-
-#### Individuals
-
-<a href="https://opencollective.com/GaugeKit"><img src="https://opencollective.com/GaugeKit/individuals.svg?width=890"></a>
-
-#### Organizations
-
-Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/GaugeKit/contribute)]
 
 <a href="https://opencollective.com/GaugeKit/organization/0/website"><img src="https://opencollective.com/GaugeKit/organization/0/avatar.svg"></a>
 <a href="https://opencollective.com/GaugeKit/organization/1/website"><img src="https://opencollective.com/GaugeKit/organization/1/avatar.svg"></a>
