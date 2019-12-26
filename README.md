@@ -18,7 +18,7 @@
 
 ## Example Usage
 
-Just open `GaugeKit.xcworkspace` and run Example project.
+Open `GaugeKit.xcworkspace` and change the scheme to 'Example' and run Example project.
 
 ## Installation
 
@@ -91,12 +91,12 @@ If you prefer not to use either of the aforementioned dependency managers, you c
 ## Requirements
 
 - iOS SDK **7.0** or **later** (iOS SDK **8.0** if you use it as a Framework)
-- **Swift 1.2** and **Xcode 6.3** or later 
+- **Swift 1.2** and **Xcode 6.3** or later
 - **Swift 2.x.x** is also supported!
 
 ## Communication :speaker:
 
-Bug reports, feature requests, patches, well-wishes are always welcome! 
+Bug reports, feature requests, patches, well-wishes are always welcome!
 
 - If you need help, [open an issue](https://github.com/skywinder/GaugeKit/issues/new).
 - If you found a bug, [open an issue](https://github.com/skywinder/GaugeKit/issues/new).
@@ -107,6 +107,24 @@ Bug reports, feature requests, patches, well-wishes are always welcome!
 I'd love to see your ideas for improving this library.
 
 The best way to contribute is by submitting a pull request.
+
+## Contributors
+
+### Code Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+<a href="https://github.com/skywinder/GaugeKit/graphs/contributors"><img src="https://opencollective.com/GaugeKit/contributors.svg?width=890&button=false" /></a>
+
+<a href="https://opencollective.com/GaugeKit/organization/0/website"><img src="https://opencollective.com/GaugeKit/organization/0/avatar.svg"></a>
+<a href="https://opencollective.com/GaugeKit/organization/1/website"><img src="https://opencollective.com/GaugeKit/organization/1/avatar.svg"></a>
+<a href="https://opencollective.com/GaugeKit/organization/2/website"><img src="https://opencollective.com/GaugeKit/organization/2/avatar.svg"></a>
+<a href="https://opencollective.com/GaugeKit/organization/3/website"><img src="https://opencollective.com/GaugeKit/organization/3/avatar.svg"></a>
+<a href="https://opencollective.com/GaugeKit/organization/4/website"><img src="https://opencollective.com/GaugeKit/organization/4/avatar.svg"></a>
+<a href="https://opencollective.com/GaugeKit/organization/5/website"><img src="https://opencollective.com/GaugeKit/organization/5/avatar.svg"></a>
+<a href="https://opencollective.com/GaugeKit/organization/6/website"><img src="https://opencollective.com/GaugeKit/organization/6/avatar.svg"></a>
+<a href="https://opencollective.com/GaugeKit/organization/7/website"><img src="https://opencollective.com/GaugeKit/organization/7/avatar.svg"></a>
+<a href="https://opencollective.com/GaugeKit/organization/8/website"><img src="https://opencollective.com/GaugeKit/organization/8/avatar.svg"></a>
+<a href="https://opencollective.com/GaugeKit/organization/9/website"><img src="https://opencollective.com/GaugeKit/organization/9/avatar.svg"></a>
 
 ## License
 
