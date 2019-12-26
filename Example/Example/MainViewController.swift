@@ -13,18 +13,18 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        gauge.colorsArray = [UIColor.red, UIColor.orange, UIColor.yellow ,UIColor.green]
+        gradientGauge.colorsArray = [UIColor.red, UIColor.orange, UIColor.yellow ,UIColor.green]
     }
 
     @IBOutlet var allGauges: [Gauge]!
 //    @IBOutlet var scaleLabel: UILabel!
-    @IBOutlet var gauge: Gauge!
+    @IBOutlet var gradientGauge: Gauge!
     @IBOutlet var gaugeSmall: Gauge!
     @IBOutlet var leftGauge: Gauge!
     @IBOutlet var rightGauge: Gauge!
     @IBOutlet var lineGauge: Gauge!
     @IBAction func sliderChanged(_ sender: UISlider) {
-        gauge.rate = CGFloat(sender.value)
+        gradientGauge.rate = CGFloat(sender.value)
         gaugeSmall.rate = CGFloat(sender.value)
         leftGauge.rate = CGFloat(sender.value)
         rightGauge.rate = CGFloat(sender.value)
@@ -49,7 +49,7 @@ class MainViewController: UIViewController {
     }
 
     @IBAction func switchChanged(_ sender: UISwitch) {
-        gauge.reverse = sender.isOn
+        gradientGauge.reverse = sender.isOn
         leftGauge.reverse = sender.isOn
         rightGauge.reverse = sender.isOn
         lineGauge.reverse = sender.isOn
