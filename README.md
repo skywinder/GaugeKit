@@ -18,7 +18,7 @@
 
 ## Example Usage
 
-Just open `GaugeKit.xcworkspace` and run Example project.
+Open `GaugeKit.xcworkspace` and change the scheme to 'Example' and run Example project.
 
 ## Installation
 

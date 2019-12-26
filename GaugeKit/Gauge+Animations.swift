@@ -19,7 +19,7 @@ extension Gauge {
         animationTimer = Timer.scheduledTimer(
             timeInterval: refreshRate,
             target: self,
-            selector: #selector(updateProgress),
+            selector: #selector(updateProgress(_:)),
             userInfo: [newValue, rateSpeed],
             repeats: true
         )

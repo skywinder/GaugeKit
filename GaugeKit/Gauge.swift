@@ -199,32 +199,23 @@ open class Gauge: UIView {
             default:
                 ringLayer.strokeEnd = rate / maxValue
             }
-            
+
             var strokeColor = UIColor.lightGray
-            
+
             if !colorsArray.isEmpty {
-                switch colorsArray.count {
-                case 1:
-                    strokeColor = colorsArray.first!
-                case 2:
-                    let percentage: CGFloat = rate / maxValue
-                    strokeColor = (1 - percentage) * colorsArray.first! + percentage * colorsArray.last!
-                default:
-                    let percentageInSector: CGFloat = ((rate / maxValue * CGFloat(colorsArray.count - 1) * 100.0).truncatingRemainder(dividingBy: 100.0)) / 100.0
-                    let currentSector: Int = Int(rate / maxValue * CGFloat(colorsArray.count - 1)) + 1
-                    //print(currentSector)
-                    //print(percentageInSector)
-                    
-                    let firstColor = colorsArray[currentSector - 1]
-                    let secondColor = colorsArray[min(currentSector, colorsArray.count - 1)]
-                    
-                    strokeColor = (1.0 - percentageInSector) * firstColor + percentageInSector * secondColor
-                }
-                
+
+                let percentageInSector: CGFloat = ((rate / maxValue * CGFloat(colorsArray.count - 1) * 100.0).truncatingRemainder(dividingBy: 100.0)) / 100.0
+                let currentSector: Int = Int(rate / maxValue * CGFloat(colorsArray.count - 1)) + 1
+
+                let firstColor = colorsArray[max(0, currentSector - 1)]
+                let secondColor = colorsArray[min(currentSector, colorsArray.count - 1)]
+
+                strokeColor = blend(colors: (firstColor, secondColor), distance: percentageInSector )
+
                 if type == .line {
                     ringLayer.strokeColor = strokeColor.cgColor
                 }
-                
+
                 if ringGradientLayer != nil {
                     ringGradientLayer.colors = [strokeColor.cgColor, strokeColor.cgColor]
                 } else {
@@ -234,6 +225,23 @@ open class Gauge: UIView {
                 ringLayer.strokeColor = startColor.cgColor
             }
         }
+    }
+
+    private func blend(colors: (UIColor, UIColor), distance: CGFloat) -> UIColor {
+
+        let (color1, color2) = colors
+        let (weight1, weight2) = (1.0 - distance, distance)
+
+        var (red1, green1, blue1) : (CGFloat, CGFloat, CGFloat) = (0, 0, 0)
+        var (red2, green2, blue2) : (CGFloat, CGFloat, CGFloat) = (0, 0, 0)
+        color1.getRed(&red1, green: &green1, blue: &blue1, alpha: nil)
+        color2.getRed(&red2, green: &green2, blue: &blue2, alpha: nil)
+
+        let blendedColorComponents = zip( [red1, green1, blue1], [red2, green2, blue2] )
+            .map { weight1 * $0.0 + weight2 * $0.1 }
+
+        let (red, green, blue) = (blendedColorComponents[0], blendedColorComponents[1], blendedColorComponents[2])
+        return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
 
     required public init?(coder aDecoder: NSCoder) {
