@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ia3-CH-9hP">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ia3-CH-9hP">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -133,7 +131,7 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ob-Uc-gqV" userLabel="CircleGauge" customClass="Gauge" customModule="GaugeKit">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ob-Uc-gqV" userLabel="CircleGauge" customClass="Gauge" customModule="GaugeKit" colorLabel="IBBuiltInLabel-Orange">
                                         <rect key="frame" x="91.5" y="179.5" width="160" height="160"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -291,13 +289,6 @@
                                         <exclude reference="2ri-zW-sxG"/>
                                         <exclude reference="hPG-kV-fYD"/>
                                         <exclude reference="wgz-zN-EJ9"/>
-                                        <exclude reference="2xc-VX-bm7"/>
-                                        <exclude reference="4Q7-c9-Fww"/>
-                                        <exclude reference="K2d-OX-cq5"/>
-                                        <exclude reference="K2z-9n-C0z"/>
-                                        <exclude reference="f2m-iw-T3T"/>
-                                        <exclude reference="kJP-aj-br0"/>
-                                        <exclude reference="rZ2-t1-FL1"/>
                                         <exclude reference="KbR-vl-VkR"/>
                                         <exclude reference="Qu5-lH-SM4"/>
                                         <exclude reference="RiZ-Zh-6IB"/>
@@ -305,6 +296,13 @@
                                         <exclude reference="cW0-mP-yVb"/>
                                         <exclude reference="eVp-cc-LKK"/>
                                         <exclude reference="ige-AP-jty"/>
+                                        <exclude reference="2xc-VX-bm7"/>
+                                        <exclude reference="4Q7-c9-Fww"/>
+                                        <exclude reference="K2d-OX-cq5"/>
+                                        <exclude reference="K2z-9n-C0z"/>
+                                        <exclude reference="f2m-iw-T3T"/>
+                                        <exclude reference="kJP-aj-br0"/>
+                                        <exclude reference="rZ2-t1-FL1"/>
                                         <exclude reference="TSj-im-oD4"/>
                                         <exclude reference="MTp-Qo-kCR"/>
                                         <exclude reference="Nvx-tk-DI2"/>
@@ -353,6 +351,10 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="dd0-2j-eRo"/>
+                                <exclude reference="rWo-7x-MEC"/>
+                                <exclude reference="yx2-WQ-cvy"/>
+                                <exclude reference="PFL-Vv-fNB"/>
                                 <exclude reference="SRb-xo-axE"/>
                                 <exclude reference="cUe-DU-PZb"/>
                                 <exclude reference="f21-QT-8e2"/>
@@ -360,17 +362,13 @@
                                 <exclude reference="Rwp-La-Hav"/>
                                 <exclude reference="Znn-p3-rgO"/>
                                 <exclude reference="alC-H9-oOR"/>
-                                <exclude reference="dd0-2j-eRo"/>
-                                <exclude reference="rWo-7x-MEC"/>
-                                <exclude reference="yx2-WQ-cvy"/>
-                                <exclude reference="PFL-Vv-fNB"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" badgeValue="Custom" systemItem="favorites" id="qVI-Ch-pAm"/>
                     <connections>
-                        <outlet property="gauge" destination="0Ob-Uc-gqV" id="EFi-Kl-JB7"/>
                         <outlet property="gaugeSmall" destination="yI1-eB-yrd" id="m5R-Sy-oFe"/>
+                        <outlet property="gradientGauge" destination="0Ob-Uc-gqV" id="EFi-Kl-JB7"/>
                         <outlet property="leftGauge" destination="Xql-cv-5KY" id="Hy4-zR-Elj"/>
                         <outlet property="lineGauge" destination="WLb-pf-4hf" id="8wR-eZ-Nxy"/>
                         <outlet property="rightGauge" destination="fV1-7b-EpV" id="fB1-k6-cGi"/>

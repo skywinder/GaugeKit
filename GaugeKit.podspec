@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
   s.requires_arc = true
-
+  s.swift_versions = ['4.0', '4.1', '4.2', '5.0']
   s.source_files = 'GaugeKit/**/*.{h,m,swift}'
 
   s.public_header_files = 'GaugeKit/**/*.h'
