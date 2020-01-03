@@ -14,7 +14,6 @@ extension Gauge {
         
         let refreshRate: Double = 0.1
         let rateSpeed: CGFloat = CGFloat(refreshRate) * ((newValue - self.rate) / CGFloat(duration))
-        print(rateSpeed)
         
         animationTimer = Timer.scheduledTimer(
             timeInterval: refreshRate,
