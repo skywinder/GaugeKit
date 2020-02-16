@@ -43,7 +43,7 @@ class MainViewController: UIViewController {
             let newRate : CGFloat = gauge.rate == 0.0 ? 10.0 : 0.0
 
             gauge.animateRate(1.0, newValue: newRate) { (finished) in
-                print("Gauge animation completed !")
+                if (finished) {print("\(gauge.type) animation completed !")}
             }
         }
     }
@@ -55,12 +55,6 @@ class MainViewController: UIViewController {
         lineGauge.reverse = sender.isOn
 
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
     /*
     // MARK: - Navigation
