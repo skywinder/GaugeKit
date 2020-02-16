@@ -17,7 +17,6 @@ class MainViewController: UIViewController {
     }
 
     @IBOutlet var allGauges: [Gauge]!
-//    @IBOutlet var scaleLabel: UILabel!
     @IBOutlet var gradientGauge: Gauge!
     @IBOutlet var gaugeSmall: Gauge!
     @IBOutlet var leftGauge: Gauge!
@@ -29,8 +28,6 @@ class MainViewController: UIViewController {
         leftGauge.rate = CGFloat(sender.value)
         rightGauge.rate = CGFloat(sender.value)
         lineGauge.rate = CGFloat(sender.value)
-
-//        scaleLabel.text = "\(sender.value)"
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -55,15 +52,4 @@ class MainViewController: UIViewController {
         lineGauge.reverse = sender.isOn
 
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
